@@ -28,3 +28,226 @@ body {
   font-size: 18px;
   line-height: 30px;
 }
+
+.search {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.search_button {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.page_header {
+  background-color: #ffe17f;
+}
+
+.page_header a,
+.main_index a:not(.contacts_phone) {
+  color: #000000;
+  text-decoration: none;
+}
+
+.navigation_menu_item,
+.slider_more-detailed,
+.index_benefits_button,
+.about-shop_link {
+  font-family: "raleway", sans-serif;
+  font-weight: 800;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.slider_number {
+  font-weight: 700;
+  font-size: 180px;
+  color: #ffffff;
+  background-color: #ffe17f;
+}
+
+.slider_promo,
+.index_benefits_item h3,
+.about-shop h3,
+.mailing-list_title {
+  font-family: "raleway", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.slider_text {
+  color: #444444;
+}
+
+.slider_features dt {
+  color: #444444;
+  font-size: 16px;
+}
+
+.slider_features dd {
+  font-size: 36px;
+}
+
+.index_category_item {
+  font-family: "raleway", sans-serif;
+  font-weight: 800;
+  line-height: 24px;
+}
+
+.index_benefits_current {
+  color: #ffe17f;
+  background-color: #000000;
+}
+
+.index_benefits {
+  color: #444444;
+  background-color: #f0f0f0;
+}
+
+.delivery_wrapper {
+  width: 1160px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.delivery {
+  font-family: "raleway", sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 23.48px;
+  text-transform: uppercase;
+}
+
+.about-shop p {
+  color: #444444;
+}
+
+.delivery_line_item {
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.about-shop h4 {
+  color: #444444;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.contacts_address_text {
+  font-style: normal;
+}
+
+.contacts_phone {
+  color: #444444;
+  font-style: normal;
+}
+
+.contacts_timetable_item {
+  color: #444444;
+}
+
+.mailing-list_form {
+  color: #444444;
+}
+
+.email_button {
+  color: #000000;
+  line-height: 21.13px;
+  text-transform: uppercase;
+}
+
+.footer_index {
+  color: #ffffff;
+  background-color: #444444;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.footer_address_text {
+  font-style: normal;
+}
+
+.footer_index a:not(.footer_phone) {
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.footer_navigation_item {
+  font-family: "raleway", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21.13px;
+}
+
+.footer_phone {
+  color: #ffffff;
+}
+
+.bread-crumbs h1 {
+  font-family: "raleway", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.main_catalog a:not(.pagination_link) {
+  color: #000000;
+  font-size: 16px;
+  line-height: 18.96px;
+  text-decoration: none;
+}
+
+.catalog_filter h2,
+.select_container h2,
+.pagination_show-more {
+  font-family: "raleway", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 18.78px;
+  text-transform: uppercase;
+}
+
+.filter_title {
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.filter_item {
+  font-size: 16px;
+  line-height: 18.96px;
+}
+
+.filter_button,
+.pagination_prev,
+.pagination_next {
+  font-family: "raleway", sans-serif;
+  font-weight: 800;
+  line-height: 21.13px;
+  text-transform: uppercase;
+}
+
+.product_card_title {
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.product_card_price {
+  font-size: 18px;
+  line-height: 21.33px;
+  color: #444444;
+}
+
+.pagination_button a {
+  color: #000000;
+  line-height: 21.13px;
+  text-decoration: none;
+}
+
+.pagination_item a {
+  color: #444444;
+  font-size: 16px;
+  text-decoration: none;
+}

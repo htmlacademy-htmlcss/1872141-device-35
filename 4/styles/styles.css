@@ -2,7 +2,7 @@
   font-family: "rubik";
   font-style: normal;
   font-weight: 400;
-  src: url("/fonts/rubik/rubik-400.woff2") format("woff2");
+  src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -10,7 +10,7 @@
   font-family: "rubik";
   font-style: normal;
   font-weight: 700;
-  src: url("/fonts/rubik/rubik-700.woff2") format("woff2");
+  src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -18,7 +18,7 @@
   font-family: "raleway";
   font-style: normal;
   font-weight: 800;
-  src: url("/fonts/raleway/raleway-800.woff2") format("woff2");
+  src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -154,7 +154,7 @@ body {
 
 .email_button {
   color: #000000;
-  line-height: 21.13px;
+  line-height: 21px;
   text-transform: uppercase;
 }
 
@@ -179,7 +179,7 @@ body {
   font-family: "raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
-  line-height: 21.13px;
+  line-height: 21px;
 }
 
 .footer_phone {
@@ -196,7 +196,7 @@ body {
 .main_catalog a:not(.pagination_link) {
   color: #000000;
   font-size: 16px;
-  line-height: 18.96px;
+  line-height: 19px;
   text-decoration: none;
 }
 
@@ -206,7 +206,7 @@ body {
   font-family: "raleway", sans-serif;
   font-weight: 800;
   font-size: 16px;
-  line-height: 18.78px;
+  line-height: 19px;
   text-transform: uppercase;
 }
 
@@ -217,7 +217,7 @@ body {
 
 .filter_item {
   font-size: 16px;
-  line-height: 18.96px;
+  line-height: 19px;
 }
 
 .filter_button,
@@ -225,7 +225,7 @@ body {
 .pagination_next {
   font-family: "raleway", sans-serif;
   font-weight: 800;
-  line-height: 21.13px;
+  line-height: 21px;
   text-transform: uppercase;
 }
 
@@ -236,13 +236,13 @@ body {
 
 .product_card_price {
   font-size: 18px;
-  line-height: 21.33px;
+  line-height: 21px;
   color: #444444;
 }
 
 .pagination_button a {
   color: #000000;
-  line-height: 21.13px;
+  line-height: 21px;
   text-decoration: none;
 }
 

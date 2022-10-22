@@ -41,6 +41,7 @@ body {
   background-color: #ffe17f;
   width: 1040px;
   padding: 0 60px;
+  margin: 0 auto;
 }
 
 .page_header ul {
@@ -54,6 +55,20 @@ body {
   text-decoration: none;
 }
 
+.header_menu_container {
+  display: flex;
+}
+
+.header_search-user_container,
+.header_menu_list {
+  display: flex;
+}
+
+.header_search {
+  width: 517px;
+  margin-right: 26px;
+}
+
 .search {
   font-size: 16px;
   line-height: 20px;
@@ -65,6 +80,25 @@ body {
   text-align: center;
 }
 
+.log-in_list {
+  width: 231px;
+}
+
+.log-out_name {
+  width: 146px;
+  margin-right: 28px;
+}
+
+.log-out_item {
+  width: 56px;
+}
+
+.navigation_user_list {
+  width: 240px;
+  margin-left: auto;
+}
+
+.navigation_menu_catalog,
 .navigation_menu_item,
 .slider_more-detailed,
 .index_benefits_button,
@@ -74,6 +108,21 @@ body {
   line-height: 21px;
   text-transform: uppercase;
 }
+
+.navigation_menu {
+  display: flex;
+}
+
+.navigation_menu_catalog {
+  width: 293px;
+}
+
+.navigation_menu_list {
+  width: 431px;
+  margin-left: auto;
+}
+
+
 
 .main_index,
 .main_catalog {

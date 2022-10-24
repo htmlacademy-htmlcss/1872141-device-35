@@ -10,18 +10,12 @@
       <a class="logo" href="index.html">
         <img src="images/logo_device.svg" width="145" height="36" alt="Логотип интернет-магазина Device.">
       </a>
-      <div class="header_search-user_container">
-        <ul class="header_menu_list">
-          <li class="header_search">
-            <form class="header_search_form" action="https://echo.htmlacademy.ru/">
-              <input type="search" id="search_input" placeholder="Текст поиска">
-              <button class="search_buttun" type="submit">Найти</button>
-            </form>
-          </li>
-          <li class="log-in_list">
-            <a class="log-in" href="#">Войти</a>
-          </li>
-        </ul>
+      <div class="header_menu_container">
+        <form class="header_search_form" action="https://echo.htmlacademy.ru/">
+          <input type="search" id="search_input" placeholder="Поиск по сайту">
+          <button class="search_buttun" type="submit">Найти</button>
+        </form>
+        <a class="log-in" href="#">Войти</a>
         <ul class="navigation_user_list">
           <li class="navigation_user_item">
             <a href="#">Сравнить</a>
@@ -33,6 +27,7 @@
       </div>
       <nav class="navigation_menu">
         <a class="navigation_menu_catalog" href="catalog.html">Каталог товаров</a>
+        <a class="visually-hidden navigation_menu_plus" href="#">+</a>
         <ul class="navigation_menu_list">
           <li class="navigation_menu_item">
             <a href="#">Доставка</a>
@@ -46,7 +41,7 @@
         </ul>
       </nav>
     </header>
-    <main class="main_index">
+    <main class="main_index main-container">
       <h1 class="visually-hidden">Интернет-магазин Device</h1>
       <section class="main-slider">
         <h2 class="visually-hidden">Слайдер с новинками интернет-магазина</h2>
@@ -72,53 +67,55 @@
         <ol class="slider_properties_list">
           <li class="slider_item">
             <img class="slider_image" src="./images/slider/slider_1.png" width="560" height="560" alt="Квадрокоптер с лазером, замаскированным под камеру." >
-            <span class="slider_number">01</span>
-            <div class="slider_item">
-              <p class="slider_promo">Порхает как бабочка, жалит как пчела!</p>
-              <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-            </div>
-            <a class="slider_more-detailed" href="#">Подробнее</a>
-            <div>
-              <b>800 м</b>
-              <span>Дальность полёта</span>
-            </div>
-            <div>
-              <b>50 м</b>
-              <span>Радиус поражения</span>
+            <div class="slider_item_wrapper">
+              <span class="slider_number">01</span>
+              <div class="slider_text">
+                <p class="slider_promo">Порхает как бабочка, жалит как пчела!</p>
+                <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+              </div>
+              <a class="slider_more-detailed" href="#">Подробнее</a>
+              <dl class="slider_features">
+                <dt>800 м</dt>
+                <dd>Дальность полёта</dd>
+              </dl>
+              <dl class="slider_features">
+                <dt>50 м</dt>
+                <dd>Радиус поражения</dd>
+              </dl>
             </div>
           </li>
           <li class="slider_item">
             <img class="slider_image" src="./images/slider/slider_2.png" width="560" height="560" alt="Мотивирующий фитнес-браслет черного цвета." >
-            <span class="slider_number">02</span>
-            <div class="slider_item">
-              <p class="slider_promo">Худеем правильно!</p>
-              <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-            </div>
-            <a class="slider_more-detailed" href="#">Подробнее</a>
-            <div>
-              <b>48 часов</b>
-              <span>Без подзарядки</span>
+            <div class="slider_item_wrapper">
+              <span class="slider_number">02</span>
+              <div class="slider_text">
+                <p class="slider_promo">Худеем правильно!</p>
+                <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+              </div>
+              <a class="slider_more-detailed" href="#">Подробнее</a>
+              <dl class="slider_features">
+                <dt>48 часов</dt>
+                <dd>Без подзарядки</dd>
+              </dl>
             </div>
           </li>
           <li class="slider_item">
             <img class="slider_image" src="./images/slider/slider_3.png" width="560" height="560" alt="Чёрная телескопическая палка для селфи с ремешком." >
-            <span class="slider_number">03</span>
-            <div class="slider_item">
-              <p class="slider_promo">Делай селфи, как Бен Стиллер!</p>
-              <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
-            </div>
-            <a class="slider_more-detailed" href="#">Подробнее</a>
-            <div>
-              <b>8,5 м</b>
-              <span>Длина палки</span>
-            </div>
-            <div>
-              <b>5 кг</b>
-              <span>Вес палки</span>
-            </div>
-            <div>
-              <b>Карбон</b>
-              <span>Материал</span>
+            <div class="slider_item_wrapper">
+              <span class="slider_number">03</span>
+              <div class="slider_text">
+                <p class="slider_promo">Делай селфи, как Бен Стиллер!</p>
+                <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
+              </div>
+              <a class="slider_more-detailed" href="#">Подробнее</a>
+              <dl class="slider_features">
+                <dt>8,5 м</dt>
+                  <dd>Длина палки</dd>
+                <dt>5 кг</dt>
+                  <dd>Вес палки</dd>
+                <dt>Карбон</dt>
+                  <dd>Материал</dd>
+              </dl>
             </div>
           </li>
         </ol>
@@ -156,15 +153,15 @@
         <ol class="index_benefits_list">
           <li class="index_benefits_item">
             <h3>Доставка</h3>
-            <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+            <p class="index_benefits_text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
           </li>
-          <li class="benefits_list_item">
+          <li class="index_benefits_item">
             <h3>Гарантия</h3>
-            <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+            <p class="index_benefits_text">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
           </li>
-          <li class="benefits_list_item">
+          <li class="index_benefits_item">
             <h3>Кредит</h3>
-            <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
+            <p class="index_benefits_text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
           </li>
         </ol>
       </section>
@@ -174,8 +171,8 @@
       <section class="about-shop">
         <h2 class="visualy-hiden">Информация о магазине и контакты</h2>
         <h3 class="about-us">О нас</h3>
-        <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-        <p>Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:</p>
+        <p class="about-us_text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+        <p class="about-us_text">Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:</p>
         <ul class="delivery_line_list">
           <li class="delivery_line_item">Меловые линии</li>
           <li class="delivery_line_item">СДИК</li>
@@ -196,13 +193,15 @@
         </ul>
         <a class="about-shop_link" href="#">Напишите нам</a>
       </section>
-      <h2 class="mailing-list_title">Подпишитесь на рассылку</h2>
-      <p class="mailing-list_text">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
-      <form class="mailing-list_form" action="https://echo.htmlacademy.ru/">
-        <input type="email" placeholder="Ваш e-mail">
-        <button class="email_button" type="submit">Подписаться</button>
+      <div class="mailing-list_container">
+        <h2 class="mailing-list_title">Подпишитесь на рассылку</h2>
+        <p class="mailing-list_text">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
+        <form class="mailing-list_form" action="https://echo.htmlacademy.ru/">
+          <input type="email" placeholder="Ваш e-mail">
+          <button class="email_button" type="submit">Подписаться</button>
+        </form>
         <span>Это бесплатно</span>
-      </form>
+      </div>
     </main>
     <footer class="footer_index">
       <section class="footer_address">

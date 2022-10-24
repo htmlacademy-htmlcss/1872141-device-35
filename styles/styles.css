@@ -1,3 +1,4 @@
+/*Используемуе шрифты*/
 @font-face {
   font-family: "rubik";
   font-style: normal;
@@ -22,31 +23,20 @@
   font-display: swap;
 }
 
-html {
-  height: 100%;
-}
-
+/*Свойства шрифтов главная страница*/
 body {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
   font-family: "rubik", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
+  color: #000000;
+  background-color: #ffffff;
 }
 
+/*Свойства шрифтов хедэр главная страница*/
 .page_header {
   background-color: #ffe17f;
-  width: 1040px;
-  padding: 0 60px;
-  margin: 0 auto;
-}
-
-.page_header ul {
-  list-style-type: none;
-  padding: 0;
+  color: #000000;
 }
 
 .page_header a,
@@ -55,47 +45,12 @@ body {
   text-decoration: none;
 }
 
-.header_menu_container {
-  display: flex;
-}
-
-.header_search-user_container,
-.header_menu_list {
-  display: flex;
-}
-
-.header_search {
-  width: 517px;
-  margin-right: 26px;
-}
-
-.search {
+.header_search_form input,
+.header_search_form button {
   font-size: 16px;
   line-height: 20px;
-}
-
-.search_button {
-  font-size: 16px;
-  line-height: 20px;
-  text-align: center;
-}
-
-.log-in_list {
-  width: 231px;
-}
-
-.log-out_name {
-  width: 146px;
-  margin-right: 28px;
-}
-
-.log-out_item {
-  width: 56px;
-}
-
-.navigation_user_list {
-  width: 240px;
-  margin-left: auto;
+  color: #000000;
+  background-color: #ffe17f;
 }
 
 .navigation_menu_catalog,
@@ -109,26 +64,7 @@ body {
   text-transform: uppercase;
 }
 
-.navigation_menu {
-  display: flex;
-}
-
-.navigation_menu_catalog {
-  width: 293px;
-}
-
-.navigation_menu_list {
-  width: 431px;
-  margin-left: auto;
-}
-
-
-
-.main_index,
-.main_catalog {
-  flex-grow: 1;
-}
-
+/*Свойства шрифтов мэйн главная страница*/
 .slider_number {
   font-weight: 700;
   font-size: 180px;
@@ -146,17 +82,17 @@ body {
   line-height: 50px;
 }
 
-.slider_text {
+.slider_text p+p{
   color: #444444;
 }
 
 .slider_features dt {
-  color: #444444;
-  font-size: 16px;
+  font-size: 36px;
 }
 
 .slider_features dd {
-  font-size: 36px;
+  color: #444444;
+  font-size: 16px;
 }
 
 .index_category_item {
@@ -165,31 +101,37 @@ body {
   line-height: 24px;
 }
 
+.index_benefits {
+  color: #000000;
+  background-color: #f0f0f0;
+}
+
+.index_benefits_button {
+    font-size: 18px;
+}
+
 .index_benefits_current {
   color: #ffe17f;
   background-color: #000000;
 }
 
-.index_benefits {
+.index_benefits_text {
   color: #444444;
-  background-color: #f0f0f0;
 }
 
 .delivery_wrapper {
-  width: 1160px;
   background-color: #f0f0f0;
-  text-align: center;
 }
 
 .delivery {
   font-family: "raleway", sans-serif;
   font-weight: 800;
   font-size: 20px;
-  line-height: 23.48px;
+  line-height: 23px;
   text-transform: uppercase;
 }
 
-.about-shop p {
+.about-us_text {
   color: #444444;
 }
 
@@ -205,6 +147,7 @@ body {
 }
 
 .contacts_address_text {
+  color: #444444;
   font-style: normal;
 }
 
@@ -217,16 +160,31 @@ body {
   color: #444444;
 }
 
-.mailing-list_form {
+.mailing-list_container {
   color: #444444;
+  background-color: #f0f0f0;
 }
 
-.email_button {
+.mailing-list_title {
   color: #000000;
+}
+
+.mailing-list_form input {
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
+  background-color: #f0f0f0;
+}
+
+.mailing-list_form button {
+  color: #000000;
+  background-color: #f0f0f0;
+  font-size: 18px;
   line-height: 21px;
   text-transform: uppercase;
 }
 
+/*Свойства шрифтов футер главная страница*/
 .footer_index {
   color: #ffffff;
   background-color: #444444;
@@ -253,6 +211,13 @@ body {
 
 .footer_phone {
   color: #ffffff;
+  text-decoration: underline;
+}
+
+/*Свойства шрифтов страница каталога*/
+.main_catalog a {
+  color: #000000;
+  text-decoration: none;
 }
 
 .bread-crumbs h1 {
@@ -262,11 +227,8 @@ body {
   line-height: 50px;
 }
 
-.main_catalog a:not(.pagination_link) {
-  color: #000000;
-  font-size: 16px;
-  line-height: 19px;
-  text-decoration: none;
+.bread-crumbs_item {
+  line-height: 20px;
 }
 
 .catalog_filter h2,
@@ -319,4 +281,133 @@ body {
   color: #444444;
   font-size: 16px;
   text-decoration: none;
+}
+
+/*Построение сетки + стики-футер*/
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+/*Построение сетки хедэр главной страницы*/
+.page_header {
+  width: 1160px;
+  padding: 0 60px;
+  margin: 0 auto;
+}
+
+.header_menu_container {
+  display: flex;
+  margin: 46px auto 30px;
+}
+
+.header_search_form {
+  width: 517px;
+  height: 40px;
+  display: flex;
+}
+
+.header_search_form input {
+  width: 359px;
+  border: 2px solid #000000;
+  border-radius: 50px 0 0 50px;
+  padding: 0;
+  padding-left: 48px;
+}
+
+.header_search_form button {
+  width: 160px;
+  border: 2px solid #000000;
+  border-radius: 0 50px 50px 0;
+  padding: 0;
+  text-align: center;
+}
+
+.log-in {
+  width: 204px;
+  padding-left: 27px;
+  margin: auto 26px;
+}
+
+.navigation_user_list {
+  display: flex;
+  margin: 0 0 0 auto;
+  justify-content: end;
+  align-items: center;
+  gap: 10px 36px;
+  flex-wrap: wrap;
+}
+
+.navigation_user_item:nth-child(1)  {
+  width: 93px;
+  padding-left: 12px;
+}
+
+.navigation_user_item:nth-child(2)  {
+  width: 74px;
+  padding-left: 25px;
+}
+
+.navigation_menu {
+  display: flex;
+}
+
+.navigation_menu_catalog {
+  width: 236px;
+  margin: auto 0;
+}
+
+.navigation_menu_plus {
+  width: 50px;
+  margin: auto 7px;
+}
+
+.navigation_menu_list {
+  width: 471px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  margin-bottom: 13px;
+  margin-left: auto;
+  gap: 10px 45px;
+
+}
+
+.navigation_menu_item {
+  width: 127px;
+}
+
+/*Построение сетки хедэр страницы каталога*/
+.user-name {
+  width: 119px;
+  padding-left: 27px;
+  margin-left: 26px;
+  align-self: center;
+}
+
+.log-out {
+  width: 56px;
+  margin: auto 28px;
+}
+
+/*Построение сетки мэйн страницы каталога*/
+.main-container {
+  flex-grow: 1;
+}
+
+.delivery_wrapper {
+  width: 1160px;
+  text-align: center;
 }

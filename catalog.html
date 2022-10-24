@@ -10,23 +10,13 @@
       <a class="logo" href="index.html">
         <img src="./images/logo_device.svg" width="145" height="36" alt="Логотип интернет-магазина Device.">
       </a>
-      <!-- А не лучше ли будет убрать следующий список и заменить его на форму поиска и
-        div-контейнер с ссылками user-name + log-out?-->
       <div class="header_menu_container">
-        <ul class="header_menu_list">
-          <li class="header_search">
-            <form class="header_search_form" action="https://echo.htmlacademy.ru/">
-              <input type="search" id="search_input" placeholder="Текст поиска">
-              <button class="search_buttun" type="submit">Найти</button>
-            </form>
-          </li>
-          <li class="log-out_name">
-            <a class="user-name" href="#">Коля Петухов</a>
-          </li>
-          <li class="log-out_item">
-            <a class="log-out" href="#">Выйти</a>
-          </li>
-        </ul>
+        <form class="header_search_form" action="https://echo.htmlacademy.ru/">
+          <input type="search" id="search_input" placeholder="Текст поиска">
+          <button class="search_buttun" type="submit">Найти</button>
+        </form>
+        <a class="user-name" href="#">Коля Петухов</a>
+        <a class="log-out" href="#">Выйти</a>
         <ul class="navigation_user_list">
           <li class="navigation_user_item">
             <a href="#">Сравнить</a>
@@ -38,6 +28,7 @@
       </div>
       <nav class="navigation_menu">
         <a class="navigation_menu_catalog" href="catalog.html">Каталог товаров</a>
+        <a class="visually-hidden navigation_menu_plus" href="#">+</a>
         <ul class="navigation_menu_list">
           <li class="navigation_menu_item">
             <a href="#">Доставка</a>
@@ -51,7 +42,7 @@
         </ul>
       </nav>
     </header>
-    <main class="main_catalog">
+    <main class="main_catalog main-container">
       <section class="bread-crumbs">
         <h1>Моноподы для селфи</h1>
         <ol class="bread-crumbs_list">

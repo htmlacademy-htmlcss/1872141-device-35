@@ -12,7 +12,7 @@
       </a>
       <div class="header_menu_container">
         <form class="header_search_form" action="https://echo.htmlacademy.ru/">
-          <input type="search" id="search_input" placeholder="Поиск по сайту">
+          <input type="search" id="search_input" placeholder="Поиск по сайту" required>
           <button class="search_buttun" type="submit">Найти</button>
         </form>
         <a class="log-in" href="#">Войти</a>
@@ -27,7 +27,7 @@
       </div>
       <nav class="navigation_menu">
         <a class="navigation_menu_catalog" href="catalog.html">Каталог товаров</a>
-        <a class="visually-hidden navigation_menu_plus" href="#">+</a>
+        <button class="visually-hidden navigation_menu_plus" type="button">+</button>
         <ul class="navigation_menu_list">
           <li class="navigation_menu_item">
             <a href="#">Доставка</a>
@@ -202,18 +202,17 @@
           <a class="about-shop_link" href="#">Напишите нам</a>
         </div>
       </section>
-      <!--Допустимо ли применять тут aside?-->
-      <aside class="mailing-list_container">
+      <section class="mailing-list_container">
         <div class="mailng-list_wrapper">
           <h2 class="mailing-list_title">Подпишитесь на рассылку</h2>
           <p class="mailing-list_text">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
           <form class="mailing-list_form" action="https://echo.htmlacademy.ru/">
-            <input type="email" placeholder="Ваш e-mail">
+            <input type="email" placeholder="Ваш e-mail" required>
             <button class="email_button" type="submit">Подписаться</button>
           </form>
           <span>Это бесплатно</span>
         </div>
-      </aside>
+      </section>
     </main>
     <footer class="footer_index">
       <section class="footer_index_container">

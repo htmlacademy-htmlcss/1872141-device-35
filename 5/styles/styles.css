@@ -324,8 +324,19 @@ body {
   min-height: 100%;
 }
 
-ul,
-ol {
+.navigation_user_list,
+.navigation_menu_list,
+.index_category_list,
+.delivery_line_list,
+.contacts_timetable,
+.footer_navigation_list,
+.footer_social_list,
+.slider_properties_list,
+.index_benefits_list,
+.filter_list,
+.product_monopod_list,
+.pagination_list,
+.bread-crumbs_list {
   list-style-type: none;
   padding: 0;
 }

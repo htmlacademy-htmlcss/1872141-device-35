@@ -481,16 +481,78 @@ body {
 .slider_item {
   display: flex;
   width: 1160px;
+  column-gap: 40px;
+}
+
+.slider_image {
+  display: block;
+}
+
+.slider_item_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 560px;
+  min-height: 401px;
+  margin-top: 121px;
+  margin-bottom: 38px;
+  row-gap: 50px;
 }
 
 .slider_number {
-  margin-top: 13px;
+  margin-top: 29px;
+}
+
+.slider_promo {
+  margin: 0;
+  min-height: 100px;
+  margin-bottom: 29px;
+}
+
+.slider_text p+p{
+  margin: 0;
+  min-height: 60px;
+}
+
+.slider_more-detailed {
+  width: 220px;
+  height: 40px;
+  display: block;
+}
+
+.slider_features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+}
+
+.slider_features dl {
+  min-width: fit-content;
+  margin: 0;
+}
+
+.slider_features dd {
+  margin-left: 0;
+  margin-top: 12px;
 }
 
 .index_category_list {
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px 40px;
   width: 1160px;
   justify-content: space-between;
+}
+
+.index_category_item {
+  width: 160px;
+  height: 253px;
+}
+
+.index_category_link {
+  display: block;
+  padding-top: 193px;
+  height: 60px;
 }
 
 .index_benefits_container {
@@ -499,15 +561,38 @@ body {
   margin: 0 auto;
 }
 
-.index_benefits_buttons,
+.index_benefits_buttons {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  height: 190px;
+  margin: 65px 0;
+  gap: 45px;
+}
+
 .index_benefits_button {
   width: 280px;
+  height: 40px;
 }
 
 .index_benefits_list {
+  width: 694px;
+  margin-left: 116px;
+}
+
+.index_benefits_item {
   width: 448px;
-  padding-left: 116px;
-  margin-right: auto;
+  padding-right: 246px;
+  margin-top: 72px;
+}
+
+.index_benefits_title {
+  margin: 0;
+  margin-bottom: 34px;
+}
+
+.index_benefits_text {
+  margin: 0;
 }
 
 .delivery_wrapper {
@@ -525,8 +610,65 @@ body {
   width: 520px;
 }
 
+.about-shop h3 {
+  margin: 0;
+  margin-bottom: 48px;
+  height: 50px;
+  padding-top: 47px;
+}
+
+.about-shop p:not(.contacts_address_text) {
+  margin: 0;
+  min-height: 60px;
+}
+
+.about-us_block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.delivery_line_item {
+  height: 20px;
+  padding-left: 34px;
+  margin-bottom: 19px;
+}
+
+.delivery_line_item:last-child {
+  margin-bottom: 0;
+}
+
+.about-shop_link {
+  display: block;
+  width: 270px;
+  height: 20px;
+  text-align: center;
+  padding-top: 10px;
+}
+
 .contacts_container {
   width: 532px;
+}
+
+.contacts_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contacts_subtitle {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.contacts_address_text {
+  margin: 0;
+  min-height: 30px;
+}
+
+.contacts_phone {
+  width: 30px;
 }
 
 .mailing-list_container {

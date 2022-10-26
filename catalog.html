@@ -51,7 +51,7 @@
     </header>
     <main class="main_catalog main-container">
       <section class="bread-crumbs">
-        <h1>Моноподы для селфи</h1>
+        <h1 class="bread-crumbs_title">Моноподы для селфи</h1>
         <ol class="bread-crumbs_list">
           <li class="bread-crumbs_item">
             <a href="index.html">Главная</a>
@@ -67,8 +67,8 @@
       <section class="catalog">
         <div class="catalog_wrapper">
           <div class="catalog_filter">
-            <h2>фильтр:</h2>
-            <form action="https://echo.htmlacademy.ru/" method="get">
+            <h2 class="catalog_filter_subtitle">фильтр:</h2>
+            <form class="catalog_filter_form" action="https://echo.htmlacademy.ru/" method="get">
               <fieldset class="filter_price">
                 <legend class="filter_title">Стоимость</legend>
                 <ul class="filter_list">
@@ -132,7 +132,7 @@
           </div>
           <div class="select_product-page_container">
             <div class="select_container">
-              <h2>сортировка:</h2>
+              <h2 class="select_container_subtitle">сортировка:</h2>
               <select class="select_control" aria-label="Сортировка">
                 <option class="popul" value="popular">Популярные</option>
                 <option value="cheap">Дешёвые</option>
@@ -144,38 +144,51 @@
               </div>
             </div>
             <div class="product-page_monopod">
-              <!--
-                Скрыто, чтобы не ломало разметку, пока не будет прописано свойство visually-hidden
               <h2 class="visually-hidden">Каталог моноподов для селфи</h2>
-              -->
               <ul class="product_monopod_list">
                 <li class="product_monopod_card">
                   <a class="product_card_link" href="#">
                     <img class="product_card_image" src="./images/catalog_products/product_1.jpg" width="360" height="380" alt="Недорогой популярный монопод с чёрной ручкой.">
-                    <h3 class="product_card_title">Любительская селфи-палка</h3>
                   </a>
-                  <b class="product_card_price">500 ₽</b>
+                  <div class="product_card_block">
+                    <a class="product_card_link" href="#">
+                      <h3 class="product_card_title">Любительская селфи-палка</h3>
+                    </a>
+                    <span class="product_card_price">500 ₽</span>
+                  </div>
                 </li>
                 <li class="product_monopod_card">
                   <a class="product_card_link" href="#">
                     <img class="product_card_image" src="./images/catalog_products/product_2.jpg" width="360" height="380" alt="Профессиональный монопод в чёрном исполнении.">
-                    <h3 class="product_card_title">Профессиональная селфи-палка</h3>
                   </a>
-                  <b class="product_card_price">1 500 ₽</b>
+                  <div class="product_card_block">
+                    <a class="product_card_link" href="#">
+                      <h3 class="product_card_title">Профессиональная селфи-палка</h3>
+                    </a>
+                    <span class="product_card_price">1 500 ₽</span>
+                  </div>
                 </li>
                 <li class="product_monopod_card">
                   <a class="product_card_link" href="#">
                     <img class="product_card_image" src="./images/catalog_products/product_3.jpg" width="360" height="380" alt="Монопод влагозащищённый обрезиненный со шнурком.">
-                    <h3 class="product_card_title">Непотопляемая селфи-палка</h3>
                   </a>
-                  <b class="product_card_price">2 500 ₽</b>
+                  <div class="product_card_block">
+                    <a class="product_card_link" href="#">
+                      <h3 class="product_card_title">Непотопляемая селфи-палка</h3>
+                    </a>
+                    <span class="product_card_price">2 500 ₽</span>
+                  </div>
                 </li>
                 <li class="product_monopod_card">
                   <a class="product_card_link" href="#">
                     <img class="product_card_image" src="./images/catalog_products/product_4.jpg" width="360" height="380" alt="Монопод в виде человеческой руки.">
-                    <h3 class="product_card_title">Селфи-палка «Следуй за мной»</h3>
                   </a>
-                  <b class="product_card_price">1 500 ₽</b>
+                  <div class="product_card_block">
+                    <a class="product_card_link" href="#">
+                      <h3 class="product_card_title">Селфи-палка «Следуй за мной»</h3>
+                    </a>
+                    <span class="product_card_price">1 500 ₽</span>
+                  </div>
                 </li>
               </ul>
               <button class="pagination_show-more" type="button">Загрузить ещё</button>

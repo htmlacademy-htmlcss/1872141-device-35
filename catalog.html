@@ -7,16 +7,21 @@
   </head>
   <body>
     <header class="page_header">
+      <!--
+          Скрыто до следующих разделов, чтобы вёрстка соответствовала макету
       <a class="logo" href="index.html">
-        <img src="./images/logo_device.svg" width="145" height="36" alt="Логотип интернет-магазина Device.">
+        <img src="images/logo_device.svg" width="145" height="36" alt="Логотип интернет-магазина Device.">
       </a>
+      -->
       <div class="header_menu_container">
         <form class="header_search_form" action="https://echo.htmlacademy.ru/">
-          <input type="search" id="search_input" placeholder="Текст поиска" required>
+          <input type="search" id="search_input" placeholder="Поиск по сайту" required>
           <button class="search_buttun" type="submit">Найти</button>
         </form>
-        <a class="user-name" href="#">Коля Петухов</a>
-        <a class="log-out" href="#">Выйти</a>
+        <div class="log-in_block">
+          <a class="user-name" href="#">Коля Петухов</a>
+          <a class="log-out" href="#">Выйти</a>
+        </div>
         <ul class="navigation_user_list">
           <li class="navigation_user_item">
             <a href="#">Сравнить</a>
@@ -27,8 +32,10 @@
         </ul>
       </div>
       <nav class="navigation_menu">
-        <a class="navigation_menu_catalog" href="catalog.html">Каталог товаров</a>
-        <button class="visually-hidden navigation_menu_plus" type="button">+</button>
+        <div class="navigation_menu_block">
+          <a class="navigation_menu_link" href="catalog.html">Каталог товаров</a>
+          <button class="navigation_menu_plus" type="button">+</button>
+        </div>
         <ul class="navigation_menu_list">
           <li class="navigation_menu_item">
             <a href="#">Доставка</a>

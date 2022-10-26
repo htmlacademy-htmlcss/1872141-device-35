@@ -53,7 +53,7 @@ body {
   background-color: #ffe17f;
 }
 
-.navigation_menu_catalog,
+.navigation_menu_link,
 .navigation_menu_item,
 .slider_more-detailed,
 .index_benefits_button,
@@ -350,18 +350,22 @@ body {
 .bread-crumbs_list {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 /*Построение сетки хедэр главной страницы*/
 .page_header {
   width: 1040px;
+  min-height: 300px;
   padding: 0 60px;
   margin: 0 auto;
+  margin-top: 40px;
 }
 
 .header_menu_container {
   display: flex;
   margin: 46px auto 30px;
+  justify-content: space-between;
 }
 
 .header_search_form {
@@ -389,12 +393,12 @@ body {
 .log-in {
   width: 204px;
   padding-left: 27px;
-  margin: auto 26px;
+  align-self: center;
 }
 
 .navigation_user_list {
   display: flex;
-  margin: 0 0 0 auto;
+  margin: 0;
   justify-content: end;
   align-items: center;
   gap: 10px 36px;
@@ -413,16 +417,23 @@ body {
 
 .navigation_menu {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 50px;
 }
 
-.navigation_menu_catalog {
+.navigation_menu_block {
+  display: flex;
+  margin-right: 5px;
+}
+
+.navigation_menu_link {
   width: 236px;
-  margin: auto 0;
 }
 
 .navigation_menu_plus {
   width: 50px;
-  margin: auto 7px;
+  margin-left: 7px;
 }
 
 .navigation_menu_list {
@@ -430,27 +441,29 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: end;
-  margin-bottom: 13px;
-  margin-left: auto;
   gap: 10px 45px;
-
 }
 
 .navigation_menu_item {
   width: 127px;
+  text-align: end;
 }
 
 /*Доп свойства сетки хедэр страницы каталога*/
+.log-in_block {
+  display: flex;
+  justify-content: space-between;
+  width: 230px;
+  align-items: center;
+}
+
 .user-name {
   width: 119px;
   padding-left: 27px;
-  margin-left: 26px;
-  align-self: center;
 }
 
 .log-out {
   width: 56px;
-  margin: auto 27px auto 28px;
 }
 
 /*Построение сетки мэйн главной страницы*/
@@ -468,7 +481,10 @@ body {
 .slider_item {
   display: flex;
   width: 1160px;
+}
 
+.slider_number {
+  margin-top: 13px;
 }
 
 .index_category_list {

@@ -652,22 +652,78 @@ body {
 /*Построение сетки футер главной страницы*/
 .footer_index_container {
   width: 1160px;
+  min-height: 198px;
   display: flex;
   flex-wrap: wrap;
-  margin: 62px auto 65px;
+  margin: 0 auto;
   justify-content: center;
 }
 
 .footer_address {
   width: 234px;
+  min-height: 182px;
+  margin-top: 62px;
+  margin-bottom: 77px;
+}
+
+.footer_logo {
+  margin: 0;
+}
+
+.footer_logo_image {
+  display: block;
+}
+
+.footer_address_text {
+  margin-top: 35px;
+  height: 40px;
 }
 
 .footer_nav-social_container {
   width: 444px;
-  margin-left: auto;
-  margin-right: auto;
+  min-height: 123px;
+  margin-left: 10.6%;
+  margin-right: 15.7%;
+  margin-top: 137px;
+  margin-bottom: 61px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer_navigation_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 5px;
+}
+
+.footer_social_list {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 150px;
+  column-gap: 10px;
+  justify-content: center;
+}
+
+/*Рамка и изменение размеров временные, для обозначения занятого места*/
+.footer_social_item {
+  width: 36px;
+  height: 36px;
+  align-self: center;
+  border: 1px solid #ffffff;
 }
 
 .footer_other {
   width: 175px;
+  margin-top: 140px;
+  margin-bottom: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.footer_other_image {
+  display: block;
 }

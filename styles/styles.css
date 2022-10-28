@@ -53,7 +53,7 @@ body {
   background-color: #ffe17f;
 }
 
-.navigation_menu_catalog,
+.navigation_menu_link,
 .navigation_menu_item,
 .slider_more-detailed,
 .index_benefits_button,
@@ -324,6 +324,17 @@ body {
   min-height: 100%;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .navigation_user_list,
 .navigation_menu_list,
 .index_category_list,
@@ -339,18 +350,22 @@ body {
 .bread-crumbs_list {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 /*Построение сетки хедэр главной страницы*/
 .page_header {
   width: 1040px;
+  min-height: 300px;
   padding: 0 60px;
   margin: 0 auto;
+  margin-top: 40px;
 }
 
 .header_menu_container {
   display: flex;
   margin: 46px auto 30px;
+  justify-content: space-between;
 }
 
 .header_search_form {
@@ -378,12 +393,12 @@ body {
 .log-in {
   width: 204px;
   padding-left: 27px;
-  margin: auto 26px;
+  align-self: center;
 }
 
 .navigation_user_list {
   display: flex;
-  margin: 0 0 0 auto;
+  margin: 0;
   justify-content: end;
   align-items: center;
   gap: 10px 36px;
@@ -402,16 +417,23 @@ body {
 
 .navigation_menu {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 50px;
 }
 
-.navigation_menu_catalog {
+.navigation_menu_block {
+  display: flex;
+  margin-right: 5px;
+}
+
+.navigation_menu_link {
   width: 236px;
-  margin: auto 0;
 }
 
 .navigation_menu_plus {
   width: 50px;
-  margin: auto 7px;
+  margin-left: 7px;
 }
 
 .navigation_menu_list {
@@ -419,27 +441,29 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: end;
-  margin-bottom: 13px;
-  margin-left: auto;
   gap: 10px 45px;
-
 }
 
 .navigation_menu_item {
   width: 127px;
+  text-align: end;
 }
 
 /*Доп свойства сетки хедэр страницы каталога*/
+.log-in_block {
+  display: flex;
+  justify-content: space-between;
+  width: 230px;
+  align-items: center;
+}
+
 .user-name {
   width: 119px;
   padding-left: 27px;
-  margin-left: 26px;
-  align-self: center;
 }
 
 .log-out {
   width: 56px;
-  margin: auto 27px auto 28px;
 }
 
 /*Построение сетки мэйн главной страницы*/
@@ -457,13 +481,78 @@ body {
 .slider_item {
   display: flex;
   width: 1160px;
+  column-gap: 40px;
+}
 
+.slider_image {
+  display: block;
+}
+
+.slider_item_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 560px;
+  min-height: 401px;
+  margin-top: 121px;
+  margin-bottom: 38px;
+  row-gap: 50px;
+}
+
+.slider_number {
+  margin-top: 29px;
+}
+
+.slider_promo {
+  margin: 0;
+  min-height: 100px;
+  margin-bottom: 29px;
+}
+
+.slider_text p+p{
+  margin: 0;
+  min-height: 60px;
+}
+
+.slider_more-detailed {
+  width: 220px;
+  height: 40px;
+  display: block;
+}
+
+.slider_features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+}
+
+.slider_features dl {
+  min-width: fit-content;
+  margin: 0;
+}
+
+.slider_features dd {
+  margin-left: 0;
+  margin-top: 12px;
 }
 
 .index_category_list {
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px 40px;
   width: 1160px;
   justify-content: space-between;
+}
+
+.index_category_item {
+  width: 160px;
+  height: 253px;
+}
+
+.index_category_link {
+  display: block;
+  padding-top: 193px;
+  height: 60px;
 }
 
 .index_benefits_container {
@@ -472,15 +561,38 @@ body {
   margin: 0 auto;
 }
 
-.index_benefits_buttons,
+.index_benefits_buttons {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  min-height: 190px;
+  margin: 65px 0;
+  gap: 45px;
+}
+
 .index_benefits_button {
   width: 280px;
+  height: 40px;
 }
 
 .index_benefits_list {
+  width: 694px;
+  margin-left: 116px;
+}
+
+.index_benefits_item {
   width: 448px;
-  padding-left: 116px;
-  margin-right: auto;
+  padding-right: 246px;
+  margin-top: 72px;
+}
+
+.index_benefits_title {
+  margin: 0;
+  margin-bottom: 34px;
+}
+
+.index_benefits_text {
+  margin: 0;
 }
 
 .delivery_wrapper {
@@ -498,8 +610,62 @@ body {
   width: 520px;
 }
 
+.about-shop h3 {
+  margin: 0;
+  margin-bottom: 48px;
+  padding-top: 47px;
+}
+
+.about-shop p:not(.contacts_address_text) {
+  margin: 0;
+  min-height: 60px;
+}
+
+.about-us_block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.delivery_line_item {
+  height: 20px;
+  padding-left: 34px;
+  margin-bottom: 19px;
+}
+
+.delivery_line_item:last-child {
+  margin-bottom: 0;
+}
+
+.about-shop_link {
+  display: block;
+  width: 270px;
+  height: 20px;
+  text-align: center;
+  padding-top: 10px;
+}
+
 .contacts_container {
   width: 532px;
+}
+
+.contacts_subtitle {
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.contacts_address_text {
+  margin: 0;
+}
+
+.contacts_phone {
+  width: 30px;
+}
+
+.contacts_timetable {
+  margin-bottom: 30px;
 }
 
 .mailing-list_container {
@@ -555,6 +721,10 @@ body {
   margin: 35px auto 34px;
 }
 
+.bread-crumbs_title {
+  margin: 0;
+}
+
 .bread-crumbs_list {
   display: flex;
   flex-wrap: wrap;
@@ -577,6 +747,56 @@ body {
   padding-left: 60px;
 }
 
+.catalog_filter_subtitle {
+  margin: 25px 0;
+}
+
+.catalog_filter_form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 35px;
+}
+
+.filter_price {
+  height: 95px;
+}
+
+.filter_title {
+  height: 20px;
+  padding-top: 12px;
+  margin-bottom: 20px;
+}
+
+/*Временное свойство. Ждёт реализации двойного ползунка*/
+.filter_list p {
+  margin: 0;
+}
+
+.filter_item {
+  width: 200px;
+  margin: 0;
+  margin-bottom: 17px;
+  height: 20px;
+}
+
+.filter_item:last-child {
+  margin-bottom: 0;
+}
+
+.filter_button {
+  border: 0;
+  padding: 0;
+  height: 40px;
+  width: 210px;
+  margin-top: 10px;
+}
+
+.control_input {
+  height: 20px;
+  width: 20px;
+}
+
 .select_product-page_container {
   width: 840px;
 }
@@ -585,6 +805,23 @@ body {
   display: flex;
   justify-content: space-between;
   margin:  0 40px;
+  height: 70px;
+  align-items: center;
+}
+
+.select_container_subtitle {
+  margin: 0;
+  width: 147px;
+}
+
+.select_container select {
+  width: 142px;
+}
+
+.sort-up_arrows_wrapper {
+  width: 58px;
+  height: 28px;
+  border: 1px solid red;
 }
 
 .product-page_monopod {
@@ -602,45 +839,139 @@ body {
   gap: 44px 40px;
 }
 
+.product_card_image {
+  display: block;
+}
+
+.product_card_block {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.product_card_title {
+  margin: 0;
+  max-width: 240px;
+  padding-top: 32px;
+}
+
+.product_card_price {
+  padding-top: 32px;
+}
+
 .pagination_show-more {
   width: 760px;
+  height: 55px;
 }
 
 .pagination_container {
   width: 760px;
+  height: 71px;
   display: flex;
   margin-bottom: 78px;
   justify-content: space-between;
 }
 
+.pagination_button {
+  width: 128px;
+  text-align: center;
+  height: 21px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
 .pagination_list {
   display: flex;
   margin: 0;
+  align-items: center;
 }
 
 .pagination_item {
   width: 40px;
+  height: 40px;
+  text-align: center;
+}
+
+.pagination_link {
+  display: block;
+  min-width: 10px;
+  height: 40px;
+  box-sizing: border-box;
+  padding-top: 10px;
 }
 
 /*Построение сетки футер главной страницы*/
 .footer_index_container {
   width: 1160px;
+  min-height: 198px;
   display: flex;
   flex-wrap: wrap;
-  margin: 62px auto 65px;
+  margin: 0 auto;
   justify-content: center;
 }
 
 .footer_address {
   width: 234px;
+  min-height: 182px;
+  margin-top: 62px;
+  margin-bottom: 77px;
+}
+
+.footer_logo {
+  margin: 0;
+}
+
+.footer_logo_image {
+  display: block;
+}
+
+.footer_address_text {
+  margin-top: 35px;
 }
 
 .footer_nav-social_container {
   width: 444px;
-  margin-left: auto;
-  margin-right: auto;
+  min-height: 123px;
+  margin-left: 124px;
+  margin-right: 183px;
+  margin-top: 137px;
+  margin-bottom: 61px;
+}
+
+.footer_navigation_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 5px;
+  margin-bottom: 62px;
+}
+
+.footer_social_list {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 150px;
+  column-gap: 10px;
+  justify-content: center;
+}
+
+/*Рамка и изменение размеров временные, для обозначения занятого места*/
+.footer_social_item {
+  width: 36px;
+  height: 36px;
+  align-self: center;
+  border: 1px solid #ffffff;
 }
 
 .footer_other {
   width: 175px;
+  margin-top: 140px;
+  margin-bottom: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.footer_other_image {
+  display: block;
 }

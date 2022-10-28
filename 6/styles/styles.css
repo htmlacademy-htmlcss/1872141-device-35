@@ -565,7 +565,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 280px;
-  height: 190px;
+  min-height: 190px;
   margin: 65px 0;
   gap: 45px;
 }
@@ -613,7 +613,6 @@ body {
 .about-shop h3 {
   margin: 0;
   margin-bottom: 48px;
-  height: 50px;
   padding-top: 47px;
 }
 
@@ -651,24 +650,22 @@ body {
   width: 532px;
 }
 
-.contacts_wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
 .contacts_subtitle {
   margin: 0;
+  margin-top: 30px;
   margin-bottom: 15px;
 }
 
 .contacts_address_text {
   margin: 0;
-  min-height: 30px;
 }
 
 .contacts_phone {
   width: 30px;
+}
+
+.contacts_timetable {
+  margin-bottom: 30px;
 }
 
 .mailing-list_container {
@@ -726,7 +723,6 @@ body {
 
 .bread-crumbs_title {
   margin: 0;
-  height: 50px;
 }
 
 .bread-crumbs_list {
@@ -747,30 +743,19 @@ body {
 }
 
 .catalog_filter {
-  display: flex;
-  flex-direction: column;
   width: 260px;
   padding-left: 60px;
-  row-gap: 35px;
 }
 
 .catalog_filter_subtitle {
-  height: 20px;
-  margin: 0;
-  padding-top: 25px;
-  padding-bottom: 25px;
-}
-
-.catalog_filter_form {
-  display: flex;
-  flex-direction: column;
-  row-gap: 35px;
+  margin: 25px 0;
 }
 
 .catalog_filter_form fieldset {
   border: none;
   padding: 0;
   margin: 0;
+  margin-bottom: 35px;
 }
 
 .filter_price {
@@ -804,6 +789,7 @@ body {
   padding: 0;
   height: 40px;
   width: 210px;
+  margin-top: 10px;
 }
 
 .control_input {
@@ -866,7 +852,6 @@ body {
 .product_card_title {
   margin: 0;
   max-width: 240px;
-  height: 40px;
   padding-top: 32px;
 }
 
@@ -942,19 +927,15 @@ body {
 
 .footer_address_text {
   margin-top: 35px;
-  height: 40px;
 }
 
 .footer_nav-social_container {
   width: 444px;
   min-height: 123px;
-  margin-left: 10.6%;
-  margin-right: 15.7%;
+  margin-left: 124px;
+  margin-right: 183px;
   margin-top: 137px;
   margin-bottom: 61px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .footer_navigation_list {
@@ -962,6 +943,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   row-gap: 5px;
+  margin-bottom: 62px;
 }
 
 .footer_social_list {

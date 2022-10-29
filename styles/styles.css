@@ -479,13 +479,14 @@ body {
 }
 
 .slider_item {
-  display: flex;
-  width: 1160px;
+  display: grid;
+  grid-template-columns: repeat(2, 560px);
   column-gap: 40px;
 }
 
 .slider_image {
   display: block;
+  object-fit: contain;
 }
 
 .slider_item_wrapper {
@@ -802,7 +803,8 @@ body {
 }
 
 .select_container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 147px 142px 60px;
   justify-content: space-between;
   margin:  0 40px;
   height: 70px;
@@ -833,7 +835,8 @@ body {
 }
 
 .product_monopod_list {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 360px);
   flex-wrap: wrap;
   margin: 70px 40px 0;
   gap: 44px 40px;
@@ -841,6 +844,7 @@ body {
 
 .product_card_image {
   display: block;
+  object-fit: contain;
 }
 
 .product_card_block {

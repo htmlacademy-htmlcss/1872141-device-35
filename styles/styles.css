@@ -1169,12 +1169,16 @@ body {
   min-height: 182px;
   margin-top: 62px;
   margin-bottom: 77px;
+  position: relative;
 }
 
 .footer_logo {
   margin: 0;
 }
 
+/*Замена цвета логотипа ведь будет рассматриваться в следующем разделе?
+Или можно логотипы хэдера и футера выполнить разными svg-файлами?
+Или вставлять непосредственно svg-код?*/
 .footer_logo_image {
   display: block;
 }
@@ -1182,6 +1186,13 @@ body {
 .footer_address_text {
   margin-top: 35px;
 }
+
+.footer_address_line {
+  position: absolute;
+  left: 0;
+  top: 175px;
+}
+
 
 .footer_nav-social_container {
   width: 444px;
@@ -1208,12 +1219,33 @@ body {
   justify-content: center;
 }
 
-/*Рамка и изменение размеров временные, для обозначения занятого места*/
 .footer_social_item {
-  width: 36px;
-  height: 36px;
-  align-self: center;
-  border: 1px solid #ffffff;
+  width: 40px;
+  height: 40px;
+}
+
+.footer_social_link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50% 50%;
+  background-color: #ffffff;
+  opacity: 0.3;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer_social_telegram {
+  background-image: url("../images/icon/social_networks/telegram.svg");
+}
+
+.footer_social_youtube {
+  background-image: url("../images/icon/social_networks/youtube.svg");
+}
+
+.footer_social_twitter {
+  background-image: url("../images/icon/social_networks/twitter.svg");
 }
 
 .footer_other {
@@ -1226,6 +1258,6 @@ body {
   align-items: flex-end;
 }
 
-.footer_other_image {
+.htmlacademy_link {
   display: block;
 }

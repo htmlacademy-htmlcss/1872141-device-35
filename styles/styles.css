@@ -360,11 +360,22 @@ body {
   padding: 0 60px;
   margin: 0 auto;
   margin-top: 40px;
+
+}
+
+.logo {
+  position: relative;
+  top: -20px;
+  left: 0;
+}
+
+.header_logo {
+  display: block;
 }
 
 .header_menu_container {
   display: flex;
-  margin: 46px auto 30px;
+  margin: 30px auto;
   justify-content: space-between;
 }
 
@@ -380,6 +391,9 @@ body {
   border-radius: 50px 0 0 50px;
   padding: 0;
   padding-left: 48px;
+  background-image: url("../images/icon/loupe.svg");
+  background-repeat: no-repeat;
+  background-position: 12px center;
 }
 
 .header_search_form button {
@@ -394,6 +408,9 @@ body {
   width: 204px;
   padding-left: 27px;
   align-self: center;
+  background-image: url("../images/icon/user.svg");
+  background-repeat: no-repeat;
+  background-position: 0 center;
 }
 
 .navigation_user_list {
@@ -408,11 +425,17 @@ body {
 .navigation_user_item:nth-child(1)  {
   width: 83px;
   padding-left: 22px;
+  background-image: url("../images/icon/difference.svg");
+  background-repeat: no-repeat;
+  background-position: 0 center;
 }
 
 .navigation_user_item:nth-child(2)  {
   width: 74px;
   padding-left: 25px;
+  background-image: url("../images/icon/cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 center;
 }
 
 .navigation_menu {
@@ -429,11 +452,20 @@ body {
 
 .navigation_menu_link {
   width: 236px;
+  margin: auto 0;
 }
 
 .navigation_menu_plus {
   width: 50px;
+  height: 50px;
+  display: inline-block;
   margin-left: 7px;
+  background-image: url("../images/icon/plus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ffe17f;
+  border-radius: 50% 50%;
+  cursor: pointer;
 }
 
 .navigation_menu_list {

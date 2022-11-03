@@ -39,8 +39,8 @@ body {
   color: #000000;
 }
 
-.page_header a,
-.main_index a:not(.contacts_phone) {
+.header_link,
+.main_link {
   color: #000000;
   text-decoration: none;
 }
@@ -70,7 +70,6 @@ body {
   font-weight: 700;
   font-size: 180px;
   color: #ffffff;
-  background-color: #ffe17f;
 }
 
 .slider_promo,
@@ -112,11 +111,6 @@ body {
     font-size: 18px;
 }
 
-.index_benefits_current {
-  color: #ffe17f;
-  background-color: #000000;
-}
-
 .index_benefits_text {
   color: #444444;
 }
@@ -137,7 +131,7 @@ body {
   color: #444444;
 }
 
-.delivery_line_item {
+.about-us_item {
   font-weight: 700;
   line-height: 20px;
 }
@@ -198,7 +192,7 @@ body {
   font-style: normal;
 }
 
-.footer_index a:not(.footer_phone) {
+.footer_link {
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
@@ -338,7 +332,7 @@ body {
 .navigation_user_list,
 .navigation_menu_list,
 .index_category_list,
-.delivery_line_list,
+.about-us_list,
 .contacts_timetable,
 .footer_navigation_list,
 .footer_social_list,
@@ -387,7 +381,10 @@ body {
 
 .header_search_form input {
   width: 359px;
-  border: 2px solid #000000;
+  border-top: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  border-left: 2px solid #000000;
+  border-right: 1px solid #000000;
   border-radius: 50px 0 0 50px;
   padding: 0;
   padding-left: 48px;
@@ -398,7 +395,10 @@ body {
 
 .header_search_form button {
   width: 160px;
-  border: 2px solid #000000;
+  border-top: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  border-left: 1px solid #000000;
+  border-right: 2px solid #000000;
   border-radius: 0 50px 50px 0;
   padding: 0;
   text-align: center;
@@ -448,6 +448,7 @@ body {
 .navigation_menu_block {
   display: flex;
   margin-right: 5px;
+  z-index: 2;
 }
 
 .navigation_menu_link {
@@ -474,11 +475,13 @@ body {
   flex-wrap: wrap;
   justify-content: end;
   gap: 10px 45px;
+
 }
 
 .navigation_menu_item {
   width: 127px;
   text-align: end;
+  z-index: 3;
 }
 
 /*Доп свойства сетки хедэр страницы каталога*/
@@ -510,10 +513,17 @@ body {
   flex-grow: 1;
 }
 
+.slider_properties_list {
+  position: relative;
+  height: 410px;
+}
+
 .slider_item {
   display: grid;
   grid-template-columns: repeat(2, 560px);
   column-gap: 40px;
+  position: relative;
+  top: -150px;
 }
 
 .slider_image {
@@ -526,14 +536,24 @@ body {
   flex-direction: column;
   justify-content: space-between;
   width: 560px;
-  min-height: 401px;
-  margin-top: 121px;
-  margin-bottom: 38px;
+  min-height: 440px;
+  padding-top: 120px;
   row-gap: 50px;
+  position: relative;
 }
 
 .slider_number {
-  margin-top: 29px;
+  width: 250px;
+  height: 135px;
+  position: absolute;
+  top: 92px;
+  right: 49px;
+  text-align: end;
+  z-index: 2;
+}
+
+.slider_text {
+  z-index: 3;
 }
 
 .slider_promo {
@@ -547,16 +567,38 @@ body {
   min-height: 60px;
 }
 
+.button_more_block {
+  position: relative;
+}
+/*Мне кажется такой способ более сложный, чем сверстать черту через background-image.
+Сделал таким способом для пробы. */
+.slider_more-detailed::before {
+  content: "";
+  display: block;
+  width: 220px;
+  height: 8px;
+  background-color: #ffe17f;
+  position: absolute;
+  top: 16px;
+  z-index: -1;
+}
+
 .slider_more-detailed {
   width: 220px;
   height: 40px;
-  display: block;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  padding: 10px 0;
+  background-color: inherit;
+  border: none;
 }
 
 .slider_features {
   display: flex;
   flex-wrap: wrap;
   gap: 10px 20px;
+  margin-bottom: 38px;
 }
 
 .slider_features dl {
@@ -567,6 +609,10 @@ body {
 .slider_features dd {
   margin-left: 0;
   margin-top: 12px;
+}
+
+.index_category {
+  margin-bottom: 172px;
 }
 
 .index_category_list {
@@ -580,6 +626,81 @@ body {
 .index_category_item {
   width: 160px;
   height: 253px;
+  position: relative;
+}
+
+/*Возможно это ошибка дизайна, поэтому расположил иконки по центру (кроме монопода)
+  Если это не ошибка дизайна, то выставлю с верхним отступом как в макете.*/
+.index_category_item:nth-child(1):before {
+  content: "";
+  height: 160px;
+  width: 160px;
+  background-image: url("../images/category/category_1_vr.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ffe17f;
+  position: absolute;
+  z-index: -1;
+}
+
+.index_category_item:nth-child(2):before {
+  content: "";
+  height: 160px;
+  width: 160px;
+  background-image: url("../images/category/category_2_monopod.svg");
+  background-repeat: no-repeat;
+  background-position: center 44px;
+  background-color: #ffe17f;
+  position: absolute;
+  z-index: -1;
+}
+
+.index_category_item:nth-child(3):before {
+  content: "";
+  height: 160px;
+  width: 160px;
+  background-image: url("../images/category/category_3_action-camera.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ffe17f;
+  position: absolute;
+  z-index: -1;
+}
+
+.index_category_item:nth-child(4):before {
+  content: "";
+  height: 160px;
+  width: 160px;
+  background-image: url("../images/category/category_4_fitness-bracelet.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ffe17f;
+  position: absolute;
+  z-index: -1;
+}
+
+.index_category_item:nth-child(5):before {
+  content: "";
+  height: 160px;
+  width: 160px;
+  background-image: url("../images/category/category_5_smart-watch.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ffe17f;
+  position: absolute;
+  z-index: -1;
+}
+
+.index_category_item:nth-child(6):before {
+  content: "";
+  height: 160px;
+  width: 160px;
+  background-image: url("../images/category/category_6_quadrocopter.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ffe17f;
+  position: absolute;
+  z-index: -1;
 }
 
 .index_category_link {
@@ -588,35 +709,76 @@ body {
   height: 60px;
 }
 
+.index_benefits {
+  min-height: 289px;
+  position: relative;
+}
+
 .index_benefits_container {
   display: flex;
   width: 1160px;
   margin: 0 auto;
+  position: relative;
+  top: -102px;
 }
 
 .index_benefits_buttons {
-  display: flex;
-  flex-direction: column;
   width: 280px;
-  min-height: 190px;
-  margin: 65px 0;
-  gap: 45px;
+  height: 190px;
+  padding: 64px 0;
+  position: relative;
 }
 
 .index_benefits_button {
-  width: 280px;
+  width: 160px;
   height: 40px;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  padding: 0;
+  background-image: url("../images/hidden-line.svg");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  box-sizing: border-box;
+  margin-bottom: 35px;
+}
+
+.index_benefits_current {
+  width: 280px;
+  padding-right: 120px;
+  color: #ffe17f;
+  background-color: #000000;
+  background-image: none;
 }
 
 .index_benefits_list {
-  width: 694px;
-  margin-left: 116px;
+  min-height: 319px;
+  padding-left: 116px;
+  border-left: 7px solid #000000;
 }
 
 .index_benefits_item {
-  width: 448px;
+  width: 475px;
   padding-right: 246px;
-  margin-top: 72px;
+  padding-top: 72px;
+}
+
+.index_benefits_item:nth-child(1) {
+  background-image: url("../images/slider/delivery.svg");
+  background-repeat: no-repeat;
+  background-position: 558px 77px;
+}
+
+.index_benefits_item:nth-child(2) {
+  background-image: url("../images/slider/guarantee.svg");
+  background-repeat: no-repeat;
+  background-position: 558px 62px;
+}
+
+.index_benefits_item:nth-child(3) {
+  background-image: url("../images/slider/credit.svg");
+  background-repeat: no-repeat;
+  background-position: 568px 65px;
 }
 
 .index_benefits_title {
@@ -626,12 +788,56 @@ body {
 
 .index_benefits_text {
   margin: 0;
+  width: 475px;
 }
 
 .delivery_wrapper {
-  width: 1160px;
+  display: inline-block;
+  cursor: pointer;
+  width: 910px;
+  height: 20px;
   text-align: center;
+  padding: 40px 125px;
+  position: relative;
 }
+
+/*Это часть ссылки, или его делать отдельным элементом?*/
+.delivery::before {
+  content: "";
+  display: block;
+  width: 125px;
+  height: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #ffe17f;
+  background-image: url("../images/icon/delivery_truck.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.delivery {
+  display: block;
+}
+
+/*Это кнопка? Она позже будет реализовываться?*/
+.delivery_info_buttun {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50% 50%;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  background-color: rgba(220, 220, 220, 0.5);
+  background-image: url("../images/icon/information.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
 
 .about-shop {
   display: flex;
@@ -643,10 +849,12 @@ body {
   width: 520px;
 }
 
-.about-shop h3 {
+.about_title {
   margin: 0;
   margin-bottom: 48px;
   padding-top: 47px;
+  background-image: url("../images/line.svg");
+  background-repeat: no-repeat;
 }
 
 .about-shop p:not(.contacts_address_text) {
@@ -661,22 +869,27 @@ body {
   gap: 30px;
 }
 
-.delivery_line_item {
+.about-us_item {
   height: 20px;
   padding-left: 34px;
   margin-bottom: 19px;
 }
 
-.delivery_line_item:last-child {
+.about-us_item:last-child {
   margin-bottom: 0;
 }
 
 .about-shop_link {
-  display: block;
+  display: inline-block;
   width: 270px;
   height: 20px;
   text-align: center;
   padding-top: 10px;
+  background-image: url("../images/hidden-line.svg");
+  background-repeat: no-repeat;
+  background-position: 0 16px;
+  background-size: 100% auto;
+  cursor: pointer;
 }
 
 .contacts_container {
@@ -724,6 +937,7 @@ body {
 
 .mailing-list_form {
   width: 810px;
+  height: 55px;
   display: flex;
   margin-bottom: 56px;
 }
@@ -739,12 +953,16 @@ body {
   width: 253px;
   text-align: center;
   border: 3px solid #c4c4c4;
+  padding: 0;
 }
 
-.mailng-list_wrapper span {
+.mailing-list_free {
   width: 160px;
   padding-left: 32px;
   margin-left: auto;
+  background-image: url("../images/icon/check-mark_green.svg");
+  background-repeat: no-repeat;
+  background-position: 2px 7px;
 }
 
 /*Построение сетки мэйн страницы каталога*/

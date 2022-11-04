@@ -495,10 +495,17 @@ body {
 .user-name {
   width: 119px;
   padding-left: 27px;
+  text-decoration-line: none;
+  color: #000000;
+  background-image: url("../images/icon/user.svg");
+  background-repeat: no-repeat;
+  background-position: 0 center;
 }
 
 .log-out {
   width: 56px;
+  text-decoration-line: none;
+  color: #000000;
 }
 
 /*Построение сетки мэйн главной страницы*/

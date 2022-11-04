@@ -223,7 +223,7 @@ body {
   text-decoration: none;
 }
 
-.bread-crumbs h1 {
+.bread-crumbs_title {
   font-family: "raleway", sans-serif;
   font-weight: 800;
   font-size: 50px;
@@ -276,6 +276,24 @@ body {
   line-height: 30px;
 }
 
+.select_control:focus {
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
+}
+
+.select_control:hover {
+  opacity: 0.6;
+}
+
+.select_control:active {
+  opacity: 0.3;
+}
+
+/*Не уверен на счёт этого состояния, т.к. в макете не прописано, когда использовать Variant5*/
+.select_control:disabled {
+  opacity: 0.1;
+}
+
 .product-page_monopod {
   background-color: #ffffff;
 }
@@ -313,7 +331,7 @@ body {
   text-decoration: none;
 }
 
-/*Построение сетки + стики-футер*/
+/*Общие свойства + стики-футер*/
 html {
   height: 100%;
 }
@@ -368,10 +386,23 @@ body {
   position: relative;
   top: -20px;
   left: 0;
+  display: block;
+  width: 145px;
+  height: 37px;
 }
 
-.header_logo {
-  display: block;
+.logo:focus {
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
+}
+
+.logo:hover {
+  opacity: 0.6;
+}
+
+.logo:active {
+  opacity: 0.3;
+  outline: none;
 }
 
 .header_menu_container {
@@ -400,6 +431,16 @@ body {
   background-position: 12px center;
 }
 
+/*Доделать состояния в дальнейших разделах*/
+.header_search_form input:focus {
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
+}
+
+.header_search_form input:disabled {
+  opacity: 0.3;
+}
+
 .header_search_form button {
   width: 160px;
   border-top: 2px solid #000000;
@@ -411,13 +452,48 @@ body {
   text-align: center;
 }
 
+.header_search_form button:focus {
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
+}
+
+.header_search_form button:hover {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.header_search_form button:active {
+  color: rgba(259, 259, 259, 0.3);
+  outline: none;
+}
+
+.header_search_form input:disabled {
+  opacity: 0.3;
+}
+
 .log-in {
-  width: 204px;
+  width: 54px;
+  margin-right: 150px;
   padding-left: 27px;
   align-self: center;
   background-image: url("../images/icon/user.svg");
   background-repeat: no-repeat;
   background-position: 0 center;
+}
+
+
+.header_link:focus {
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
+}
+
+.header_link:hover {
+  opacity: 0.6;
+}
+
+.header_link:active {
+  opacity: 0.3;
+  outline: none;
 }
 
 .navigation_user_list {
@@ -429,7 +505,7 @@ body {
   flex-wrap: wrap;
 }
 
-.navigation_user_item:nth-child(1)  {
+.navigation_user_item:nth-child(1) .header_link {
   width: 83px;
   padding-left: 22px;
   background-image: url("../images/icon/difference.svg");
@@ -437,7 +513,7 @@ body {
   background-position: 0 center;
 }
 
-.navigation_user_item:nth-child(2)  {
+.navigation_user_item:nth-child(2) .header_link {
   width: 74px;
   padding-left: 25px;
   background-image: url("../images/icon/cart.svg");
@@ -459,8 +535,17 @@ body {
 }
 
 .navigation_menu_link {
+  display: block;
   width: 236px;
   margin: auto 0;
+  text-decoration: none;
+  color: #000000;
+}
+
+.navigation_menu_item .header_link:focus,
+.navigation_menu_item .header_link:hover,
+.navigation_menu_item .header_link:active {
+  text-decoration: underline;
 }
 
 .navigation_menu_plus {
@@ -607,6 +692,26 @@ body {
   padding: 10px 0;
   background-color: inherit;
   border: none;
+  font-size: 18px;
+}
+
+.slider_more-detailed:focus {
+  outline: #AF4FFF solid 2px;
+}
+
+.slider_more-detailed:hover {
+  background-color: #ffe17f;
+}
+
+.slider_more-detailed:disabled {
+  background-image: none;
+  opacity: 0.3;
+}
+
+.slider_more-detailed:active {
+  background-image: none;
+  background-color: #ffcc33;
+  outline: none;
 }
 
 .slider_features {
@@ -751,11 +856,34 @@ body {
   display: inline-block;
   cursor: pointer;
   padding: 0;
+  box-sizing: border-box;
+  margin-bottom: 35px;
+}
+
+.button_yellow_line {
   background-image: url("../images/hidden-line.svg");
   background-repeat: no-repeat;
   background-position: 0 center;
-  box-sizing: border-box;
-  margin-bottom: 35px;
+  background-size: 100% auto;
+}
+
+.button_yellow_line:focus {
+  outline: #AF4FFF solid 2px;
+}
+
+.button_yellow_line:hover:not(.index_benefits_current) {
+  background-color: #ffe17f;
+}
+
+.button_yellow_line:disabled {
+  background-image: none;
+  opacity: 0.3;
+}
+
+.button_yellow_line:active:not(.index_benefits_current) {
+  background-image: none;
+  background-color: #ffcc33;
+  outline: none;
 }
 
 .index_benefits_current {
@@ -895,16 +1023,15 @@ body {
 }
 
 .about-shop_link {
-  display: inline-block;
+  font-size: 18px;
+  display: block;
   width: 270px;
-  height: 20px;
+  height: 40px;
   text-align: center;
-  padding-top: 10px;
-  background-image: url("../images/hidden-line.svg");
-  background-repeat: no-repeat;
-  background-position: 0 16px;
-  background-size: 100% auto;
   cursor: pointer;
+  padding: 0;
+  border: none;
+  background-color: inherit;
 }
 
 .contacts_container {
@@ -964,11 +1091,52 @@ body {
   border-bottom: 3px solid #c4c4c4;
 }
 
-.mailing-list_form button {
+/*Нужно оформить состояния ошибки и введённого текста*/
+.mailing-list_form input:focus {
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
+}
+
+.mailing-list_form input:hover {
+  background-color: #dcdcdc;
+}
+
+.mailing-list_form input:disabled {
+  opacity: 0.3;
+  background-color: inherit;
+}
+
+.email_button {
   width: 253px;
   text-align: center;
   border: 3px solid #c4c4c4;
   padding: 0;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.email_button:focus {
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
+  border-color: #c4c4c4;
+}
+
+.email_button:hover {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.email_button:disabled {
+  opacity: 0.3;
+  color: inherit;
+  background-color: inherit;
+}
+
+.email_button:active {
+  color: rgba(259, 259, 259, 0.3);
+  background-color: #000000;
+  border: none;
+  outline: none;
 }
 
 .mailing-list_free {
@@ -1000,7 +1168,6 @@ body {
 }
 
 .bread-crumbs_item {
-
   height: 20px;
 }
 
@@ -1009,6 +1176,24 @@ body {
   background-image: url("../images/icon/arrow_right_small.svg");
   background-repeat: no-repeat;
   background-position: 0 center;
+}
+
+.bread-crumbs_link {
+  display: block;
+}
+
+.bread-crumbs_link:focus {
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
+}
+
+.bread-crumbs_link:hover {
+  opacity: 0.6;
+}
+
+.bread-crumbs_link:active {
+  opacity: 0.3;
+  outline: none;
 }
 
 .catalog {
@@ -1067,14 +1252,14 @@ body {
 }
 
 .filter_button {
-  border: 0;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
   padding: 0;
   height: 40px;
   width: 220px;
   margin-top: 10px;
-  background-image: url("../images/hidden-line.svg");
-  background-repeat: no-repeat;
-  background-position: 0 center;
+  font-size: 18px;
 }
 
 .control_input {
@@ -1169,6 +1354,28 @@ body {
 .pagination_show-more {
   width: 760px;
   height: 55px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.pagination_show-more:focus {
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
+  border-color: #e5e5e5;
+}
+
+.pagination_show-more:hover {
+  border-color: #000000;
+}
+
+.pagination_show-more:disabled {
+  opacity: 0.3;
+  border-color: #e5e5e5;
+}
+
+.pagination_show-more:active {
+  opacity: 0.3;
+  outline: none;
 }
 
 .pagination_container {

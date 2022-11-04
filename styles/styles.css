@@ -47,6 +47,8 @@ body {
 
 .header_search_form input,
 .header_search_form button {
+  font-family: "rubik", sans-serif;
+  font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   color: #000000;
@@ -63,6 +65,11 @@ body {
   font-weight: 800;
   line-height: 21px;
   text-transform: uppercase;
+}
+
+.mailing-list_form input {
+  font-family: "rubik", sans-serif;
+  font-weight: 400;
 }
 
 /*Свойства шрифтов мэйн главная страница*/
@@ -506,6 +513,7 @@ body {
   width: 56px;
   text-decoration-line: none;
   color: #000000;
+  opacity: 0.3;
 }
 
 /*Построение сетки мэйн главной страницы*/
@@ -987,7 +995,20 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin-top: 16px;
-  gap: 10px 36px;
+  gap: 10px 16px;
+  height: 20px;
+}
+
+.bread-crumbs_item {
+
+  height: 20px;
+}
+
+.bread-crumbs_item + .bread-crumbs_item {
+  padding-left: 20px;
+  background-image: url("../images/icon/arrow_right_small.svg");
+  background-repeat: no-repeat;
+  background-position: 0 center;
 }
 
 .catalog {
@@ -1014,6 +1035,7 @@ body {
   padding: 0;
   margin: 0;
   margin-bottom: 35px;
+  width: 200px;
 }
 
 .filter_price {
@@ -1024,6 +1046,8 @@ body {
   height: 20px;
   padding-top: 12px;
   margin-bottom: 20px;
+  width: 200px;
+  box-shadow: inset 0 2px 0 0 #000000;
 }
 
 /*Временное свойство. Ждёт реализации двойного ползунка*/
@@ -1046,8 +1070,11 @@ body {
   border: 0;
   padding: 0;
   height: 40px;
-  width: 210px;
+  width: 220px;
   margin-top: 10px;
+  background-image: url("../images/hidden-line.svg");
+  background-repeat: no-repeat;
+  background-position: 0 center;
 }
 
 .control_input {
@@ -1078,9 +1105,28 @@ body {
 }
 
 .sort-up_arrows_wrapper {
-  width: 58px;
-  height: 28px;
-  border: 1px solid red;
+  width: 60px;
+  height: 30px;
+  display: flex;
+}
+
+.sort-up_button {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  opacity: 0.2;
+}
+
+.sort-up_arrow-up {
+  background-image: url("../images/icon/triangle_up.svg");
+}
+
+.sort-up_arrow-down {
+  background-image: url("../images/icon/triangle_down.svg");
 }
 
 .product-page_monopod {
@@ -1267,4 +1313,8 @@ body {
 
 .htmlacademy_link {
   display: block;
+}
+
+.footer_logo_academy {
+  fill: #FFC700;
 }

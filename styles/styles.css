@@ -60,7 +60,8 @@ body {
 .slider_more-detailed,
 .index_benefits_button,
 .about-shop_link,
-.email_button {
+.email_button,
+.product_hidden_button {
   font-family: "raleway", sans-serif;
   font-weight: 800;
   line-height: 21px;
@@ -261,8 +262,7 @@ body {
 }
 
 .filter_button,
-.pagination_prev,
-.pagination_next {
+.pagination_button {
   font-family: "raleway", sans-serif;
   font-weight: 800;
   line-height: 21px;
@@ -274,24 +274,6 @@ body {
   border: none;
   font-size: 18px;
   line-height: 30px;
-}
-
-.select_control:focus {
-  outline: #AF4FFF solid 2px;
-  outline-offset: 2px;
-}
-
-.select_control:hover {
-  opacity: 0.6;
-}
-
-.select_control:active {
-  opacity: 0.3;
-}
-
-/*Не уверен на счёт этого состояния, т.к. в макете не прописано, когда использовать Variant5*/
-.select_control:disabled {
-  opacity: 0.1;
 }
 
 .product-page_monopod {
@@ -316,12 +298,6 @@ body {
 
 .pagination_container {
   background-color: #ebebeb;
-}
-
-.pagination_button a {
-  color: #000000;
-  line-height: 21px;
-  text-decoration: none;
 }
 
 .pagination_item a {
@@ -391,16 +367,19 @@ body {
   height: 37px;
 }
 
-.logo:focus {
+.logo:focus,
+.footer_logo_link:focus {
   outline: #AF4FFF solid 2px;
   outline-offset: 2px;
 }
 
-.logo:hover {
+.logo:hover,
+.footer_logo_link:hover {
   opacity: 0.6;
 }
 
-.logo:active {
+.logo:active,
+.footer_logo_link:active {
   opacity: 0.3;
   outline: none;
 }
@@ -745,88 +724,87 @@ body {
 
 .index_category_item {
   width: 160px;
-  height: 253px;
+  height: 160px;
   position: relative;
 }
 
 /*Возможно это ошибка дизайна, поэтому расположил иконки по центру (кроме монопода)
   Если это не ошибка дизайна, то выставлю с верхним отступом как в макете.*/
-.index_category_item:nth-child(1):before {
-  content: "";
+.index_category_item:nth-child(1) {
   height: 160px;
   width: 160px;
   background-image: url("../images/category/category_1_vr.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-color: #ffe17f;
-  position: absolute;
-  z-index: -1;
 }
 
-.index_category_item:nth-child(2):before {
-  content: "";
+.index_category_item:nth-child(2) {
   height: 160px;
   width: 160px;
   background-image: url("../images/category/category_2_monopod.svg");
   background-repeat: no-repeat;
   background-position: center 44px;
   background-color: #ffe17f;
-  position: absolute;
-  z-index: -1;
 }
 
-.index_category_item:nth-child(3):before {
-  content: "";
+.index_category_item:nth-child(3) {
   height: 160px;
   width: 160px;
   background-image: url("../images/category/category_3_action-camera.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-color: #ffe17f;
-  position: absolute;
-  z-index: -1;
 }
 
-.index_category_item:nth-child(4):before {
-  content: "";
+.index_category_item:nth-child(4) {
   height: 160px;
   width: 160px;
   background-image: url("../images/category/category_4_fitness-bracelet.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-color: #ffe17f;
-  position: absolute;
-  z-index: -1;
 }
 
-.index_category_item:nth-child(5):before {
-  content: "";
+.index_category_item:nth-child(5) {
   height: 160px;
   width: 160px;
   background-image: url("../images/category/category_5_smart-watch.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-color: #ffe17f;
-  position: absolute;
-  z-index: -1;
 }
 
-.index_category_item:nth-child(6):before {
-  content: "";
+.index_category_item:nth-child(6) {
   height: 160px;
   width: 160px;
   background-image: url("../images/category/category_6_quadrocopter.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-color: #ffe17f;
-  position: absolute;
-  z-index: -1;
 }
 
 .index_category_link {
   display: block;
   padding-top: 193px;
   height: 60px;
+}
+
+.index_category_link:focus {
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
+}
+
+.index_category_item:hover {
+  background-color: #FFC700;
+}
+
+.index_category_item:active {
+  opacity: 0.3;
+}
+
+.index_category_item:active .index_category_link {
+  outline: none;
 }
 
 .index_benefits {
@@ -894,6 +872,17 @@ body {
   background-image: none;
 }
 
+.index_benefits_current:focus {
+  outline-offset: 2px;
+  padding-left: 35px;
+}
+
+.index_benefits_current:hover,
+.index_benefits_current:active {
+  padding-left: 35px;
+  outline: none;
+}
+
 .index_benefits_list {
   min-height: 319px;
   padding-left: 116px;
@@ -935,32 +924,33 @@ body {
 }
 
 .delivery_wrapper {
-  display: inline-block;
-  cursor: pointer;
-  width: 910px;
-  height: 20px;
-  text-align: center;
-  padding: 40px 125px;
+  display: flex;
+  width: 1160px;
+  height: 100px;
   position: relative;
 }
 
-/*Это часть ссылки, или его делать отдельным элементом?*/
-.delivery::before {
-  content: "";
-  display: block;
+.delivery_truck_button {
+  display: inline-block;
   width: 125px;
   height: 100px;
-  position: absolute;
-  left: 0;
-  top: 0;
   background-color: #ffe17f;
   background-image: url("../images/icon/delivery_truck.svg");
   background-repeat: no-repeat;
   background-position: center;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }
 
 .delivery {
-  display: block;
+  display: inline-block;
+  cursor: pointer;
+  width: 935px;
+  height: 100px;
+  border: none;
+  padding: 0;
+  padding-right: 25px;
 }
 
 /*Это кнопка? Она позже будет реализовываться?*/
@@ -974,13 +964,30 @@ body {
   right: 30px;
   top: 30px;
   background-color: rgba(220, 220, 220, 0.5);
-  background-image: url("../images/icon/information.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0.3;
   cursor: pointer;
 }
 
+.delivery_info_icon {
+  opacity: 0.3;
+}
+
+.delivery_wrapper:focus {
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
+}
+
+.delivery_wrapper:hover .delivery_info_icon {
+  opacity: 1;
+}
+
+.delivery_wrapper:hover .delivery_truck_button {
+  background-color: #FFC700;
+}
+
+.delivery_wrapper:active {
+  outline: none;
+  opacity: 0.3;
+}
 
 .about-shop {
   display: flex;
@@ -1285,8 +1292,27 @@ body {
   width: 147px;
 }
 
-.select_container select {
+.select_control {
   width: 142px;
+}
+
+.select_control:focus {
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
+}
+
+.select_control:hover {
+  opacity: 0.6;
+}
+
+.select_control:active {
+  opacity: 0.3;
+  outline: none;
+}
+
+/*Не уверен на счёт этого состояния, т.к. в макете не прописано, когда использовать Variant5*/
+.select_control:disabled {
+  opacity: 0.1;
 }
 
 .sort-up_arrows_wrapper {
@@ -1306,12 +1332,37 @@ body {
   opacity: 0.2;
 }
 
-.sort-up_arrow-up {
-  background-image: url("../images/icon/triangle_up.svg");
+.sort-up_arrow-up,
+.sort-up_arrow-down {
+  fill: #444444;
 }
 
 .sort-up_arrow-down {
   background-image: url("../images/icon/triangle_down.svg");
+}
+
+.sort-up_button:focus {
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
+  opacity: 1;
+}
+
+.sort-up_button:focus .sort-up_arrow-up,
+.sort-up_button:focus .sort-up_arrow-down {
+  opacity: 0.2;
+}
+
+.sort-up_button:hover {
+  opacity: 1;
+}
+
+.sort-up_button:active .sort-up_arrow-up,
+.sort-up_button:active .sort-up_arrow-down {
+  opacity: 0.1;
+}
+
+.sort-up_button:active {
+  outline: none;
 }
 
 .product-page_monopod {
@@ -1330,6 +1381,51 @@ body {
   gap: 44px 40px;
 }
 
+.product_monopod_card {
+  position: relative;
+}
+
+.product_card_link {
+  display: block;
+}
+
+.product_hidden_button {
+  display: none;
+  text-align: center;
+  height: 30px;
+  width: 220px;
+  padding-top: 10px;
+  position: absolute;
+  top: 170px;
+  left: 70px
+}
+
+.product_card_link:focus {
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
+}
+
+.product_card_link:hover {
+  opacity: 0.6;
+}
+
+.product_monopod_card:hover .product_hidden_button {
+  display: block;
+  z-index: 2;
+}
+
+.product_hidden_button:hover + .product_card_link{
+  opacity: 0.6;
+}
+
+.product_monopod_card:active .product_card_link{
+  opacity: 0.3;
+}
+
+.product_monopod_card:active .product_card_link {
+  outline: none;
+}
+
 .product_card_image {
   display: block;
   object-fit: contain;
@@ -1338,7 +1434,6 @@ body {
 .product_card_block {
   display: flex;
   justify-content: space-between;
-
 }
 
 .product_card_title {
@@ -1387,11 +1482,35 @@ body {
 }
 
 .pagination_button {
+  font-size: 18px;
+  display: inline-block;
   width: 128px;
   text-align: center;
-  height: 21px;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  border: none;
+}
+
+.pagination_current_page {
+  pointer-events: none;
+}
+
+.pagination_button:focus {
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
+}
+
+.pagination_button:hover {
+  background-color: #dcdcdc;
+}
+
+.pagination_button:active {
+  outline: none;
+  background-color: #dcdcdc;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.pagination_button:disabled {
+  opacity: 0.3;
+  background-color: #ebebeb;
 }
 
 .pagination_list {
@@ -1412,6 +1531,26 @@ body {
   height: 40px;
   box-sizing: border-box;
   padding-top: 10px;
+  color: #444444;
+  opacity: 0.3;
+}
+
+.pagination_link:focus {
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
+}
+
+.pagination_link:hover {
+  opacity: 1;
+}
+
+.pagination_link:active {
+  opacity: 0.1;
+  outline: none;
+}
+
+.pagination_link:disabled {
+  opacity: 0.6;
 }
 
 /*Построение сетки футер главной страницы*/
@@ -1436,10 +1575,16 @@ body {
   margin: 0;
 }
 
+.footer_logo_link {
+  display: block;
+  width: 145px;
+}
+
 /*Замена цвета логотипа ведь будет рассматриваться в следующем разделе?
 Или можно логотипы хэдера и футера выполнить разными svg-файлами?
-Или вставлять непосредственно svg-код?*/
-.footer_logo_image {
+Или вставлять непосредственно svg-код? Не понимаю, как изменить цвет на #FFC700,
+Это потому что в исходном логотипе два цвета?*/
+.footer_logo {
   display: block;
 }
 
@@ -1471,6 +1616,30 @@ body {
   margin-bottom: 62px;
 }
 
+.footer_link {
+  display: block;
+}
+
+.footer_link:focus,
+.footer_phone:focus {
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
+}
+
+.footer_link:hover,
+.footer_phone:hover {
+  color: #FFC700;
+  text-decoration: underline;
+}
+
+.footer_link:active,
+.footer_phone:active {
+  color: #FFC700;
+  text-decoration: underline;
+  opacity: 0.3;
+  outline: none;
+}
+
 .footer_social_list {
   display: flex;
   flex-wrap: wrap;
@@ -1482,18 +1651,39 @@ body {
 .footer_social_item {
   width: 40px;
   height: 40px;
+  border-radius: 50% 50%;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .footer_social_link {
   display: block;
   width: 40px;
   height: 40px;
-  border: none;
-  border-radius: 50% 50%;
-  background-color: #ffffff;
-  opacity: 0.3;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.footer_social_link:focus {
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
+}
+
+.footer_social_item:hover {
+  background-color: #FFC700;
+}
+
+.footer_social_item:active {
+  background-color: #FFC700;
+}
+
+.footer_social_item:active .footer_social_telegram,
+.footer_social_item:active .footer_social_youtube,
+.footer_social_item:active .footer_social_twitter {
+  opacity: 0.3;
+}
+
+.footer_social_item:active .footer_social_link {
+  outline: none;
 }
 
 .footer_social_telegram {
@@ -1524,4 +1714,19 @@ body {
 
 .footer_logo_academy {
   fill: #FFC700;
+}
+
+.htmlacademy_link:focus {
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
+}
+
+.htmlacademy_link:hover .footer_logo_academy {
+  fill: #FFffff;
+}
+
+.htmlacademy_link:active {
+  fill: #FFffff;
+  opacity: 0.3;
+  outline: none;
 }

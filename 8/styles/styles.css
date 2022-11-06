@@ -1,0 +1,1732 @@
+/*Используемуе шрифты*/
+@font-face {
+  font-family: "rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "rubik";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "raleway";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
+  font-display: swap;
+}
+
+/*Свойства шрифтов главная страница*/
+body {
+  font-family: "rubik", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/*Свойства шрифтов хедэр главная страница*/
+.page_header {
+  background-color: #ffe17f;
+  color: #000000;
+}
+
+.header_link,
+.main_link {
+  color: #000000;
+  text-decoration: none;
+}
+
+.header_search_form input,
+.header_search_form button {
+  font-family: "rubik", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  background-color: #ffe17f;
+}
+
+.navigation_menu_link,
+.navigation_menu_item,
+.slider_more-detailed,
+.index_benefits_button,
+.about-shop_link,
+.email_button,
+.product_hidden_button {
+  font-family: "raleway", sans-serif;
+  font-weight: 800;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.mailing-list_form input {
+  font-family: "rubik", sans-serif;
+  font-weight: 400;
+}
+
+/*Свойства шрифтов мэйн главная страница*/
+.slider_number {
+  font-weight: 700;
+  font-size: 180px;
+  color: #ffffff;
+}
+
+.slider_promo,
+.index_benefits_item h3,
+.about-shop h3,
+.mailing-list_title {
+  font-family: "raleway", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.slider_text p+p{
+  color: #444444;
+}
+
+.slider_features dt {
+  font-size: 36px;
+}
+
+.slider_features dd {
+  color: #444444;
+  font-size: 16px;
+}
+
+.index_category_item {
+  font-family: "raleway", sans-serif;
+  font-weight: 800;
+  line-height: 24px;
+}
+
+.index_benefits {
+  color: #000000;
+  background-color: #f0f0f0;
+  width: 100%;
+}
+
+.index_benefits_button {
+    font-size: 18px;
+}
+
+.index_benefits_text {
+  color: #444444;
+}
+
+.delivery_wrapper {
+  background-color: #f0f0f0;
+}
+
+.delivery {
+  font-family: "raleway", sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 23px;
+  text-transform: uppercase;
+}
+
+.about-us_text {
+  color: #444444;
+}
+
+.about-us_item {
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.about-shop h4 {
+  color: #444444;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.contacts_address_text {
+  color: #444444;
+  font-style: normal;
+}
+
+.contacts_phone {
+  color: #444444;
+  font-style: normal;
+}
+
+.contacts_timetable_item {
+  color: #444444;
+}
+
+.mailing-list_container {
+  color: #444444;
+  background-color: #f0f0f0;
+}
+
+.mailing-list_title {
+  color: #000000;
+}
+
+.mailing-list_form input {
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
+  background-color: #f0f0f0;
+}
+
+.mailing-list_form button {
+  color: #000000;
+  background-color: #f0f0f0;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+/*Свойства шрифтов футер главная страница*/
+.footer_index {
+  color: #ffffff;
+  background-color: #444444;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.footer_address_text {
+  font-style: normal;
+}
+
+.footer_link {
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.footer_navigation_item {
+  font-family: "raleway", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.footer_phone {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/*Свойства шрифтов страница каталога*/
+.main_catalog a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.bread-crumbs_title {
+  font-family: "raleway", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.bread-crumbs_item {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.catalog {
+  color: #000000;
+  background-color: #f0f0f0;
+}
+
+.catalog_filter h2,
+.select_container h2,
+.pagination_show-more {
+  font-family: "raleway", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+
+.filter_title {
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.filter_item {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.filter_button,
+.pagination_button {
+  font-family: "raleway", sans-serif;
+  font-weight: 800;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.select_control {
+  background-color: #f0f0f0;
+  border: none;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.product-page_monopod {
+  background-color: #ffffff;
+}
+
+.product_card_title {
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.product_card_price {
+  font-size: 18px;
+  line-height: 21px;
+  color: #444444;
+}
+
+.pagination_show-more {
+  background-color: #ffffff;
+  border: 3px solid #e5e5e5;
+}
+
+.pagination_container {
+  background-color: #ebebeb;
+}
+
+.pagination_item a {
+  color: #444444;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+/*Общие свойства + стики-футер*/
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.navigation_user_list,
+.navigation_menu_list,
+.index_category_list,
+.about-us_list,
+.contacts_timetable,
+.footer_navigation_list,
+.footer_social_list,
+.slider_properties_list,
+.index_benefits_list,
+.filter_list,
+.product_monopod_list,
+.pagination_list,
+.bread-crumbs_list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/*Построение сетки хедэр главной страницы*/
+.page_header {
+  width: 1040px;
+  min-height: 300px;
+  padding: 0 60px;
+  margin: 0 auto;
+  margin-top: 40px;
+
+}
+
+.logo {
+  position: relative;
+  top: -20px;
+  left: 0;
+  display: block;
+  width: 145px;
+  height: 37px;
+}
+
+.logo:focus,
+.footer_logo_link:focus {
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
+}
+
+.logo:hover,
+.footer_logo_link:hover {
+  opacity: 0.6;
+}
+
+.logo:active,
+.footer_logo_link:active {
+  opacity: 0.3;
+  outline: none;
+}
+
+.header_menu_container {
+  display: flex;
+  margin: 30px auto;
+  justify-content: space-between;
+}
+
+.header_search_form {
+  width: 517px;
+  height: 40px;
+  display: flex;
+}
+
+.header_search_form input {
+  width: 359px;
+  border-top: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  border-left: 2px solid #000000;
+  border-right: 1px solid #000000;
+  border-radius: 50px 0 0 50px;
+  padding: 0;
+  padding-left: 48px;
+  background-image: url("../images/icon/loupe.svg");
+  background-repeat: no-repeat;
+  background-position: 12px center;
+}
+
+/*Доделать состояния в дальнейших разделах*/
+.header_search_form input:focus {
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
+}
+
+.header_search_form input:disabled {
+  opacity: 0.3;
+}
+
+.header_search_form button {
+  width: 160px;
+  border-top: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  border-left: 1px solid #000000;
+  border-right: 2px solid #000000;
+  border-radius: 0 50px 50px 0;
+  padding: 0;
+  text-align: center;
+}
+
+.header_search_form button:focus {
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
+}
+
+.header_search_form button:hover {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.header_search_form button:active {
+  color: rgba(259, 259, 259, 0.3);
+  outline: none;
+}
+
+.header_search_form input:disabled {
+  opacity: 0.3;
+}
+
+.log-in {
+  width: 54px;
+  margin-right: 150px;
+  padding-left: 27px;
+  align-self: center;
+  background-image: url("../images/icon/user.svg");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+}
+
+
+.header_link:focus {
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
+}
+
+.header_link:hover {
+  opacity: 0.6;
+}
+
+.header_link:active {
+  opacity: 0.3;
+  outline: none;
+}
+
+.navigation_user_list {
+  display: flex;
+  margin: 0;
+  justify-content: end;
+  align-items: center;
+  gap: 10px 36px;
+  flex-wrap: wrap;
+}
+
+.navigation_user_item:nth-child(1) .header_link {
+  width: 83px;
+  padding-left: 22px;
+  background-image: url("../images/icon/difference.svg");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+}
+
+.navigation_user_item:nth-child(2) .header_link {
+  width: 74px;
+  padding-left: 25px;
+  background-image: url("../images/icon/cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+}
+
+.navigation_menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 50px;
+}
+
+.navigation_menu_block {
+  display: flex;
+  margin-right: 5px;
+  z-index: 2;
+}
+
+.navigation_menu_link {
+  display: block;
+  width: 236px;
+  margin: auto 0;
+  text-decoration: none;
+  color: #000000;
+}
+
+.navigation_menu_item .header_link:focus,
+.navigation_menu_item .header_link:hover,
+.navigation_menu_item .header_link:active {
+  text-decoration: underline;
+}
+
+.navigation_menu_plus {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  margin-left: 7px;
+  background-image: url("../images/icon/plus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ffe17f;
+  border-radius: 50% 50%;
+  cursor: pointer;
+}
+
+.navigation_menu_list {
+  width: 471px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  gap: 10px 45px;
+
+}
+
+.navigation_menu_item {
+  width: 127px;
+  text-align: end;
+  z-index: 3;
+}
+
+/*Доп свойства сетки хедэр страницы каталога*/
+.log-in_block {
+  display: flex;
+  justify-content: space-between;
+  width: 230px;
+  align-items: center;
+}
+
+.user-name {
+  width: 119px;
+  padding-left: 27px;
+  text-decoration-line: none;
+  color: #000000;
+  background-image: url("../images/icon/user.svg");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+}
+
+.log-out {
+  width: 56px;
+  text-decoration-line: none;
+  color: #000000;
+  opacity: 0.3;
+}
+
+/*Построение сетки мэйн главной страницы*/
+.main_index {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  align-items: center;
+}
+
+.main-container {
+  flex-grow: 1;
+}
+
+.slider_properties_list {
+  position: relative;
+  height: 410px;
+}
+
+.slider_item {
+  display: grid;
+  grid-template-columns: repeat(2, 560px);
+  column-gap: 40px;
+  position: relative;
+  top: -150px;
+}
+
+.slider_image {
+  display: block;
+  object-fit: contain;
+}
+
+.slider_item_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 560px;
+  min-height: 440px;
+  padding-top: 120px;
+  row-gap: 50px;
+  position: relative;
+}
+
+.slider_number {
+  width: 250px;
+  height: 135px;
+  position: absolute;
+  top: 92px;
+  right: 49px;
+  text-align: end;
+  z-index: 2;
+}
+
+.slider_text {
+  z-index: 3;
+}
+
+.slider_promo {
+  margin: 0;
+  min-height: 100px;
+  margin-bottom: 29px;
+}
+
+.slider_text p+p{
+  margin: 0;
+  min-height: 60px;
+}
+
+.button_more_block {
+  position: relative;
+}
+/*Мне кажется такой способ более сложный, чем сверстать черту через background-image.
+Сделал таким способом для пробы. */
+.slider_more-detailed::before {
+  content: "";
+  display: block;
+  width: 220px;
+  height: 8px;
+  background-color: #ffe17f;
+  position: absolute;
+  top: 16px;
+  z-index: -1;
+}
+
+.slider_more-detailed {
+  width: 220px;
+  height: 40px;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  padding: 10px 0;
+  background-color: inherit;
+  border: none;
+  font-size: 18px;
+}
+
+.slider_more-detailed:focus {
+  outline: #AF4FFF solid 2px;
+}
+
+.slider_more-detailed:hover {
+  background-color: #ffe17f;
+}
+
+.slider_more-detailed:disabled {
+  background-image: none;
+  opacity: 0.3;
+}
+
+.slider_more-detailed:active {
+  background-image: none;
+  background-color: #ffcc33;
+  outline: none;
+}
+
+.slider_features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  margin-bottom: 38px;
+}
+
+.slider_features dl {
+  min-width: fit-content;
+  margin: 0;
+}
+
+.slider_features dd {
+  margin-left: 0;
+  margin-top: 12px;
+}
+
+.index_category {
+  margin-bottom: 172px;
+}
+
+.index_category_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 40px;
+  width: 1160px;
+  justify-content: space-between;
+}
+
+.index_category_item {
+  width: 160px;
+  height: 160px;
+  position: relative;
+}
+
+/*Возможно это ошибка дизайна, поэтому расположил иконки по центру (кроме монопода)
+  Если это не ошибка дизайна, то выставлю с верхним отступом как в макете.*/
+.index_category_item:nth-child(1) {
+  height: 160px;
+  width: 160px;
+  background-image: url("../images/category/category_1_vr.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ffe17f;
+}
+
+.index_category_item:nth-child(2) {
+  height: 160px;
+  width: 160px;
+  background-image: url("../images/category/category_2_monopod.svg");
+  background-repeat: no-repeat;
+  background-position: center 44px;
+  background-color: #ffe17f;
+}
+
+.index_category_item:nth-child(3) {
+  height: 160px;
+  width: 160px;
+  background-image: url("../images/category/category_3_action-camera.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ffe17f;
+}
+
+.index_category_item:nth-child(4) {
+  height: 160px;
+  width: 160px;
+  background-image: url("../images/category/category_4_fitness-bracelet.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ffe17f;
+}
+
+.index_category_item:nth-child(5) {
+  height: 160px;
+  width: 160px;
+  background-image: url("../images/category/category_5_smart-watch.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ffe17f;
+}
+
+.index_category_item:nth-child(6) {
+  height: 160px;
+  width: 160px;
+  background-image: url("../images/category/category_6_quadrocopter.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ffe17f;
+}
+
+.index_category_link {
+  display: block;
+  padding-top: 193px;
+  height: 60px;
+}
+
+.index_category_link:focus {
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
+}
+
+.index_category_item:hover {
+  background-color: #FFC700;
+}
+
+.index_category_item:active {
+  opacity: 0.3;
+}
+
+.index_category_item:active .index_category_link {
+  outline: none;
+}
+
+.index_benefits {
+  min-height: 289px;
+  position: relative;
+}
+
+.index_benefits_container {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
+  position: relative;
+  top: -102px;
+}
+
+.index_benefits_buttons {
+  width: 280px;
+  height: 190px;
+  padding: 64px 0;
+  position: relative;
+}
+
+.index_benefits_button {
+  width: 160px;
+  height: 40px;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  padding: 0;
+  box-sizing: border-box;
+  margin-bottom: 35px;
+}
+
+.button_yellow_line {
+  background-image: url("../images/hidden-line.svg");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  background-size: 100% auto;
+}
+
+.button_yellow_line:focus {
+  outline: #AF4FFF solid 2px;
+}
+
+.button_yellow_line:hover:not(.index_benefits_current) {
+  background-color: #ffe17f;
+}
+
+.button_yellow_line:disabled {
+  background-image: none;
+  opacity: 0.3;
+}
+
+.button_yellow_line:active:not(.index_benefits_current) {
+  background-image: none;
+  background-color: #ffcc33;
+  outline: none;
+}
+
+.index_benefits_current {
+  width: 280px;
+  padding-right: 120px;
+  color: #ffe17f;
+  background-color: #000000;
+  background-image: none;
+}
+
+.index_benefits_current:focus {
+  outline-offset: 2px;
+  padding-left: 35px;
+}
+
+.index_benefits_current:hover,
+.index_benefits_current:active {
+  padding-left: 35px;
+  outline: none;
+}
+
+.index_benefits_list {
+  min-height: 319px;
+  padding-left: 116px;
+  border-left: 7px solid #000000;
+}
+
+.index_benefits_item {
+  width: 475px;
+  padding-right: 246px;
+  padding-top: 72px;
+}
+
+.index_benefits_item:nth-child(1) {
+  background-image: url("../images/slider/delivery.svg");
+  background-repeat: no-repeat;
+  background-position: 558px 77px;
+}
+
+.index_benefits_item:nth-child(2) {
+  background-image: url("../images/slider/guarantee.svg");
+  background-repeat: no-repeat;
+  background-position: 558px 62px;
+}
+
+.index_benefits_item:nth-child(3) {
+  background-image: url("../images/slider/credit.svg");
+  background-repeat: no-repeat;
+  background-position: 568px 65px;
+}
+
+.index_benefits_title {
+  margin: 0;
+  margin-bottom: 34px;
+}
+
+.index_benefits_text {
+  margin: 0;
+  width: 475px;
+}
+
+.delivery_wrapper {
+  display: flex;
+  width: 1160px;
+  height: 100px;
+  position: relative;
+}
+
+.delivery_truck_button {
+  display: inline-block;
+  width: 125px;
+  height: 100px;
+  background-color: #ffe17f;
+  background-image: url("../images/icon/delivery_truck.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.delivery {
+  display: inline-block;
+  cursor: pointer;
+  width: 935px;
+  height: 100px;
+  border: none;
+  padding: 0;
+  padding-right: 25px;
+}
+
+/*Это кнопка? Она позже будет реализовываться?*/
+.delivery_info_buttun {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50% 50%;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  background-color: rgba(220, 220, 220, 0.5);
+  cursor: pointer;
+}
+
+.delivery_info_icon {
+  opacity: 0.3;
+}
+
+.delivery_wrapper:focus {
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
+}
+
+.delivery_wrapper:hover .delivery_info_icon {
+  opacity: 1;
+}
+
+.delivery_wrapper:hover .delivery_truck_button {
+  background-color: #FFC700;
+}
+
+.delivery_wrapper:active {
+  outline: none;
+  opacity: 0.3;
+}
+
+.about-shop {
+  display: flex;
+  width: 1160px;
+  column-gap: 108px;
+}
+
+.about-us_container {
+  width: 520px;
+}
+
+.about_title {
+  margin: 0;
+  margin-bottom: 48px;
+  padding-top: 47px;
+  background-image: url("../images/line.svg");
+  background-repeat: no-repeat;
+}
+
+.about-shop p:not(.contacts_address_text) {
+  margin: 0;
+  min-height: 60px;
+}
+
+.about-us_block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.about-us_item {
+  height: 20px;
+  padding-left: 34px;
+  margin-bottom: 19px;
+}
+
+.about-us_item:last-child {
+  margin-bottom: 0;
+}
+
+.about-shop_link {
+  font-size: 18px;
+  display: block;
+  width: 270px;
+  height: 40px;
+  text-align: center;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  background-color: inherit;
+}
+
+.contacts_container {
+  width: 532px;
+}
+
+.contacts_subtitle {
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.contacts_address_text {
+  margin: 0;
+}
+
+.contacts_phone {
+  width: 30px;
+}
+
+.contacts_timetable {
+  margin-bottom: 30px;
+}
+
+.mailing-list_container {
+  width: 100%;
+}
+
+.mailng-list_wrapper {
+  width: 1160px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.mailing-list_title {
+  width: 348px;
+  margin: 64px 252px 144px 0;
+}
+
+.mailing-list_text {
+  width: 560px;
+  margin-top: 74px;
+}
+
+.mailing-list_form {
+  width: 810px;
+  height: 55px;
+  display: flex;
+  margin-bottom: 56px;
+}
+
+.mailing-list_form input {
+  width: 551px;
+  padding-left: 16px;
+  border: none;
+  border-bottom: 3px solid #c4c4c4;
+}
+
+/*Нужно оформить состояния ошибки и введённого текста*/
+.mailing-list_form input:focus {
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
+}
+
+.mailing-list_form input:hover {
+  background-color: #dcdcdc;
+}
+
+.mailing-list_form input:disabled {
+  opacity: 0.3;
+  background-color: inherit;
+}
+
+.email_button {
+  width: 253px;
+  text-align: center;
+  border: 3px solid #c4c4c4;
+  padding: 0;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.email_button:focus {
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
+  border-color: #c4c4c4;
+}
+
+.email_button:hover {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.email_button:disabled {
+  opacity: 0.3;
+  color: inherit;
+  background-color: inherit;
+}
+
+.email_button:active {
+  color: rgba(259, 259, 259, 0.3);
+  background-color: #000000;
+  border: none;
+  outline: none;
+}
+
+.mailing-list_free {
+  width: 160px;
+  padding-left: 32px;
+  margin-left: auto;
+  background-image: url("../images/icon/check-mark_green.svg");
+  background-repeat: no-repeat;
+  background-position: 2px 7px;
+}
+
+/*Построение сетки мэйн страницы каталога*/
+.bread-crumbs {
+  width: 1040px;
+  padding: 0 60px;
+  margin: 35px auto 34px;
+}
+
+.bread-crumbs_title {
+  margin: 0;
+}
+
+.bread-crumbs_list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 16px;
+  gap: 10px 16px;
+  height: 20px;
+}
+
+.bread-crumbs_item {
+  height: 20px;
+}
+
+.bread-crumbs_item + .bread-crumbs_item {
+  padding-left: 20px;
+  background-image: url("../images/icon/arrow_right_small.svg");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+}
+
+.bread-crumbs_link {
+  display: block;
+}
+
+.bread-crumbs_link:focus {
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
+}
+
+.bread-crumbs_link:hover {
+  opacity: 0.6;
+}
+
+.bread-crumbs_link:active {
+  opacity: 0.3;
+  outline: none;
+}
+
+.catalog {
+  width: 100%;
+}
+
+.catalog_wrapper {
+  width: 1160px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.catalog_filter {
+  width: 260px;
+  padding-left: 60px;
+}
+
+.catalog_filter_subtitle {
+  margin: 25px 0;
+}
+
+.catalog_filter_form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 35px;
+  width: 200px;
+}
+
+.filter_price {
+  height: 95px;
+}
+
+.filter_title {
+  height: 20px;
+  padding-top: 12px;
+  margin-bottom: 20px;
+  width: 200px;
+  box-shadow: inset 0 2px 0 0 #000000;
+}
+
+/*Временное свойство. Ждёт реализации двойного ползунка*/
+.filter_list p {
+  margin: 0;
+}
+
+.filter_item {
+  width: 200px;
+  margin: 0;
+  margin-bottom: 17px;
+  height: 20px;
+}
+
+.filter_item:last-child {
+  margin-bottom: 0;
+}
+
+.filter_button {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  height: 40px;
+  width: 220px;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.control_input {
+  height: 20px;
+  width: 20px;
+}
+
+.select_product-page_container {
+  width: 840px;
+}
+
+.select_container {
+  display: grid;
+  grid-template-columns: 147px 142px 60px;
+  justify-content: space-between;
+  margin:  0 40px;
+  height: 70px;
+  align-items: center;
+}
+
+.select_container_subtitle {
+  margin: 0;
+  width: 147px;
+}
+
+.select_control {
+  width: 142px;
+}
+
+.select_control:focus {
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
+}
+
+.select_control:hover {
+  opacity: 0.6;
+}
+
+.select_control:active {
+  opacity: 0.3;
+  outline: none;
+}
+
+/*Не уверен на счёт этого состояния, т.к. в макете не прописано, когда использовать Variant5*/
+.select_control:disabled {
+  opacity: 0.1;
+}
+
+.sort-up_arrows_wrapper {
+  width: 60px;
+  height: 30px;
+  display: flex;
+}
+
+.sort-up_button {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  opacity: 0.2;
+}
+
+.sort-up_arrow-up,
+.sort-up_arrow-down {
+  fill: #444444;
+}
+
+.sort-up_arrow-down {
+  background-image: url("../images/icon/triangle_down.svg");
+}
+
+.sort-up_button:focus {
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
+  opacity: 1;
+}
+
+.sort-up_button:focus .sort-up_arrow-up,
+.sort-up_button:focus .sort-up_arrow-down {
+  opacity: 0.2;
+}
+
+.sort-up_button:hover {
+  opacity: 1;
+}
+
+.sort-up_button:active .sort-up_arrow-up,
+.sort-up_button:active .sort-up_arrow-down {
+  opacity: 0.1;
+}
+
+.sort-up_button:active {
+  outline: none;
+}
+
+.product-page_monopod {
+  display: flex;
+  flex-direction: column;
+  width: 840px;
+  row-gap: 44px;
+  align-items: center;
+}
+
+.product_monopod_list {
+  display: grid;
+  grid-template-columns: repeat(2, 360px);
+  flex-wrap: wrap;
+  margin: 70px 40px 0;
+  gap: 44px 40px;
+}
+
+.product_monopod_card {
+  position: relative;
+}
+
+.product_card_link {
+  display: block;
+}
+
+.product_hidden_button {
+  display: none;
+  text-align: center;
+  height: 30px;
+  width: 220px;
+  padding-top: 10px;
+  position: absolute;
+  top: 170px;
+  left: 70px
+}
+
+.product_card_link:focus {
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
+}
+
+.product_card_link:hover {
+  opacity: 0.6;
+}
+
+.product_monopod_card:hover .product_hidden_button {
+  display: block;
+  z-index: 2;
+}
+
+.product_hidden_button:hover + .product_card_link{
+  opacity: 0.6;
+}
+
+.product_monopod_card:active .product_card_link{
+  opacity: 0.3;
+}
+
+.product_monopod_card:active .product_card_link {
+  outline: none;
+}
+
+.product_card_image {
+  display: block;
+  object-fit: contain;
+}
+
+.product_card_block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product_card_title {
+  margin: 0;
+  max-width: 240px;
+  padding-top: 32px;
+}
+
+.product_card_price {
+  padding-top: 32px;
+}
+
+.pagination_show-more {
+  width: 760px;
+  height: 55px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.pagination_show-more:focus {
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
+  border-color: #e5e5e5;
+}
+
+.pagination_show-more:hover {
+  border-color: #000000;
+}
+
+.pagination_show-more:disabled {
+  opacity: 0.3;
+  border-color: #e5e5e5;
+}
+
+.pagination_show-more:active {
+  opacity: 0.3;
+  outline: none;
+}
+
+.pagination_container {
+  width: 760px;
+  height: 71px;
+  display: flex;
+  margin-bottom: 78px;
+  justify-content: space-between;
+}
+
+.pagination_button {
+  font-size: 18px;
+  display: inline-block;
+  width: 128px;
+  text-align: center;
+  border: none;
+}
+
+.pagination_current_page {
+  pointer-events: none;
+}
+
+.pagination_button:focus {
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
+}
+
+.pagination_button:hover {
+  background-color: #dcdcdc;
+}
+
+.pagination_button:active {
+  outline: none;
+  background-color: #dcdcdc;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.pagination_button:disabled {
+  opacity: 0.3;
+  background-color: #ebebeb;
+}
+
+.pagination_list {
+  display: flex;
+  margin: 0;
+  align-items: center;
+}
+
+.pagination_item {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+}
+
+.pagination_link {
+  display: block;
+  min-width: 10px;
+  height: 40px;
+  box-sizing: border-box;
+  padding-top: 10px;
+  color: #444444;
+  opacity: 0.3;
+}
+
+.pagination_link:focus {
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
+}
+
+.pagination_link:hover {
+  opacity: 1;
+}
+
+.pagination_link:active {
+  opacity: 0.1;
+  outline: none;
+}
+
+.pagination_link:disabled {
+  opacity: 0.6;
+}
+
+/*Построение сетки футер главной страницы*/
+.footer_index_container {
+  width: 1160px;
+  min-height: 198px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.footer_address {
+  width: 234px;
+  min-height: 182px;
+  margin-top: 62px;
+  margin-bottom: 77px;
+  position: relative;
+}
+
+.footer_logo {
+  margin: 0;
+}
+
+.footer_logo_link {
+  display: block;
+  width: 145px;
+}
+
+/*Замена цвета логотипа ведь будет рассматриваться в следующем разделе?
+Или можно логотипы хэдера и футера выполнить разными svg-файлами?
+Или вставлять непосредственно svg-код? Не понимаю, как изменить цвет на #FFC700,
+Это потому что в исходном логотипе два цвета?*/
+.footer_logo {
+  display: block;
+}
+
+.footer_address_text {
+  margin-top: 35px;
+}
+
+.footer_address_line {
+  position: absolute;
+  left: 0;
+  top: 175px;
+}
+
+
+.footer_nav-social_container {
+  width: 444px;
+  min-height: 123px;
+  margin-left: 124px;
+  margin-right: 183px;
+  margin-top: 137px;
+  margin-bottom: 61px;
+}
+
+.footer_navigation_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 5px;
+  margin-bottom: 62px;
+}
+
+.footer_link {
+  display: block;
+}
+
+.footer_link:focus,
+.footer_phone:focus {
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
+}
+
+.footer_link:hover,
+.footer_phone:hover {
+  color: #FFC700;
+  text-decoration: underline;
+}
+
+.footer_link:active,
+.footer_phone:active {
+  color: #FFC700;
+  text-decoration: underline;
+  opacity: 0.3;
+  outline: none;
+}
+
+.footer_social_list {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 150px;
+  column-gap: 10px;
+  justify-content: center;
+}
+
+.footer_social_item {
+  width: 40px;
+  height: 40px;
+  border-radius: 50% 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.footer_social_link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer_social_link:focus {
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
+}
+
+.footer_social_item:hover {
+  background-color: #FFC700;
+}
+
+.footer_social_item:active {
+  background-color: #FFC700;
+}
+
+.footer_social_item:active .footer_social_telegram,
+.footer_social_item:active .footer_social_youtube,
+.footer_social_item:active .footer_social_twitter {
+  opacity: 0.3;
+}
+
+.footer_social_item:active .footer_social_link {
+  outline: none;
+}
+
+.footer_social_telegram {
+  background-image: url("../images/icon/social_networks/telegram.svg");
+}
+
+.footer_social_youtube {
+  background-image: url("../images/icon/social_networks/youtube.svg");
+}
+
+.footer_social_twitter {
+  background-image: url("../images/icon/social_networks/twitter.svg");
+}
+
+.footer_other {
+  width: 175px;
+  margin-top: 140px;
+  margin-bottom: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.htmlacademy_link {
+  display: block;
+}
+
+.footer_logo_academy {
+  fill: #FFC700;
+}
+
+.htmlacademy_link:focus {
+  outline: #AF4FFF solid 2px;
+  outline-offset: 2px;
+}
+
+.htmlacademy_link:hover .footer_logo_academy {
+  fill: #FFffff;
+}
+
+.htmlacademy_link:active {
+  fill: #FFffff;
+  opacity: 0.3;
+  outline: none;
+}

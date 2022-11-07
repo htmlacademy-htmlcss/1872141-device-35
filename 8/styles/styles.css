@@ -369,7 +369,7 @@ body {
 
 .logo:focus,
 .footer_logo_link:focus {
-  outline: #AF4FFF solid 2px;
+  outline: #af4fff solid 2px;
   outline-offset: 2px;
 }
 
@@ -412,7 +412,7 @@ body {
 
 /*Доделать состояния в дальнейших разделах*/
 .header_search_form input:focus {
-  outline: #AF4FFF solid 2px;
+  outline: #af4fff solid 2px;
   outline-offset: 2px;
 }
 
@@ -432,7 +432,7 @@ body {
 }
 
 .header_search_form button:focus {
-  outline: #AF4FFF solid 2px;
+  outline: #af4fff solid 2px;
   outline-offset: 2px;
 }
 
@@ -462,7 +462,7 @@ body {
 
 
 .header_link:focus {
-  outline: #AF4FFF solid 2px;
+  outline: #af4fff solid 2px;
   outline-offset: 2px;
 }
 
@@ -515,29 +515,51 @@ body {
 
 .navigation_menu_link {
   display: block;
-  width: 236px;
+  width: 243px;
+  height: 35px;
+  padding-right: 50px;
+  padding-top: 15px;
   margin: auto 0;
   text-decoration: none;
   color: #000000;
+  position: relative;
+}
+
+.navigation_menu_link::after {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 46px;
+  background-image: url("../images/icon/plus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid #000000;
+  border-radius: 50% 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.3;
+}
+
+.navigation_menu_link:focus {
+  outline: #af4fff solid 2px;
+  outline-offset: 2px;
+}
+
+.navigation_menu_link:hover:after {
+  opacity: 1;
+}
+
+.navigation_menu_link:active {
+  opacity: 1;
+  outline: none;
 }
 
 .navigation_menu_item .header_link:focus,
 .navigation_menu_item .header_link:hover,
 .navigation_menu_item .header_link:active {
   text-decoration: underline;
-}
-
-.navigation_menu_plus {
-  width: 50px;
-  height: 50px;
-  display: inline-block;
-  margin-left: 7px;
-  background-image: url("../images/icon/plus.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #ffe17f;
-  border-radius: 50% 50%;
-  cursor: pointer;
 }
 
 .navigation_menu_list {
@@ -649,33 +671,21 @@ body {
 .button_more_block {
   position: relative;
 }
-/*Мне кажется такой способ более сложный, чем сверстать черту через background-image.
-Сделал таким способом для пробы. */
-.slider_more-detailed::before {
-  content: "";
-  display: block;
-  width: 220px;
-  height: 8px;
-  background-color: #ffe17f;
-  position: absolute;
-  top: 16px;
-  z-index: -1;
-}
 
 .slider_more-detailed {
   width: 220px;
-  height: 40px;
-  display: inline-block;
-  cursor: pointer;
+  height: 20px;
+  display: block;
   text-align: center;
   padding: 10px 0;
   background-color: inherit;
-  border: none;
   font-size: 18px;
+  text-decoration: none;
+  color: #000000;
 }
 
 .slider_more-detailed:focus {
-  outline: #AF4FFF solid 2px;
+  outline: #af4fff solid 2px;
 }
 
 .slider_more-detailed:hover {
@@ -726,62 +736,33 @@ body {
   width: 160px;
   height: 160px;
   position: relative;
-}
-
-/*Возможно это ошибка дизайна, поэтому расположил иконки по центру (кроме монопода)
-  Если это не ошибка дизайна, то выставлю с верхним отступом как в макете.*/
-.index_category_item:nth-child(1) {
-  height: 160px;
-  width: 160px;
-  background-image: url("../images/category/category_1_vr.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-color: #ffe17f;
+}
+
+.index_category_item:nth-child(1) {
+  background-image: url("../images/category/category_1_vr.svg");
 }
 
 .index_category_item:nth-child(2) {
-  height: 160px;
-  width: 160px;
   background-image: url("../images/category/category_2_monopod.svg");
-  background-repeat: no-repeat;
-  background-position: center 44px;
-  background-color: #ffe17f;
 }
 
 .index_category_item:nth-child(3) {
-  height: 160px;
-  width: 160px;
   background-image: url("../images/category/category_3_action-camera.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #ffe17f;
 }
 
 .index_category_item:nth-child(4) {
-  height: 160px;
-  width: 160px;
   background-image: url("../images/category/category_4_fitness-bracelet.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #ffe17f;
 }
 
 .index_category_item:nth-child(5) {
-  height: 160px;
-  width: 160px;
   background-image: url("../images/category/category_5_smart-watch.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #ffe17f;
 }
 
 .index_category_item:nth-child(6) {
-  height: 160px;
-  width: 160px;
   background-image: url("../images/category/category_6_quadrocopter.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #ffe17f;
 }
 
 .index_category_link {
@@ -791,7 +772,7 @@ body {
 }
 
 .index_category_link:focus {
-  outline: #AF4FFF solid 2px;
+  outline: #af4fff solid 2px;
   outline-offset: 2px;
 }
 
@@ -846,7 +827,7 @@ body {
 }
 
 .button_yellow_line:focus {
-  outline: #AF4FFF solid 2px;
+  outline: #af4fff solid 2px;
 }
 
 .button_yellow_line:hover:not(.index_benefits_current) {
@@ -930,8 +911,8 @@ body {
   position: relative;
 }
 
-.delivery_truck_button {
-  display: inline-block;
+.delivery::before {
+  content: "";
   width: 125px;
   height: 100px;
   background-color: #ffe17f;
@@ -940,21 +921,22 @@ body {
   background-position: center;
   border: none;
   padding: 0;
-  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .delivery {
-  display: inline-block;
-  cursor: pointer;
-  width: 935px;
-  height: 100px;
-  border: none;
-  padding: 0;
-  padding-right: 25px;
+  display: block;
+  width: 910px;
+  height: 20px;
+  padding: 40px 125px;
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
 }
 
-/*Это кнопка? Она позже будет реализовываться?*/
-.delivery_info_buttun {
+.delivery_info_block {
   display: block;
   width: 40px;
   height: 40px;
@@ -964,15 +946,16 @@ body {
   right: 30px;
   top: 30px;
   background-color: rgba(220, 220, 220, 0.5);
-  cursor: pointer;
 }
 
 .delivery_info_icon {
+  padding-left: 19px;
   opacity: 0.3;
+  padding-top: 14px;
 }
 
-.delivery_wrapper:focus {
-  outline: #AF4FFF solid 2px;
+.delivery:focus {
+  outline: #af4fff solid 2px;
   outline-offset: 2px;
 }
 
@@ -980,13 +963,18 @@ body {
   opacity: 1;
 }
 
-.delivery_wrapper:hover .delivery_truck_button {
-  background-color: #FFC700;
+.delivery_wrapper:hover .delivery::before {
+  background-color: #ffc700;
 }
 
 .delivery_wrapper:active {
   outline: none;
   opacity: 0.3;
+}
+
+.delivery_info_block:focus {
+  outline: #af4fff solid 2px;
+  outline-offset: 2px;
 }
 
 .about-shop {
@@ -1033,12 +1021,9 @@ body {
   font-size: 18px;
   display: block;
   width: 270px;
-  height: 40px;
+  height: 30px;
   text-align: center;
-  cursor: pointer;
-  padding: 0;
-  border: none;
-  background-color: inherit;
+  padding-top: 10px;
 }
 
 .contacts_container {
@@ -1100,7 +1085,7 @@ body {
 
 /*Нужно оформить состояния ошибки и введённого текста*/
 .mailing-list_form input:focus {
-  outline: #AF4FFF solid 2px;
+  outline: #af4fff solid 2px;
   outline-offset: 2px;
 }
 
@@ -1123,7 +1108,7 @@ body {
 }
 
 .email_button:focus {
-  outline: #AF4FFF solid 2px;
+  outline: #af4fff solid 2px;
   outline-offset: 2px;
   border-color: #c4c4c4;
 }
@@ -1190,7 +1175,7 @@ body {
 }
 
 .bread-crumbs_link:focus {
-  outline: #AF4FFF solid 2px;
+  outline: #af4fff solid 2px;
   outline-offset: 2px;
 }
 
@@ -1297,7 +1282,7 @@ body {
 }
 
 .select_control:focus {
-  outline: #AF4FFF solid 2px;
+  outline: #af4fff solid 2px;
   outline-offset: 2px;
 }
 
@@ -1310,7 +1295,6 @@ body {
   outline: none;
 }
 
-/*Не уверен на счёт этого состояния, т.к. в макете не прописано, когда использовать Variant5*/
 .select_control:disabled {
   opacity: 0.1;
 }
@@ -1326,23 +1310,17 @@ body {
   width: 30px;
   height: 30px;
   border: none;
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
   opacity: 0.2;
 }
 
 .sort-up_arrow-up,
 .sort-up_arrow-down {
   fill: #444444;
-}
-
-.sort-up_arrow-down {
-  background-image: url("../images/icon/triangle_down.svg");
+  padding-left: 9px;
 }
 
 .sort-up_button:focus {
-  outline: #AF4FFF solid 2px;
+  outline: #af4fff solid 2px;
   outline-offset: 2px;
   opacity: 1;
 }
@@ -1401,7 +1379,7 @@ body {
 }
 
 .product_card_link:focus {
-  outline: #AF4FFF solid 2px;
+  outline: #af4fff solid 2px;
   outline-offset: 2px;
 }
 
@@ -1454,7 +1432,7 @@ body {
 }
 
 .pagination_show-more:focus {
-  outline: #AF4FFF solid 2px;
+  outline: #af4fff solid 2px;
   outline-offset: 2px;
   border-color: #e5e5e5;
 }
@@ -1483,18 +1461,20 @@ body {
 
 .pagination_button {
   font-size: 18px;
-  display: inline-block;
+  display: block;
   width: 128px;
   text-align: center;
-  border: none;
+  height: 46px;
+  padding-top: 25px;
 }
 
-.pagination_current_page {
+.pagination_first-page {
   pointer-events: none;
+  opacity: 0.3;
 }
 
 .pagination_button:focus {
-  outline: #AF4FFF solid 2px;
+  outline: #af4fff solid 2px;
   outline-offset: 2px;
 }
 
@@ -1535,8 +1515,17 @@ body {
   opacity: 0.3;
 }
 
+.pagination_current_page {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.pagination_ellipsis {
+  pointer-events: none;
+}
+
 .pagination_link:focus {
-  outline: #AF4FFF solid 2px;
+  outline: #af4fff solid 2px;
   outline-offset: 2px;
 }
 
@@ -1582,7 +1571,7 @@ body {
 
 /*Замена цвета логотипа ведь будет рассматриваться в следующем разделе?
 Или можно логотипы хэдера и футера выполнить разными svg-файлами?
-Или вставлять непосредственно svg-код? Не понимаю, как изменить цвет на #FFC700,
+Или вставлять непосредственно svg-код? Не понимаю, как изменить цвет на #ffc700,
 Это потому что в исходном логотипе два цвета?*/
 .footer_logo {
   display: block;
@@ -1622,19 +1611,19 @@ body {
 
 .footer_link:focus,
 .footer_phone:focus {
-  outline: #AF4FFF solid 2px;
+  outline: #af4fff solid 2px;
   outline-offset: 2px;
 }
 
 .footer_link:hover,
 .footer_phone:hover {
-  color: #FFC700;
+  color: #ffc700;
   text-decoration: underline;
 }
 
 .footer_link:active,
 .footer_phone:active {
-  color: #FFC700;
+  color: #ffc700;
   text-decoration: underline;
   opacity: 0.3;
   outline: none;
@@ -1664,16 +1653,16 @@ body {
 }
 
 .footer_social_link:focus {
-  outline: #AF4FFF solid 2px;
+  outline: #af4fff solid 2px;
   outline-offset: 2px;
 }
 
 .footer_social_item:hover {
-  background-color: #FFC700;
+  background-color: #ffc700;
 }
 
 .footer_social_item:active {
-  background-color: #FFC700;
+  background-color: #ffc700;
 }
 
 .footer_social_item:active .footer_social_telegram,
@@ -1713,11 +1702,11 @@ body {
 }
 
 .footer_logo_academy {
-  fill: #FFC700;
+  fill: #ffc700;
 }
 
 .htmlacademy_link:focus {
-  outline: #AF4FFF solid 2px;
+  outline: #af4fff solid 2px;
   outline-offset: 2px;
 }
 

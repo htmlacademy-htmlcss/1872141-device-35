@@ -337,6 +337,7 @@ body {
 .contacts_timetable,
 .footer_navigation_list,
 .footer_social_list,
+.slider_pagination_list,
 .slider_properties_list,
 .index_benefits_list,
 .filter_list,
@@ -510,7 +511,7 @@ body {
 .navigation_menu_block {
   display: flex;
   margin-right: 5px;
-  z-index: 2;
+  z-index: 1;
 }
 
 .navigation_menu_link {
@@ -574,7 +575,7 @@ body {
 .navigation_menu_item {
   width: 127px;
   text-align: end;
-  z-index: 3;
+  z-index: 1;
 }
 
 /*Доп свойства сетки хедэр страницы каталога*/
@@ -614,22 +615,73 @@ body {
   flex-grow: 1;
 }
 
-.slider_properties_list {
+.main-slider {
   position: relative;
+  width: 1160px;
+  top: -150px;
   height: 410px;
 }
 
+.slider_button {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  width: 20px;
+  height: 60px;
+  background-image: url("../images/slider/arrow_left.svg");
+  background-repeat: no-repeat;
+  background-color: inherit;
+  z-index: 1;
+}
+
+.slider_button_prev {
+  position: absolute;
+  top: 211px;
+  left: 30px;
+}
+
+.slider_button_next {
+  position: absolute;
+  top: 211px;
+  left: 540px;
+  transform: rotate(180deg);
+}
+
+.slider_button:focus {
+  outline: #af4fff solid 2px;
+  outline-offset: 2px;
+}
+
+.slider_button:hover {
+  opacity: 0.6;
+}
+
+.slider_button:active {
+  outline: none;
+  opacity: 0.3;
+}
+
+/*По правилам я должен сверстать состояние disabled, т.к. оно есть в стайл гайде,
+но ведь такую кнопку всегда можно нажать (будет прокрутка по кругу)...
+Или это дизайнер решает?*/
+.slider_button:disabled {
+  opacity: 0.1;
+  pointer-events: none;
+}
+
 .slider_item {
-  display: grid;
-  grid-template-columns: repeat(2, 560px);
-  column-gap: 40px;
+  display: none;
+}
+
+.current_slide {
+  display: flex;
   position: relative;
-  top: -150px;
 }
 
 .slider_image {
   display: block;
   object-fit: contain;
+  margin-right: 40px;
 }
 
 .slider_item_wrapper {
@@ -637,24 +689,25 @@ body {
   flex-direction: column;
   justify-content: space-between;
   width: 560px;
-  min-height: 440px;
-  padding-top: 120px;
+  min-height: 441px;
+  margin-top: 119px;
   row-gap: 50px;
-  position: relative;
 }
 
+/*Непонимаю почему текст выходит за контейнер. Подскажите, где я ошибся...
+Для наглядности цвет фона временно изменён*/
 .slider_number {
   width: 250px;
   height: 135px;
+  background-color: red;
+  text-align: right;
   position: absolute;
-  top: 92px;
+  top: 29px;
   right: 49px;
-  text-align: end;
-  z-index: 2;
 }
 
 .slider_text {
-  z-index: 3;
+  z-index: 1;
 }
 
 .slider_promo {
@@ -718,6 +771,66 @@ body {
 .slider_features dd {
   margin-left: 0;
   margin-top: 12px;
+}
+
+.slider_pagination_list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 76px;
+  height: 12px;
+  justify-content: space-between;
+  position: absolute;
+  bottom: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.slider_pagination_item {
+  height: 12px;
+}
+
+.slider_pagination_button {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  border: none;
+  background-image: url("../images/icon/circle.svg");
+}
+
+.slider_pagination_item.slider_pagination_current {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-image: url("../images/icon/ellipse.svg");
+  padding: 0;
+  cursor: pointer;
+  border: none;
+}
+
+.slider_pagination_button:focus,
+.slider_pagination_item.slider_pagination_current:focus {
+  outline: #af4fff solid 2px;
+  outline-offset: 2px;
+}
+
+.slider_pagination_button:hover,
+.slider_pagination_item.slider_pagination_current:hover {
+  opacity: 0.6;
+}
+
+.slider_pagination_button:active,
+.slider_pagination_item.slider_pagination_current:active {
+  opacity: 0.3;
+  outline: none;
+}
+
+/*Не могу представить, когда эта кнопка будет неактивна...*/
+.slider_pagination_button:disabled,
+.slider_pagination_item.slider_pagination_current:disabled {
+  opacity: 0.1;
 }
 
 .index_category {
@@ -1389,7 +1502,7 @@ body {
 
 .product_monopod_card:hover .product_hidden_button {
   display: block;
-  z-index: 2;
+  z-index: 1;
 }
 
 .product_hidden_button:hover + .product_card_link{
@@ -1569,10 +1682,6 @@ body {
   width: 145px;
 }
 
-/*Замена цвета логотипа ведь будет рассматриваться в следующем разделе?
-Или можно логотипы хэдера и футера выполнить разными svg-файлами?
-Или вставлять непосредственно svg-код? Не понимаю, как изменить цвет на #ffc700,
-Это потому что в исходном логотипе два цвета?*/
 .footer_logo {
   display: block;
 }

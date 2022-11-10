@@ -18,17 +18,64 @@
         </form>
         <a class="log-in header_link" href="#">Войти</a>
         <ul class="navigation_user_list">
-          <li class="navigation_user_item">
+          <li class="navigation_user_difference">
             <a class="header_link" href="#">Сравнить</a>
           </li>
-          <li class="navigation_user_item">
+          <li class="navigation_user_cart">
             <a class="header_link" href="#">Корзина</a>
+            <button class="popover_close_button" type="button">
+              2
+              <span class="visually-hidden">Раскрыть</span>
+            </button>
+            <div class="popover">
+              <ul class="popover_list">
+                <li class="popover_item">
+                  <a class="popover_link" href="#">Любительская селфи-палка</a>
+                  <button class="popover_delete_button" type="button">
+                    <svg class="popover_delete_icon" aria-hidden="true" focusable="false" width="10" height="10" viewBox="0 0 10 10"><path d="M10 0.909091L9.09091 0L5 4.09091L0.909091 0L0 0.909091L4.09091 5L0 9.09091L0.909091 10L5 5.90909L9.09091 10L10 9.09091L5.90909 5L10 0.909091Z" fill="white"/></svg>
+                    <span class="visually-hidden">Удалить товар из корзины</span>
+                  </button>
+                </li>
+                <li class="popover_item">
+                  <a class="popover_link" href="#">Профессиональная селфи-палка</a>
+                  <button class="popover_delete_button" type="button">
+                    <svg class="popover_delete_icon" aria-hidden="true" focusable="false" width="10" height="10" viewBox="0 0 10 10"><path d="M10 0.909091L9.09091 0L5 4.09091L0.909091 0L0 0.909091L4.09091 5L0 9.09091L0.909091 10L5 5.90909L9.09091 10L10 9.09091L5.90909 5L10 0.909091Z" fill="white"/></svg>
+                    <span class="visually-hidden">Удалить товар из корзины</span>
+                  </button>
+                </li>
+              </ul>
+              <div class="popover_total">
+                <span>Товаров: 2</span>
+                <span>Сумма: 2000 ₽</span>
+              </div>
+              <a class="popover_open-cart_button" href="#">Открыть корзину</a>
+            </div>
           </li>
         </ul>
       </div>
       <nav class="navigation_menu">
         <div class="navigation_menu_block">
           <a class="navigation_menu_link" href="catalog.html">Каталог товаров</a>
+          <ul class="subcatalog">
+            <li class="subcatalog_item">
+              <a class="subcatalog_link" href="#">Виртуальная реальность</a>
+            </li>
+            <li class="subcatalog_item">
+              <a class="subcatalog_link" href="#">Моноподы для cелфи</a>
+            </li>
+            <li class="subcatalog_item">
+              <a class="subcatalog_link" href="#">Экшн-камеры</a>
+            </li>
+            <li class="subcatalog_item">
+              <a class="subcatalog_link" href="#">Фитнес-браслеты</a>
+            </li>
+            <li class="subcatalog_item">
+              <a class="subcatalog_link" href="#">Умные часы</a>
+            </li>
+            <li class="subcatalog_item">
+              <a class="subcatalog_link" href="#">Квадрокоптеры</a>
+            </li>
+          </ul>
         </div>
         <ul class="navigation_menu_list">
           <li class="navigation_menu_item">
@@ -56,7 +103,9 @@
         <ol class="slider_properties_list">
           <li class="slider_item current_slide">
             <img class="slider_image" src="./images/slider/slider_1.png" width="560" height="560" alt="Квадрокоптер с лазером, замаскированным под камеру.">
-            <span class="slider_number">01</span>
+            <div class="slider_number_block">
+              <span class="slider_number">01</span>
+            </div>
             <div class="slider_item_wrapper">
               <div class="slider_text">
                 <p class="slider_promo">Порхает как бабочка, жалит как пчела!</p>
@@ -122,16 +171,16 @@
         </ol>
         <ol class="slider_pagination_list">
           <li class="slider_pagination_item">
-            <button class="slider_pagination_item slider_pagination_current" type="button">
+            <button class="slider_pagination_button slider_pagination_current" type="button">
               <span class="visually-hidden">Первый слайд.</span>
             </button>
           </li>
-          <li class="slider_pagination-item">
+          <li class="slider_pagination_item">
             <button class="slider_pagination_button" type="button">
               <span class="visually-hidden">Второй слайд.</span>
             </button>
           </li>
-          <li class="slider_pagination-item">
+          <li class="slider_pagination_item">
             <button class="slider_pagination_button" type="button">
               <span class="visually-hidden">Третий слайд.</span>
             </button>

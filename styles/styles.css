@@ -352,17 +352,16 @@ body {
 /*Построение сетки хедэр главной страницы*/
 .page_header {
   width: 1040px;
-  min-height: 300px;
   padding: 0 60px;
   margin: 0 auto;
   margin-top: 40px;
-
+  position: relative;
 }
 
 .logo {
-  position: relative;
+  position: absolute;
   top: -20px;
-  left: 0;
+  left: 60px;
   display: block;
   width: 145px;
   height: 37px;
@@ -387,8 +386,9 @@ body {
 
 .header_menu_container {
   display: flex;
-  margin: 30px auto;
+  margin: 46px auto 45px;
   justify-content: space-between;
+  align-items: center;
 }
 
 .header_search_form {
@@ -464,57 +464,65 @@ body {
   background-position: 0 center;
 }
 
-
 .header_link:focus {
   outline: #af4fff solid 2px;
   outline-offset: 2px;
 }
 
-.header_link:hover {
+.header_link:hover,
+.header_link:hover ~ .popover_close_button {
   opacity: 0.6;
 }
 
-.header_link:active {
+.header_link:active,
+.header_link:active ~ .popover_close_button {
   opacity: 0.3;
   outline: none;
 }
 
 .navigation_user_list {
   display: flex;
-  margin: 0;
+  height: 30px;
   justify-content: end;
   align-items: center;
-  gap: 10px 36px;
+  gap: 10px 16px;
   flex-wrap: wrap;
 }
 
-.navigation_user_item:nth-child(1) .header_link {
+.navigation_user_difference .header_link {
+  display: block;
   width: 83px;
+  height: 30px;
   padding-left: 22px;
   background-image: url("../images/icon/difference.svg");
   background-repeat: no-repeat;
   background-position: 0 center;
 }
 
-.navigation_user_item:nth-child(2) .header_link {
+.navigation_user_cart {
+  position: relative;
+}
+
+.navigation_user_cart .header_link {
+  display: block;
   width: 74px;
-  padding-left: 25px;
+  height: 30px;
+  padding-left: 45px;
   background-image: url("../images/icon/cart.svg");
   background-repeat: no-repeat;
-  background-position: 0 center;
+  background-position: 15px center;
 }
 
 .navigation_menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 50px;
 }
 
 .navigation_menu_block {
   display: flex;
   margin-right: 5px;
-  z-index: 1;
+  position: relative;
 }
 
 .navigation_menu_link {
@@ -527,6 +535,7 @@ body {
   text-decoration: none;
   color: #000000;
   position: relative;
+  z-index: 3;
 }
 
 .navigation_menu_link::after {
@@ -541,7 +550,8 @@ body {
   border-radius: 50% 50%;
   cursor: pointer;
   position: absolute;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
   right: 0;
   opacity: 0.3;
 }
@@ -553,6 +563,10 @@ body {
 
 .navigation_menu_link:hover:after {
   opacity: 1;
+}
+
+.navigation_menu_link:hover + .subcatalog {
+  display: grid;
 }
 
 .navigation_menu_link:active {
@@ -572,7 +586,6 @@ body {
   flex-wrap: wrap;
   justify-content: end;
   gap: 10px 45px;
-
 }
 
 .navigation_menu_item {
@@ -582,6 +595,10 @@ body {
 }
 
 /*Доп свойства сетки хедэр страницы каталога*/
+.header_catalog {
+  min-height: 186px;
+}
+
 .log-in_block {
   display: flex;
   justify-content: space-between;
@@ -621,8 +638,7 @@ body {
 .main-slider {
   position: relative;
   width: 1160px;
-  top: -150px;
-  height: 410px;
+  height: 560px;
 }
 
 .slider_button {
@@ -685,6 +701,29 @@ body {
   display: block;
   object-fit: contain;
   margin-right: 40px;
+  z-index: 1;
+}
+
+.slider_number_block {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+  background-color: #ffe17f;
+  position: absolute;
+}
+
+/*Непонимаю почему текст выходит за контейнер. Подскажите, где я ошибся...
+Для наглядности цвет фона временно изменён*/
+.slider_number {
+  width: 250px;
+  height: 135px;
+  text-align: end;
+  position: absolute;
+  top: 27px;
+  right: 49px;
+  background-color: red;
 }
 
 .slider_item_wrapper {
@@ -695,18 +734,6 @@ body {
   min-height: 441px;
   margin-top: 119px;
   row-gap: 50px;
-}
-
-/*Непонимаю почему текст выходит за контейнер. Подскажите, где я ошибся...
-Для наглядности цвет фона временно изменён*/
-.slider_number {
-  width: 250px;
-  height: 135px;
-  background-color: red;
-  text-align: right;
-  position: absolute;
-  top: 29px;
-  right: 49px;
 }
 
 .slider_text {
@@ -783,17 +810,19 @@ body {
   height: 12px;
   justify-content: space-between;
   position: absolute;
-  bottom: -150px;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 1;
 }
 
+/*Не могу понять почеему */
 .slider_pagination_item {
-  height: 12px;
+  max-height: 12px;
 }
 
 .slider_pagination_button {
-  display: inline-block;
+  display: block;
   width: 12px;
   height: 12px;
   padding: 0;
@@ -801,31 +830,34 @@ body {
   cursor: pointer;
   border: none;
   background-image: url("../images/icon/circle.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.slider_pagination_item.slider_pagination_current {
-  display: inline-block;
+.slider_pagination_current {
+  display: block;
   width: 12px;
   height: 12px;
   background-image: url("../images/icon/ellipse.svg");
-  padding: 0;
-  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+
   border: none;
 }
 
 .slider_pagination_button:focus,
-.slider_pagination_item.slider_pagination_current:focus {
+.slider_pagination_current:focus {
   outline: #af4fff solid 2px;
   outline-offset: 2px;
 }
 
 .slider_pagination_button:hover,
-.slider_pagination_item.slider_pagination_current:hover {
+.slider_pagination_current:hover {
   opacity: 0.6;
 }
 
 .slider_pagination_button:active,
-.slider_pagination_item.slider_pagination_current:active {
+.slider_pagination_current:active {
   opacity: 0.3;
   outline: none;
 }
@@ -893,7 +925,7 @@ body {
 }
 
 .index_category_item:hover {
-  background-color: #FFC700;
+  background-color: #ffc700;
 }
 
 .index_category_item:active {
@@ -1982,11 +2014,261 @@ body {
 }
 
 .htmlacademy_link:hover .footer_logo_academy {
-  fill: #FFffff;
+  fill: #ffffff;
 }
 
 .htmlacademy_link:active {
-  fill: #FFffff;
+  fill: #ffffff;
   opacity: 0.3;
   outline: none;
+}
+
+/*Поповер корзины*/
+.popover_close_button {
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 21px;
+  height: 21px;
+  color: #000000;
+  background-color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+.popover_close_button:focus-within {
+  outline: #af4fff solid 2px;
+  outline-offset: 2px;
+}
+
+.popover_close_button:hover {
+  opacity: 0.6;
+}
+
+.popover_close_button:active {
+  outline: none;
+  opacity: 0.3;
+}
+
+/*Наверное следующее свойство не нужно. Сделано для наглядности работы поповера*/
+.popover_close_button:focus ~ .popover,
+.popover_close_button:hover ~ .popover {
+  display: block;
+}
+
+.popover {
+  display: none;
+  width: 320px;
+  min-height: 134px;
+  margin-top: 6px;
+  font-family: "rubik", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #ffffff;
+  background-color: #000000;
+  position: absolute;
+  top: 30px;
+  left: -126px;
+  z-index: 3;
+}
+
+.popover::before {
+  background-image: url("../images/icon/triangle_up_small.svg");
+  background-repeat: no-repeat;
+  content: "";
+  display: block;
+  width: 14px;
+  height: 6px;
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.popover_list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.popover_item {
+  margin: 20px;
+  position: relative;
+}
+
+.popover_link {
+  width: 191px;
+  height: 43px;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding-left: 62px;
+  margin-right: 23px;
+}
+
+.popover_item:nth-child(1) .popover_link {
+  background-image: url("../images/catalog_products/product_1_small.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+}
+
+.popover_item:nth-child(2) .popover_link {
+  background-image: url("../images/catalog_products/product_2_small.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+}
+
+.popover_delete_button {
+  display: block;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: inherit;
+}
+
+.popover_delete_icon {
+  display: block;
+}
+
+.popover_link:focus,
+.popover_delete_button:focus {
+  outline: #af4fff solid 2px;
+  outline-offset: 2px;
+}
+
+.popover_link:hover,
+.popover_delete_button:hover {
+  opacity: 0.6;
+}
+
+.popover_link:active,
+.popover_delete_button:active {
+  outline: none;
+  opacity: 0.3;
+}
+
+.popover_total {
+  display: flex;
+  flex-wrap: wrap;
+  width: 280px;
+  padding: 0 20px;
+  height: 44px;
+  background-color: #1a1a1a;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popover_open-cart_button {
+  display: block;
+  width: 280px;
+  height: 36px;
+  margin: 20px;
+  color: #000000;
+  background-color: #ffffff;
+  text-align: center;
+  font-family: "raleway", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding-top: 14px;
+}
+
+.popover_open-cart_button:focus {
+  outline: #af4fff solid 2px;
+  outline-offset: 2px;
+}
+
+.popover_open-cart_button:hover {
+  background-color: #ffe17f;
+}
+
+.popover_open-cart_button:active {
+  background-color: #ffe17f;
+  color: rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
+.popover_open-cart_button:disabled {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+/*Поповер каталога товаров главной страницы*/
+.subcatalog {
+  position: absolute;
+  top: 18px;
+  left: -60px;
+  background-color: #ffe17f;
+  z-index: 2;
+  width: 1160px;
+  display: none;
+  grid-template-columns: 60px 252px 211px 211px 425px;
+  grid-template-rows: 13px 20px 20px 20px 27px;
+  row-gap: 20px;
+  min-height: 180px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.subcatalog_item:nth-child(1) {
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+
+.subcatalog_item:nth-child(2) {
+  grid-row: 3/4;
+  grid-column: 2/3;
+}
+
+.subcatalog_item:nth-child(3) {
+  grid-row: 4/5;
+  grid-column: 2/3;
+}
+
+.subcatalog_item:nth-child(4) {
+  grid-row: 2/3;
+  grid-column: 3/4;
+}
+
+.subcatalog_item:nth-child(5) {
+  grid-row: 3/4;
+  grid-column: 3/4;
+}
+
+.subcatalog_item:nth-child(6) {
+  grid-row: 2/3;
+  grid-column: 4/5;
+}
+
+.subcatalog_link {
+  display: block;
+  width: fit-content;
+  color: #000000;
+  text-decoration: none;
+  font-family: "rubik", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.subcatalog_link:focus {
+  outline: #af4fff solid 2px;
+  outline-offset: 2px;
+}
+
+.subcatalog_link:hover {
+  opacity: 0.6;
+}
+
+.subcatalog_link:active {
+  outline: none;
+  opacity: 0.3;
 }

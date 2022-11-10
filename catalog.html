@@ -67,41 +67,64 @@
             <form class="catalog_filter_form" action="https://echo.htmlacademy.ru/" method="get">
               <fieldset class="filter_price">
                 <legend class="filter_title">Стоимость</legend>
-                <ul class="filter_list">
-                  <li><p>Будет позже</p></li>
-                </ul>
+                <div class="range">
+                  <div class="range_scale">
+                    <div class="range_bar" style="left: 0; width: 119px">
+                      <button class="range_toggle toggle_min">
+                        <span class="visually-hidden">Изменить минимальную цену.</span>
+                      </button>
+                      <button class="range_toggle toggle_max">
+                        <span class="visually-hidden">Изменить максимальную цену.</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="range_wrapper_inputs">
+                    <label class="catalog_filter_label">
+                      <!--Не могу сообразить, как по-другому сделать чтобы при фокусе рамка была и на тексте, и на цифрах-->
+                      <input class="range_input" type="text" placeholder="от 0" name="min-price">
+                    </label>
+                    <label class="catalog_filter_label">
+                      <input class="range_input" type="text" placeholder="до 1500" name="max-price" style="width: 71px">
+                    </label>
+                  </div>
+                </div>
               </fieldset>
               <fieldset class="filter_color">
                 <legend class="filter_title">Цвет</legend>
                 <ul class="filter_list">
                   <li class="filter_item">
                     <label class="control">
-                      <input class="control_input" type="checkbox" name="black" checked>
-                      Черный
+                      <input class="visually-hidden control_input" type="checkbox" name="black" checked>
+                      <span class="control_mark"></span>
+                      <span class="control_label">Черный</span>
                     </label>
                   </li>
                   <li class="filter_item">
                     <label class="control">
-                      <input class="control_input" type="checkbox" name="white" checked>
-                      Белый
+                      <input class="visually-hidden control_input" type="checkbox" name="white" checked>
+                      <span class="control_mark"></span>
+                      <span class="control_label">Белый</span>
                     </label>
                   </li>
                   <li class="filter_item">
                     <label class="control">
-                      <input class="control_input" type="checkbox" name="blue">
-                      Синий
+                      <input class="visually-hidden control_input" type="checkbox" name="blue">
+                      <span class="control_mark"></span>
+                      <span class="control_label">Синий</span>
                     </label>
                   </li>
                   <li class="filter_item">
                     <label class="control">
-                      <input class="control_input" type="checkbox" name="red">
-                      Красный
+                      <input class="visually-hidden control_input" type="checkbox" name="red">
+                      <span class="control_mark"></span>
+                      <span class="control_label">Красный</span>
                     </label>
                   </li>
                   <li class="filter_item">
                     <label class="control">
-                      <input class="control_input" type="checkbox" name="pink">
-                      Розовый
+                      <input class="visually-hidden control_input" type="checkbox" name="pink">
+                      <span class="control_mark"></span>
+                      <span class="control_label">Розовый</span>
                     </label>
                   </li>
                 </ul>
@@ -111,14 +134,16 @@
                 <ul class="filter_list">
                   <li class="filter_item">
                     <label class="control">
-                      <input class="control_input" type="radio" name="bluetooth" value="available" checked>
-                      Есть
+                      <input class="visually-hidden control_input" type="radio" name="bluetooth" value="build-in" checked>
+                      <span class="control_mark"></span>
+                      <span class="control_label">Есть</span>
                     </label>
                   </li>
                   <li class="filter_item">
                     <label class="control">
-                      <input class="control_input" type="radio" name="bluetooth" value="not available">
-                      Нет
+                      <input class="visually-hidden control_input" type="radio" name="bluetooth" value="not_build-in">
+                      <span class="control_mark"></span>
+                      <span class="control_label">Нет</span>
                     </label>
                   </li>
                 </ul>

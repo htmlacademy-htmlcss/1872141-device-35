@@ -12,7 +12,8 @@
       </a>
       <div class="header_menu_container">
         <form class="header_search_form" action="https://echo.htmlacademy.ru/">
-          <input type="search" id="search_input" placeholder="Поиск по сайту" required>
+          <label class="visually-hidden" for="header_search_input"></label>
+          <input type="search" id="header_search_input" placeholder="Поиск по сайту" required>
           <button class="search_buttun" type="submit">Найти</button>
         </form>
         <a class="log-in header_link" href="#">Войти</a>
@@ -233,7 +234,8 @@
           <h2 class="mailing-list_title">Подпишитесь на рассылку</h2>
           <p class="mailing-list_text">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
           <form class="mailing-list_form" action="https://echo.htmlacademy.ru/">
-            <input type="email" placeholder="Ваш e-mail" required>
+            <label for="mailing-list_input"></label>
+            <input id="mailing-list_input" type="email" placeholder="Ваш e-mail" required>
             <button class="email_button" type="submit">Подписаться</button>
           </form>
           <span class="mailing-list_free">Это бесплатно</span>

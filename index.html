@@ -33,14 +33,14 @@
                   <a class="popover_link" href="#">Любительская селфи-палка</a>
                   <button class="popover_delete_button" type="button">
                     <svg class="popover_delete_icon" aria-hidden="true" focusable="false" width="10" height="10" viewBox="0 0 10 10"><path d="M10 0.909091L9.09091 0L5 4.09091L0.909091 0L0 0.909091L4.09091 5L0 9.09091L0.909091 10L5 5.90909L9.09091 10L10 9.09091L5.90909 5L10 0.909091Z" fill="white"/></svg>
-                    <span class="visually-hidden">Удалить товар из корзины</span>
+                    <span class="visually-hidden">Удалить товар из корзины.</span>
                   </button>
                 </li>
                 <li class="popover_item">
                   <a class="popover_link" href="#">Профессиональная селфи-палка</a>
                   <button class="popover_delete_button" type="button">
                     <svg class="popover_delete_icon" aria-hidden="true" focusable="false" width="10" height="10" viewBox="0 0 10 10"><path d="M10 0.909091L9.09091 0L5 4.09091L0.909091 0L0 0.909091L4.09091 5L0 9.09091L0.909091 10L5 5.90909L9.09091 10L10 9.09091L5.90909 5L10 0.909091Z" fill="white"/></svg>
-                    <span class="visually-hidden">Удалить товар из корзины</span>
+                    <span class="visually-hidden">Удалить товар из корзины.</span>
                   </button>
                 </li>
               </ul>
@@ -103,9 +103,7 @@
         <ol class="slider_properties_list">
           <li class="slider_item current_slide">
             <img class="slider_image" src="./images/slider/slider_1.png" width="560" height="560" alt="Квадрокоптер с лазером, замаскированным под камеру.">
-            <div class="slider_number_block">
-              <span class="slider_number">01</span>
-            </div>
+            <span class="slider_number">01</span>
             <div class="slider_item_wrapper">
               <div class="slider_text">
                 <p class="slider_promo">Порхает как бабочка, жалит как пчела!</p>
@@ -134,7 +132,7 @@
                 <p class="slider_promo">Худеем правильно!</p>
                 <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
               </div>
-              <a class="slider_more-detailed" href="#">Подробнее</a>
+              <a class="slider_more-detailed button_yellow_line" href="#">Подробнее</a>
               <div class="slider_features">
                 <dl>
                   <dt>48 часов</dt>
@@ -151,7 +149,7 @@
                 <p class="slider_promo">Делай селфи, как Бен Стиллер!</p>
                 <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
               </div>
-              <a class="slider_more-detailed" href="#">Подробнее</a>
+              <a class="slider_more-detailed button_yellow_line" href="#">Подробнее</a>
               <div class="slider_features">
                 <dl>
                   <dt>8,5 м</dt>
@@ -280,8 +278,8 @@
           <h2 class="mailing-list_title">Подпишитесь на рассылку</h2>
           <p class="mailing-list_text">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
           <form class="mailing-list_form" action="https://echo.htmlacademy.ru/" method="post">
-            <label for="mailing-list_input"></label>
-            <input class="mailing-list_input" id="mailing-list_input" type="email" placeholder="Ваш e-mail" required>
+            <label for="mailing_input"></label>
+            <input class="mailing-list_input" id="mailing_input" type="email" placeholder="Ваш e-mail" required>
             <button class="email_button" type="submit">Подписаться</button>
           </form>
           <span class="mailing-list_free">Это бесплатно</span>
@@ -344,7 +342,7 @@
       <section class="modal_delivery">
         <div class="modal_title_block">
           <h2 class="modal_title">Доставка под заказ</h2>
-          <button class="modal_close_button">
+          <button class="modal_close_button" type="button">
             <span class="visually-hidden">Закрыть</span>
           </button>
         </div>
@@ -366,7 +364,7 @@
           <p class="field_group">
             <label class="modal_label modal_label_order">
               Что нужно привезти:
-              <input class="modal_input modal_input_order" type="text" name="modal_order" placeholder="В свободной форме" required>
+              <textarea class="modal_input modal_input_order" name="modal_order" id="comment-field" required>В свободной форме</textarea>
             </label>
           </p>
           <div class="modal_sum_wrapper">

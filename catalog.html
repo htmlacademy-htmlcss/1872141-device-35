@@ -36,14 +36,14 @@
                   <a class="popover_link" href="#">Любительская селфи-палка</a>
                   <button class="popover_delete_button" type="button">
                     <svg class="popover_delete_icon" aria-hidden="true" focusable="false" width="10" height="10" viewBox="0 0 10 10"><path d="M10 0.909091L9.09091 0L5 4.09091L0.909091 0L0 0.909091L4.09091 5L0 9.09091L0.909091 10L5 5.90909L9.09091 10L10 9.09091L5.90909 5L10 0.909091Z" fill="white"/></svg>
-                    <span class="visually-hidden">Удалить товар из корзины</span>
+                    <span class="visually-hidden">Удалить товар из корзины.</span>
                   </button>
                 </li>
                 <li class="popover_item">
                   <a class="popover_link" href="#">Профессиональная селфи-палка</a>
                   <button class="popover_delete_button" type="button">
                     <svg class="popover_delete_icon" aria-hidden="true" focusable="false" width="10" height="10" viewBox="0 0 10 10"><path d="M10 0.909091L9.09091 0L5 4.09091L0.909091 0L0 0.909091L4.09091 5L0 9.09091L0.909091 10L5 5.90909L9.09091 10L10 9.09091L5.90909 5L10 0.909091Z" fill="white"/></svg>
-                    <span class="visually-hidden">Удалить товар из корзины</span>
+                    <span class="visually-hidden">Удалить товар из корзины.</span>
                   </button>
                 </li>
               </ul>
@@ -118,21 +118,22 @@
                 <div class="range">
                   <div class="range_scale">
                     <div class="range_bar" style="left: 0; width: 119px">
-                      <button class="range_toggle toggle_min">
+                      <button class="range_toggle toggle_min" type="button">
                         <span class="visually-hidden">Изменить минимальную цену.</span>
                       </button>
-                      <button class="range_toggle toggle_max">
+                      <button class="range_toggle toggle_max" type="button">
                         <span class="visually-hidden">Изменить максимальную цену.</span>
                       </button>
                     </div>
                   </div>
                   <div class="range_wrapper_inputs">
                     <label class="catalog_filter_label">
-                      <!--Не могу сообразить, как по-другому сделать чтобы при фокусе рамка была и на тексте, и на цифрах-->
-                      <input class="range_input" type="text" placeholder="от 0" name="min-price">
+                      от
+                      <input class="range_input" type="text" placeholder="0" name="min-price">
                     </label>
                     <label class="catalog_filter_label">
-                      <input class="range_input" type="text" placeholder="до 1500" name="max-price" style="width: 71px">
+                      до
+                      <input class="range_input" type="text" placeholder="1500" name="max-price" style="width: 71px">
                     </label>
                   </div>
                 </div>

@@ -353,6 +353,7 @@ body {
 .page_header {
   width: 1040px;
   padding: 0 60px;
+  padding-bottom: 134px;
   margin: 0 auto;
   margin-top: 40px;
   position: relative;
@@ -386,7 +387,7 @@ body {
 
 .header_menu_container {
   display: flex;
-  margin: 46px auto 45px;
+  margin: 46px auto 30px;
   justify-content: space-between;
   align-items: center;
 }
@@ -592,7 +593,6 @@ body {
 .navigation_menu_item {
   width: 127px;
   text-align: end;
-  z-index: 1;
 }
 
 /*Доп свойства сетки хедэр страницы каталога*/
@@ -639,7 +639,7 @@ body {
 .main-slider {
   position: relative;
   width: 1160px;
-  height: 560px;
+  height: 410px;
 }
 
 .slider_button {
@@ -656,13 +656,13 @@ body {
 
 .slider_button_prev {
   position: absolute;
-  top: 211px;
+  top: 61px;
   left: 30px;
 }
 
 .slider_button_next {
   position: absolute;
-  top: 211px;
+  top: 61px;
   left: 540px;
   transform: rotate(180deg);
 }
@@ -681,9 +681,6 @@ body {
   opacity: 0.3;
 }
 
-/*По правилам я должен сверстать состояние disabled, т.к. оно есть в стайл гайде,
-но ведь такую кнопку всегда можно нажать (будет прокрутка по кругу)...
-Или это дизайнер решает?*/
 .slider_button:disabled {
   opacity: 0.1;
   pointer-events: none;
@@ -696,35 +693,24 @@ body {
 .current_slide {
   display: flex;
   position: relative;
+  top: -150px;
 }
 
 .slider_image {
   display: block;
   object-fit: contain;
   margin-right: 40px;
-  z-index: 1;
 }
 
-.slider_number_block {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 100%;
-  height: 150px;
-  background-color: #ffe17f;
-  position: absolute;
-}
-
-/*Непонимаю почему текст выходит за контейнер. Подскажите, где я ошибся...
-Для наглядности цвет фона временно изменён*/
 .slider_number {
+  display: block;
   width: 250px;
   height: 135px;
+  line-height: 135px;
   text-align: end;
   position: absolute;
   top: 27px;
   right: 49px;
-  background-color: red;
 }
 
 .slider_item_wrapper {
@@ -814,7 +800,6 @@ body {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1;
 }
 
 .slider_pagination_item {
@@ -862,8 +847,7 @@ body {
   outline: none;
 }
 
-/*Не могу представить, когда эта кнопка будет неактивна...
-Подскажите, когда такое может быть? Или это дизайнерская ошибка?*/
+/*Удалить это состояние? Или на какое переделать? Или оставить как есть?*/
 .slider_pagination_button:disabled,
 .slider_pagination_item.slider_pagination_current:disabled {
   opacity: 0.1;
@@ -1247,8 +1231,6 @@ body {
   opacity: 1;
 }
 
-/*Не понимаю как оформить состояния "ошибки".
-Состояние "ошибки" постоянно получается активным.*/
 .mailing-list_input:focus {
   outline: #af4fff solid 2px;
   outline-offset: 2px;
@@ -1264,7 +1246,9 @@ body {
   background-color: inherit;
 }
 
-
+.mailing-list_invalid {
+  border-bottom: 3px solid  #ff3d3d;
+}
 
 .email_button {
   width: 253px;
@@ -1705,7 +1689,6 @@ body {
 
 .product_monopod_card:hover .product_hidden_button {
   display: block;
-  z-index: 1;
 }
 
 .product_hidden_button:hover + .product_card_link{
@@ -2060,8 +2043,6 @@ body {
   opacity: 0.3;
 }
 
-/*Наверное следующее свойство не нужно. Сделано для наглядности
-работы поповера Удалить?*/
 .popover_close_button:focus ~ .popover,
 .popover_close_button:hover ~ .popover {
   display: block;
@@ -2427,12 +2408,12 @@ body {
   background-position: 321px center;
 }
 
-/*Это свойство всегда активно. Я использую не тот псевдокласс?*/
-.modal_input_email:invalid {
+.modal_email_invalid,
+.modal_sum_invalid {
   box-shadow: inset 0 0 0 2px #ff3d3d;
 }
 
-.modal_input_email:invalid ~ .modal_text_email {
+.modal_email_invalid ~ .modal_text_email {
   color: #ff3d3d;
 }
 
@@ -2446,6 +2427,7 @@ body {
   width: 500px;
   margin-right: 40px;
   padding: 20px;
+  resize: none;
 }
 
 .modal_sum_wrapper {
@@ -2498,7 +2480,6 @@ body {
   background-image: url("../images/icon/minus.svg");
   background-repeat: no-repeat;
   background-position: center;
-
 }
 
 .modal_input_sum {
@@ -2537,6 +2518,7 @@ body {
   top: 36px;
   left: -19px;
   padding: 19px 18px;
+  z-index: 2;
 }
 
 .modal_info_popup::after{
@@ -2561,6 +2543,28 @@ body {
   background-image: url("../images/icon/plus.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.modal_sum_button:focus {
+  outline: #af4fff solid 2px;
+  outline-offset: 2px;
+  z-index: 1;
+}
+
+.modal_sum_button:hover {
+  background-color: #ebebeb;
+  opacity: 0.6;
+}
+
+.modal_sum_button:active {
+  outline: none;
+  opacity: 0.3;
+}
+
+.modal_sum_button:disabled {
+  outline: none;
+  opacity: 0.1;
+  pointer-events: none;
 }
 
 .modal_submit_button {

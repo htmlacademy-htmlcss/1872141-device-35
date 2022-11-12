@@ -6,32 +6,79 @@
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
-    <header class="page_header">
+    <header class="page_header header_catalog">
       <a class="logo" href="index.html">
-        <img class="header_logo" src="./images/logo_device.svg" width="145" height="36" alt="Логотип интернет-магазина Device.">
+        <svg class="header_logo" aria-hidden="true" focusable="false" width="145" height="37" fill="none"><path fill="#000" d="M27.2.36v35.3h-7.6v-2.4c-1.7 1.9-4.1 3.1-7.5 3.1-6.6 0-12.1-5.8-12.1-13.3 0-7.5 5.5-13.3 12.1-13.3 3.4 0 5.9 1.2 7.5 3.1V.36h7.6Zm-7.6 22.7c0-3.8-2.5-6.2-6-6.2s-6 2.4-6 6.2c0 3.8 2.5 6.2 6 6.2 3.5-.1 6-2.4 6-6.2Zm24.1 6.5c2.1 0 3.8-.8 4.8-1.9l6.1 3.5c-2.5 3.4-6.2 5.2-11 5.2-8.6 0-14-5.8-14-13.3 0-7.5 5.4-13.3 13.4-13.3 7.4 0 12.8 5.7 12.8 13.3 0 1.1-.1 2.1-.3 3H37.6c1 2.6 3.3 3.5 6.1 3.5Zm4.6-9.1c-.8-2.9-3.1-4-5.4-4-2.9 0-4.8 1.4-5.5 4h10.9Zm33.8-10-9.3 25.2h-8.6l-9.3-25.2h8.4l5.3 16 5.3-16h8.2Zm1.3 0H91v25.2h-7.6v-25.2Zm10.2 12.6c0-7.5 5.7-13.3 13.4-13.3 4.9 0 9.2 2.6 11.4 6.5l-6.6 3.8c-.9-1.8-2.7-2.8-4.9-2.8-3.3 0-5.7 2.4-5.7 5.8 0 3.5 2.4 5.8 5.7 5.8 2.2 0 4.1-1.1 4.9-2.8l6.6 3.8c-2.1 3.9-6.4 6.5-11.4 6.5-7.7 0-13.4-5.8-13.4-13.3Zm39.2 6.5c2.1 0 3.8-.8 4.8-1.9l6.1 3.5c-2.5 3.4-6.2 5.2-11 5.2-8.6 0-14-5.8-14-13.3 0-7.5 5.5-13.3 13.4-13.3 7.4 0 12.8 5.7 12.8 13.3 0 1.1-.1 2.1-.3 3h-17.9c1 2.6 3.3 3.5 6.1 3.5Zm4.7-9.1c-.8-2.9-3.1-4-5.4-4-2.9 0-4.8 1.4-5.5 4h10.9Z"/><path fill="#510094" d="M83.4.36v10.1L91 .36h-7.6Z"/></svg>
       </a>
       <div class="header_menu_container">
-        <form class="header_search_form" action="https://echo.htmlacademy.ru/">
-          <input type="search" id="search_input" placeholder="Поиск по сайту" required>
+        <form class="header_search_form" action="https://echo.htmlacademy.ru/" method="get">
+          <label class="visually-hidden" for="header_search_input"></label>
+          <input type="search" id="header_search_input" placeholder="Поиск по сайту" required>
           <button class="search_buttun" type="submit">Найти</button>
         </form>
         <div class="log-in_block">
-          <!-- Нужно ли таким ссылкам добавлять title? Или наличие текста в них делает их верными соглласно критерию ALLY-02? -->
           <a class="user-name header_link" href="#">Коля Петухов</a>
           <a class="log-out header_link" href="#">Выйти</a>
         </div>
         <ul class="navigation_user_list">
-          <li class="navigation_user_item">
+          <li class="navigation_user_difference">
             <a class="header_link" href="#">Сравнить</a>
           </li>
-          <li class="navigation_user_item">
+          <li class="navigation_user_cart">
             <a class="header_link" href="#">Корзина</a>
+            <button class="popover_close_button" type="button">
+              2
+              <span class="visually-hidden">Раскрыть</span>
+            </button>
+            <div class="popover">
+              <ul class="popover_list">
+                <li class="popover_item">
+                  <a class="popover_link" href="#">Любительская селфи-палка</a>
+                  <button class="popover_delete_button" type="button">
+                    <svg class="popover_delete_icon" aria-hidden="true" focusable="false" width="10" height="10" viewBox="0 0 10 10"><path d="M10 0.909091L9.09091 0L5 4.09091L0.909091 0L0 0.909091L4.09091 5L0 9.09091L0.909091 10L5 5.90909L9.09091 10L10 9.09091L5.90909 5L10 0.909091Z" fill="white"/></svg>
+                    <span class="visually-hidden">Удалить товар из корзины.</span>
+                  </button>
+                </li>
+                <li class="popover_item">
+                  <a class="popover_link" href="#">Профессиональная селфи-палка</a>
+                  <button class="popover_delete_button" type="button">
+                    <svg class="popover_delete_icon" aria-hidden="true" focusable="false" width="10" height="10" viewBox="0 0 10 10"><path d="M10 0.909091L9.09091 0L5 4.09091L0.909091 0L0 0.909091L4.09091 5L0 9.09091L0.909091 10L5 5.90909L9.09091 10L10 9.09091L5.90909 5L10 0.909091Z" fill="white"/></svg>
+                    <span class="visually-hidden">Удалить товар из корзины.</span>
+                  </button>
+                </li>
+              </ul>
+              <div class="popover_total">
+                <span>Товаров: 2</span>
+                <span>Сумма: 2000 ₽</span>
+              </div>
+              <a class="popover_open-cart_button" href="#">Открыть корзину</a>
+            </div>
           </li>
         </ul>
       </div>
       <nav class="navigation_menu">
         <div class="navigation_menu_block">
           <a class="navigation_menu_link" href="catalog.html">Каталог товаров</a>
+          <ul class="subcatalog subcatalog_close">
+            <li class="subcatalog_item">
+              <a class="subcatalog_link" href="#">Виртуальная реальность</a>
+            </li>
+            <li class="subcatalog_item">
+              <a class="subcatalog_link" href="#">Моноподы для cелфи</a>
+            </li>
+            <li class="subcatalog_item">
+              <a class="subcatalog_link" href="#">Экшн-камеры</a>
+            </li>
+            <li class="subcatalog_item">
+              <a class="subcatalog_link" href="#">Фитнес-браслеты</a>
+            </li>
+            <li class="subcatalog_item">
+              <a class="subcatalog_link" href="#">Умные часы</a>
+            </li>
+            <li class="subcatalog_item">
+              <a class="subcatalog_link" href="#">Квадрокоптеры</a>
+            </li>
+          </ul>
         </div>
         <ul class="navigation_menu_list">
           <li class="navigation_menu_item">
@@ -68,41 +115,65 @@
             <form class="catalog_filter_form" action="https://echo.htmlacademy.ru/" method="get">
               <fieldset class="filter_price">
                 <legend class="filter_title">Стоимость</legend>
-                <ul class="filter_list">
-                  <li><p>Будет позже</p></li>
-                </ul>
+                <div class="range">
+                  <div class="range_scale">
+                    <div class="range_bar" style="left: 0; width: 119px">
+                      <button class="range_toggle toggle_min" type="button">
+                        <span class="visually-hidden">Изменить минимальную цену.</span>
+                      </button>
+                      <button class="range_toggle toggle_max" type="button">
+                        <span class="visually-hidden">Изменить максимальную цену.</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="range_wrapper_inputs">
+                    <label class="catalog_filter_label">
+                      от
+                      <input class="range_input" type="text" placeholder="0" name="min-price">
+                    </label>
+                    <label class="catalog_filter_label">
+                      до
+                      <input class="range_input" type="text" placeholder="1500" name="max-price" style="width: 71px">
+                    </label>
+                  </div>
+                </div>
               </fieldset>
               <fieldset class="filter_color">
                 <legend class="filter_title">Цвет</legend>
                 <ul class="filter_list">
                   <li class="filter_item">
                     <label class="control">
-                      <input class="control_input" type="checkbox" name="black" checked>
-                      Черный
+                      <input class="visually-hidden control_input" type="checkbox" name="black" checked>
+                      <span class="control_mark"></span>
+                      <span class="control_label">Черный</span>
                     </label>
                   </li>
                   <li class="filter_item">
                     <label class="control">
-                      <input class="control_input" type="checkbox" name="white" checked>
-                      Белый
+                      <input class="visually-hidden control_input" type="checkbox" name="white" checked>
+                      <span class="control_mark"></span>
+                      <span class="control_label">Белый</span>
                     </label>
                   </li>
                   <li class="filter_item">
                     <label class="control">
-                      <input class="control_input" type="checkbox" name="blue">
-                      Синий
+                      <input class="visually-hidden control_input" type="checkbox" name="blue">
+                      <span class="control_mark"></span>
+                      <span class="control_label">Синий</span>
                     </label>
                   </li>
                   <li class="filter_item">
                     <label class="control">
-                      <input class="control_input" type="checkbox" name="red">
-                      Красный
+                      <input class="visually-hidden control_input" type="checkbox" name="red">
+                      <span class="control_mark"></span>
+                      <span class="control_label">Красный</span>
                     </label>
                   </li>
                   <li class="filter_item">
                     <label class="control">
-                      <input class="control_input" type="checkbox" name="pink">
-                      Розовый
+                      <input class="visually-hidden control_input" type="checkbox" name="pink">
+                      <span class="control_mark"></span>
+                      <span class="control_label">Розовый</span>
                     </label>
                   </li>
                 </ul>
@@ -112,14 +183,16 @@
                 <ul class="filter_list">
                   <li class="filter_item">
                     <label class="control">
-                      <input class="control_input" type="radio" name="bluetooth" value="available" checked>
-                      Есть
+                      <input class="visually-hidden control_input" type="radio" name="bluetooth" value="build-in" checked>
+                      <span class="control_mark"></span>
+                      <span class="control_label">Есть</span>
                     </label>
                   </li>
                   <li class="filter_item">
                     <label class="control">
-                      <input class="control_input" type="radio" name="bluetooth" value="not available">
-                      Нет
+                      <input class="visually-hidden control_input" type="radio" name="bluetooth" value="not_build-in">
+                      <span class="control_mark"></span>
+                      <span class="control_label">Нет</span>
                     </label>
                   </li>
                 </ul>
@@ -136,7 +209,6 @@
                 <option value="expensive">Дорогие</option>
               </select>
               <div class="sort-up_arrows_wrapper">
-                <!-- Или лучше подписать ссылки добавив в них <span class="visually-hidden"></span>? -->
                 <a class="sort-up_button" href="#" title="Показать дорогие в первую очередь.">
                   <svg class="sort-up_arrow-up" aria-hidden="true" focusable="false" fill="currentColor" width="12" height="10" viewBox="0 0 12 10"><g clip-path="url(#a)"><path d="m6 0 5.5 10H.5"/></g><defs><clipPath id="a"><path fill="#fff" d="M.5 0h11v10H.5z"/></clipPath></defs></svg>
                 </a>

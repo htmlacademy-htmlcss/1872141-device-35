@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" href="favicon.ico"><!-- 32×32 -->
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon.png">
   </head>
   <body>
     <header class="page_header">
@@ -14,8 +15,8 @@
       <div class="header_menu_container">
         <form class="header_search_form" action="https://echo.htmlacademy.ru/" method="get">
           <label class="visually-hidden" for="header_search_input"></label>
-          <input type="search" id="header_search_input" placeholder="Поиск по сайту" required>
-          <button class="search_buttun" type="submit">Найти</button>
+          <input class="header_search_input" type="search" id="header_search_input" placeholder="Поиск по сайту" required>
+          <button class="header_search_buttun" type="submit">Найти</button>
         </form>
         <a class="log-in header_link" href="#">Войти</a>
         <ul class="navigation_user_list">
@@ -31,7 +32,7 @@
             <div class="popover">
               <ul class="popover_list">
                 <li class="popover_item">
-                  <a class="popover_link" href="#">Любительская селфи-палка</a>
+                  <a class="popover_link" href="#">Любительская<br> селфи-палка</a>
                   <button class="popover_delete_button" type="button">
                     <svg class="popover_delete_icon" aria-hidden="true" focusable="false" width="10" height="10" viewBox="0 0 10 10"><path d="M10 0.909091L9.09091 0L5 4.09091L0.909091 0L0 0.909091L4.09091 5L0 9.09091L0.909091 10L5 5.90909L9.09091 10L10 9.09091L5.90909 5L10 0.909091Z" fill="white"/></svg>
                     <span class="visually-hidden">Удалить товар из корзины.</span>
@@ -57,26 +58,26 @@
       <nav class="navigation_menu">
         <div class="navigation_menu_block">
           <a class="navigation_menu_link" href="catalog.html">Каталог товаров</a>
-          <ul class="subcatalog subcatalog_close">
-            <li class="subcatalog_item">
-              <a class="subcatalog_link" href="#">Виртуальная реальность</a>
-            </li>
-            <li class="subcatalog_item">
-              <a class="subcatalog_link" href="#">Моноподы для cелфи</a>
-            </li>
-            <li class="subcatalog_item">
-              <a class="subcatalog_link" href="#">Экшн-камеры</a>
-            </li>
-            <li class="subcatalog_item">
-              <a class="subcatalog_link" href="#">Фитнес-браслеты</a>
-            </li>
-            <li class="subcatalog_item">
-              <a class="subcatalog_link" href="#">Умные часы</a>
-            </li>
-            <li class="subcatalog_item">
-              <a class="subcatalog_link" href="#">Квадрокоптеры</a>
-            </li>
-          </ul>
+            <ul class="subcatalog subcatalog_close">
+              <li class="subcatalog_item">
+                <a class="subcatalog_link" href="#">Виртуальная реальность</a>
+              </li>
+              <li class="subcatalog_item">
+                <a class="subcatalog_link" href="#">Моноподы для cелфи</a>
+              </li>
+              <li class="subcatalog_item">
+                <a class="subcatalog_link" href="#">Экшн-камеры</a>
+              </li>
+              <li class="subcatalog_item">
+                <a class="subcatalog_link" href="#">Фитнес-браслеты</a>
+              </li>
+              <li class="subcatalog_item">
+                <a class="subcatalog_link" href="#">Умные часы</a>
+              </li>
+              <li class="subcatalog_item">
+                <a class="subcatalog_link" href="#">Квадрокоптеры</a>
+              </li>
+            </ul>
         </div>
         <ul class="navigation_menu_list">
           <li class="navigation_menu_item">
@@ -93,7 +94,7 @@
     </header>
     <main class="main_index main-container">
       <h1 class="visually-hidden">Интернет-магазин Device.</h1>
-      <section class="main-slider">
+      <section class="main_slider">
         <h2 class="visually-hidden">Слайдер с новинками интернет-магазина.</h2>
         <button class="slider_button slider_button_prev" type="button">
           <span class="visually-hidden">Предыдущее фото.</span>
@@ -147,7 +148,7 @@
             <span class="slider_number">03</span>
             <div class="slider_item_wrapper">
               <div class="slider_text">
-                <p class="slider_promo">Делай селфи, как Бен Стиллер!</p>
+                <p class="slider_promo">Делай селфи,<br>как Бен Стиллер!</p>
                 <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
               </div>
               <a class="slider_more-detailed button_yellow_line" href="#">Подробнее</a>
@@ -193,7 +194,7 @@
             <a class="index_category_link main_link" href="#">Виртуальная реальность</a>
           </li>
           <li class="index_category_item">
-            <a class="index_category_link main_link" href="#">Моноподы для селфи</a>
+            <a class="index_category_link main_link" href="#">Моноподы<br>для селфи</a>
           </li>
           <li class="index_category_item">
             <a class="index_category_link main_link" href="#">Экшн-камеры</a>
@@ -220,7 +221,7 @@
           <ol class="index_benefits_list">
             <li class="index_benefits_item benefit_current">
               <h3 class="index_benefits_title">Доставка</h3>
-              <p class="index_benefits_text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+              <p class="index_benefits_text">Мы с удовольствием доставим ваш товар прямо<br>к вашему подъезду совершенно бесплатно! Ведь<br>мы неплохо заработаем, поднимая его на ваш этаж.</p>
             </li>
             <li class="index_benefits_item">
               <h3 class="index_benefits_title">Гарантия</h3>
@@ -244,7 +245,7 @@
         <div class="about-us_container">
           <h3 class="about-us about_title">О нас</h3>
           <div class="about-us_block">
-            <p class="about-us_text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+            <p class="about-us_text">Огромный выбор гаджетов не оставит равнодушным<br>гика, который есть в каждом из нас.</p>
             <p class="about-us_text">Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:</p>
             <ul class="delivery_line_list">
               <li class="about-us_item">Меловые линии</li>
@@ -256,12 +257,12 @@
         </div>
         <div class="contacts_container">
           <h3 class="contacts about_title">Контакты</h3>
-          <p class="contacts_text">Вы можете забрать товар сами, заехав в наш офис. Заодно сможете проверить работоспособность покупки. </p>
+          <p class="contacts_text">Вы можете забрать товар сами, заехав в наш офис.<br>Заодно сможете проверить работоспособность покупки. </p>
           <div class="contacts_address_block">
             <h4 class="contacts_subtitle">Интернет-магазин «Девайс»</h4>
             <address class="contacts_address">
               <p class="contacts_address_text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
-              <a class="contacts_phone" href="tel:+78128121212">+7(812)812-12-12</a>
+              <a class="contacts_phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
             </address>
           </div>
           <div class="contacts_timetable_block">
@@ -277,7 +278,9 @@
       <section class="mailing-list_container">
         <div class="mailng-list_wrapper">
           <h2 class="mailing-list_title">Подпишитесь на рассылку</h2>
-          <p class="mailing-list_text">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
+          <!--Как ни пробовал, но настроить не получтлось... Или середина абзаца не совпадает,
+          или края вылезают в Pixel Perfect.-->
+          <p class="mailing-list_text">Еженедельный дайджест с обзорами новинок,<br>длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
           <form class="mailing-list_form" action="https://echo.htmlacademy.ru/" method="post">
             <label for="mailing_input"></label>
             <input class="mailing-list_input" id="mailing_input" type="email" placeholder="Ваш e-mail" required>
@@ -304,7 +307,7 @@
               <li class="footer_navigation_item">
                 <a class="footer_link" href="#">Доставка</a>
               </li>
-              <li class="footer_navigation_item">
+              <li class="footer_navigation_item footer_guarantee">
                 <a class="footer_link" href="#">Гарантия</a>
               </li>
               <li class="footer_navigation_item">
@@ -378,6 +381,7 @@
               <button class="modal_sum_button modal_sum_minus" type="button">
                 <span class="visually-hidden">Убрать единицу товара.</span>
               </button>
+              <!--Надо ли задавать атрибут readonly? Или пользователь может вписать число и не спользовать кнопки "+"/"-"?-->
               <input class="modal_input_sum" type="number" name="modal_sum" id="sum_input" placeholder="1" min="1" required>
               <button class="modal_sum_button modal_sum_plus" type="button">
                 <span class="visually-hidden">Добавить единицу товара.</span>

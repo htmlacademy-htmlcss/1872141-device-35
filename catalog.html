@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon.png">
   </head>
   <body>
     <header class="page_header header_catalog">
@@ -13,8 +15,8 @@
       <div class="header_menu_container">
         <form class="header_search_form" action="https://echo.htmlacademy.ru/" method="get">
           <label class="visually-hidden" for="header_search_input"></label>
-          <input type="search" id="header_search_input" placeholder="Поиск по сайту" required>
-          <button class="search_buttun" type="submit">Найти</button>
+          <input class="header_search_input" type="search" id="header_search_input" placeholder="Поиск по сайту" required>
+          <button class="header_search_buttun" type="submit">Найти</button>
         </form>
         <div class="log-in_block">
           <a class="user-name header_link" href="#">Коля Петухов</a>
@@ -225,7 +227,7 @@
                   <a class="product_card_link" href="#">
                     <img class="product_card_image" src="./images/catalog_products/product_1.jpg" width="360" height="380" alt="Недорогой популярный монопод с чёрной ручкой.">
                     <div class="product_card_block">
-                      <h3 class="product_card_title">Любительская селфи-палка</h3>
+                      <h3 class="product_card_title">Любительская<br>селфи-палка</h3>
                       <span class="product_card_price">500 ₽</span>
                     </div>
                   </a>
@@ -245,7 +247,7 @@
                   <a class="product_card_link" href="#">
                     <img class="product_card_image" src="./images/catalog_products/product_3.jpg" width="360" height="380" alt="Монопод влагозащищённый обрезиненный со шнурком.">
                     <div class="product_card_block">
-                      <h3 class="product_card_title">Непотопляемая селфи-палка</h3>
+                      <h3 class="product_card_title">Непотопляемая<br>селфи-палка</h3>
                       <span class="product_card_price">2 500 ₽</span>
                     </div>
                   </a>
@@ -255,7 +257,7 @@
                   <a class="product_card_link" href="#">
                     <img class="product_card_image" src="./images/catalog_products/product_4.jpg" width="360" height="380" alt="Монопод в виде человеческой руки.">
                     <div class="product_card_block">
-                        <h3 class="product_card_title">Селфи-палка «Следуй за мной»</h3>
+                        <h3 class="product_card_title">Селфи-палка «Следуй<br>за мной»</h3>
                       <span class="product_card_price">1 500 ₽</span>
                     </div>
                   </a>
@@ -263,7 +265,7 @@
               </ul>
               <button class="pagination_show-more" type="button">Загрузить ещё</button>
               <div class="pagination_container">
-                <a class="pagination_button pagination_first-page" href="#" tabindex="-1">Назад</a>
+                <a class="pagination_button pagination_button_pre pagination_first-page" href="#" tabindex="-1">Назад</a>
                 <ul class="pagination_list">
                   <li class="pagination_item">
                     <a class="pagination_link pagination_current_page" href="#" tabindex="-1">1</a>
@@ -290,13 +292,13 @@
     </main>
     <footer class="footer_index">
       <section class="footer_index_container">
-        <h2 class="visually-hidden">Наш адрес и контакты.</h2>
         <div class="footer_address">
-          <a class="footer_logo_link" href="index.html">
-            <img class="footer_logo" src="./images/logo_device_footer.svg" width="145" height="36" alt="Логотип интернет-магазина Device.">
-          </a>
+          <h2 class="footer_logo">
+            <a class="footer_logo_link" href="index.html">
+              <img class="footer_logo" src="./images/logo_device_footer.svg" width="145" height="36" alt="Логотип интернет-магазина Device.">
+            </a>
+          </h2>
           <address class="footer_address_text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</address>
-          <svg class="footer_address_line" aria-hidden="true" focusable="false" width="80" height="7" viewBox="0 0 80 7" fill="none"><path d="M80 0H0v7h80V0Z" fill="#FFC700"/></svg>
         </div>
         <div class="footer_nav-social_container">
           <nav class="footer_navigation">
@@ -304,7 +306,7 @@
               <li class="footer_navigation_item">
                 <a class="footer_link" href="#">Доставка</a>
               </li>
-              <li class="footer_navigation_item">
+              <li class="footer_navigation_item footer_guarantee">
                 <a class="footer_link" href="#">Гарантия</a>
               </li>
               <li class="footer_navigation_item">

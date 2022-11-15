@@ -60,6 +60,7 @@ body {
 .slider_more-detailed,
 .index_benefits_button,
 .about-shop_link,
+.contacts_link,
 .email_button,
 .product_hidden_button {
   font-family: "raleway", sans-serif;
@@ -117,7 +118,8 @@ body {
 }
 
 .index_benefits_button {
-    font-size: 18px;
+  background-color: inherit;
+  font-size: 18px;
 }
 
 .index_benefits_text {
@@ -315,14 +317,14 @@ html {
   height: 100%;
 }
 
-/*В макете, если смотреть по футеру, указана ширина 1440px.
-Многовато на мой взгляд. Или это решение дизайнера и верстальшик
-его просто реализует без вопросов?*/
+/*Если сделать минимальную ширину 1160px, то при таком размере окна, в некоторых
+ секциях текст будет прилипать к экрану. На лайве говорили, что это плохо. Поэтому
+ добавил к ширине по 20px на каждую сторону. Или делать точно как в макете 1160px?*/
 body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  min-width: 1440px;
+  min-width: 1200px;
   min-height: 100%;
 }
 
@@ -430,6 +432,8 @@ img {
   z-index: 1;
 }
 
+/*Критерий TEST-07 требует для форм состояние disabled. Нужно ли прописывать это
+состояние конкретно форме, или достаточно для input прописать?*/
 .header_search_input:disabled {
   opacity: 0.3;
 }
@@ -559,7 +563,25 @@ img {
   z-index: 3;
 }
 
-.navigation_menu_link::after {
+.navigation_menu_second:after {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 46px;
+  background-image: url("../images/icon/minus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid #000000;
+  border-radius: 50% 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  opacity: 0.3;
+}
+
+.navigation_menu_first::after {
   content: "";
   display: block;
   width: 46px;
@@ -650,7 +672,6 @@ img {
 .main_index {
   display: flex;
   flex-direction: column;
-  row-gap: 70px;
   align-items: center;
 }
 
@@ -661,12 +682,7 @@ img {
 .main_slider {
   position: relative;
   width: 1160px;
-  min-height: 410px;
-}
-
-.slider_properties_list {
-  position: absolute;
-  top: -150px;
+  transform: translateY(-150px);
 }
 
 .slider_button {
@@ -683,13 +699,13 @@ img {
 
 .slider_button_prev {
   position: absolute;
-  top: 61px;
+  top: 211px;
   left: 30px;
 }
 
 .slider_button_next {
   position: absolute;
-  top: 61px;
+  top: 211px;
   left: 540px;
   transform: rotate(180deg);
 }
@@ -820,7 +836,7 @@ img {
   height: 12px;
   justify-content: space-between;
   position: absolute;
-  bottom: 0;
+  bottom: 2px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -879,8 +895,9 @@ img {
 }
 
 .index_category {
-  margin-bottom: 102px;
+  margin-bottom: 90px;
   min-height: 253px;
+  transform: translateY(-82px);
 }
 
 .index_category_list {
@@ -907,8 +924,15 @@ img {
   background-image: url("../images/category/category_1_vr.svg");
 }
 
-.index_category_item:nth-child(2) {
+.category_monopod_link::after {
+  content: "";
+  display: block;
+  width: 86px;
+  height: 117px;
   background-image: url("../images/category/category_2_monopod.svg");
+  position: absolute;
+  left: 37px;
+  top: 44px;
 }
 
 .index_category_item:nth-child(3) {
@@ -927,13 +951,12 @@ img {
   background-image: url("../images/category/category_6_quadrocopter.svg");
 }
 
-/*Не могу разобраться, как исправить переполнение надписи в ссылках.
-Небольшое переполнение допускается, но не "железобетонное".*/
 .index_category_link {
   display: block;
   padding-top: 193px;
   min-height: 60px;
   letter-spacing: -0.02em;
+  word-break: break-all;
 }
 
 .index_category_link:focus {
@@ -954,8 +977,7 @@ img {
 }
 
 .index_benefits {
-  height: 289px;
-  position: relative;
+  min-height: 289px;
 }
 
 .index_benefits_container {
@@ -963,16 +985,24 @@ img {
   flex-wrap: wrap;
   width: 1160px;
   margin: 0 auto;
-  position: relative;
-  top: -102px;
+  transform: translateY(-102px);
 }
 
 .index_benefits_buttons {
   width: 280px;
   min-height: 190px;
-  padding: 64px 0;
+  padding: 64px 0 5px;
   position: relative;
   box-shadow: 7px 0 0 0 #000000;
+}
+
+.index_benefits_buttons::after {
+  content: "";
+  display: block;
+  width: 7px;
+  height: 30px;
+  background-color: #000000;
+  transform: translate(280px, 35px);
 }
 
 .index_benefits_button {
@@ -1086,6 +1116,8 @@ img {
   width: 1160px;
   height: 100px;
   position: relative;
+  margin-top: 70px;
+  margin-bottom: 70px;
 }
 
 .delivery::before {
@@ -1159,6 +1191,7 @@ img {
   display: flex;
   width: 1160px;
   column-gap: 108px;
+  margin-bottom: 70px;
 }
 
 .about-us_container {
@@ -1224,6 +1257,15 @@ img {
   padding-top: 10px;
 }
 
+.contacts_link {
+  font-size: 18px;
+  display: block;
+  width: 259px;
+  min-height: 30px;
+  text-align: center;
+  padding-top: 10px;
+}
+
 .contacts_container {
   width: 532px;
 }
@@ -1273,7 +1315,7 @@ img {
   min-height: 57px;
   display: flex;
   margin-bottom: 56px;
-  padding-left: 3px;
+  padding-left: 1px;
 }
 
 .mailing-list_input {
@@ -1434,6 +1476,14 @@ img {
   width: 200px;
 }
 
+/*Я прописал состояние disabled для класса .filter_form_disabled... А нужно ли это?
+для js, или достаточно disabled для элемента .catalog_filter_form fieldset:disabled?*/
+.catalog_filter_form fieldset:disabled,
+.filter_form_disabled {
+  opacity: 0.1;
+  pointer-events: none;
+}
+
 .filter_price {
   min-height: 95px;
   margin: 0;
@@ -1564,6 +1614,7 @@ img {
   width: 220px;
   margin-top: 35px;
   font-size: 18px;
+  background-color: inherit;
 }
 
 .control {
@@ -1633,6 +1684,7 @@ img {
 
 .control_label {
   min-height: 20px;
+  line-height: 20px;
 }
 
 .select_product-page_container {
@@ -1674,6 +1726,10 @@ img {
 
 .select_control:disabled {
   opacity: 0.1;
+}
+
+.select_control {
+  font-family: "rubik", sans-serif;
 }
 
 .sort-up_arrows_wrapper {
@@ -1945,6 +2001,11 @@ img {
   margin-top: 62px;
   margin-bottom: 77px;
   position: relative;
+  padding-right: 3px;
+}
+
+.footer_adders_text {
+  min-height: 40px;
 }
 
 .footer_logo {
@@ -1964,12 +2025,16 @@ img {
   margin-top: 35px;
 }
 
-.footer_address_line {
-  position: absolute;
+.footer_address_text::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 7px;
+  background-color: #ffc700;
+  position: relative;
+  bottom: -64px;
   left: 0;
-  top: 175px;
 }
-
 
 .footer_nav-social_container {
   width: 444px;
@@ -2023,6 +2088,7 @@ img {
   min-width: 150px;
   gap: 15px;
   justify-content: center;
+  padding-right: 7px;
 }
 
 .footer_social_item {
@@ -2194,6 +2260,10 @@ img {
   position: relative;
 }
 
+.popover_item + .popover_item {
+  margin-top: 41px;
+}
+
 .popover_link {
   width: 191px;
   min-height: 43px;
@@ -2270,6 +2340,7 @@ img {
   background-color: #ffffff;
   text-align: center;
   font-family: "raleway", sans-serif;
+  letter-spacing: 0.2em;
   font-size: 18px;
   line-height: 21px;
   text-transform: uppercase;
@@ -2311,14 +2382,18 @@ img {
   width: 1160px;
   display: grid;
   grid-template-columns: 60px 252px 211px 211px 425px;
-  row-gap: 20px;
-  min-height: 180px;
-  margin: 13px 0 27px;
-  padding: 0;
+  grid-template-rows: 34px repeat(3, 20px) 27px;
+  row-gap: 16px;
+  min-height: 195px;
+  margin: 0;
+  padding:0;
   list-style-type: none;
 }
+
+
 .subcatalog_item {
-  min-height: 20px;
+  min-height: 10px;
+  margin-bottom: 0;
 }
 
 .subcatalog_item:nth-child(1) {
@@ -2394,7 +2469,7 @@ img {
 .modal_delivery {
   position: relative;
   margin: auto;
-  padding: 72px 80px;
+  padding: 62px 70px;
   width: 760px;
   background-color: #ffffff;
   border: 10px solid #000000;
@@ -2422,8 +2497,8 @@ img {
 .modal_close_button {
   position: absolute;
   padding: 0;
-  top: 84px;
-  right: 80px;
+  top: 74px;
+  right: 70px;
   width: 26px;
   height: 26px;
   background-color: #ffffff;
@@ -2495,6 +2570,11 @@ img {
   background-color: #dcdcdc;
 }
 
+.modal_input:disabled {
+  opacity: 0.1;
+  pointer-events: none;
+}
+
 .modal_input:placeholder-shown {
   color: #000000;
   outline: none;
@@ -2507,13 +2587,13 @@ img {
 .modal_input_login {
   background-image: url("../images/icon/modal_login_icon.svg");
   background-repeat: no-repeat;
-  background-position: 321px center;
+  background-position: 325px center;
 }
 
 .modal_input_email {
   background-image: url("../images/icon/modal_mail_icon.svg");
   background-repeat: no-repeat;
-  background-position: 321px center;
+  background-position: 325px center;
 }
 
 .modal_email_invalid,
@@ -2606,6 +2686,7 @@ img {
   height: 20px;
   border: none;
   background-color: #F0F0F0;
+  -webkit-appearance: textfield;
 }
 
 .modal_input_sum::-webkit-outer-spin-button,
@@ -2629,7 +2710,10 @@ img {
   top: 36px;
   left: -19px;
   padding: 19px 18px;
+  box-sizing: border-box;
   z-index: 2;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .modal_info_popup::after{
@@ -2642,7 +2726,7 @@ img {
   background-position: center;
   position: absolute;
   top: -6px;
-  left: 148px;
+  left: 146px;
 }
 
 .modal_sum_info:focus ~ .modal_info_popup,
@@ -2656,23 +2740,27 @@ img {
   background-position: center;
 }
 
-.modal_sum_button:focus {
+.modal_sum_button:focus,
+.modal_input_sum:focus {
   outline: #af4fff solid 2px;
   outline-offset: 2px;
   z-index: 1;
 }
 
-.modal_sum_button:hover {
+.modal_sum_button:hover,
+.modal_input_sum:hover {
   background-color: #ebebeb;
   opacity: 0.6;
 }
 
-.modal_sum_button:active {
+.modal_sum_button:active,
+.modal_input_sum:active {
   outline: none;
   opacity: 0.3;
 }
 
-.modal_sum_button:disabled {
+.modal_sum_button:disabled,
+.modal_input_sum:disabled {
   outline: none;
   opacity: 0.1;
   pointer-events: none;

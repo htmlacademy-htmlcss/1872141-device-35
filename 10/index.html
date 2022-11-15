@@ -58,7 +58,7 @@
       </div>
       <nav class="navigation_menu">
         <div class="navigation_menu_block">
-          <a class="navigation_menu_link" href="catalog.html">Каталог товаров</a>
+          <a class="navigation_menu_link navigation_menu_first" href="catalog.html">Каталог товаров</a>
             <ul class="subcatalog subcatalog_close">
               <li class="subcatalog_item">
                 <a class="subcatalog_link" href="#">Виртуальная реальность</a>
@@ -192,10 +192,10 @@
         <h2 class="visually-hidden">Категории товаров из каталога.</h2>
         <ul class="index_category_list">
           <li class="index_category_item">
-            <a class="index_category_link main_link" href="#">Виртуальная реальность</a>
+            <a class="index_category_link main_link" href="#">Виртуальная<br> реальность</a>
           </li>
           <li class="index_category_item">
-            <a class="index_category_link main_link" href="#">Моноподы<br>для селфи</a>
+            <a class="index_category_link category_monopod_link main_link" href="#">Моноподы<br>для селфи</a>
           </li>
           <li class="index_category_item">
             <a class="index_category_link main_link" href="#">Экшн-камеры</a>
@@ -273,17 +273,15 @@
               <li class="contacts_timetable_item">сб—вс: с 10:00 до 19:00</li>
             </ul>
           </div>
-          <a class="about-shop_link button_yellow_line main_link" href="#">Напишите нам</a>
+          <a class="contacts_link button_yellow_line main_link" href="#">Напишите нам</a>
         </div>
       </section>
       <section class="mailing-list_container">
         <div class="mailng-list_wrapper">
           <h2 class="mailing-list_title">Подпишитесь на рассылку</h2>
-          <!--Как ни пробовал, но настроить не получтлось... Или середина абзаца не совпадает,
-          или края вылезают в Pixel Perfect.-->
           <p class="mailing-list_text">Еженедельный дайджест с обзорами новинок,<br>длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
           <form class="mailing-list_form" action="https://echo.htmlacademy.ru/" method="post">
-            <label for="mailing_input"></label>
+            <label class="visually-hidden" for="mailing_input">Введите вашу почту.</label>
             <input class="mailing-list_input" id="mailing_input" type="email" placeholder="Ваш e-mail" required>
             <button class="email_button" type="submit">Подписаться</button>
           </form>
@@ -300,7 +298,6 @@
             </a>
           </h2>
           <address class="footer_address_text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</address>
-          <svg class="footer_address_line" aria-hidden="true" focusable="false" width="80" height="7" viewBox="0 0 80 7" fill="none"><path d="M80 0H0v7h80V0Z" fill="#FFC700"/></svg>
         </div>
         <div class="footer_nav-social_container">
           <nav class="footer_navigation">
@@ -382,7 +379,7 @@
               <button class="modal_sum_button modal_sum_minus" type="button">
                 <span class="visually-hidden">Убрать единицу товара.</span>
               </button>
-              <!--Надо ли задавать атрибут readonly? Или пользователь может вписать число и не спользовать кнопки "+"/"-"?-->
+              <label class="visually-hidden" for="sum_input">Сколько единиц товара хотите заказать</label>
               <input class="modal_input_sum" type="number" name="modal_sum" id="sum_input" placeholder="1" min="1" required>
               <button class="modal_sum_button modal_sum_plus" type="button">
                 <span class="visually-hidden">Добавить единицу товара.</span>

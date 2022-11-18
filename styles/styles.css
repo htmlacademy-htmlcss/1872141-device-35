@@ -317,9 +317,6 @@ html {
   height: 100%;
 }
 
-/*Если сделать минимальную ширину 1160px, то при таком размере окна, в некоторых
- секциях текст будет прилипать к экрану. На лайве говорили, что это плохо. Поэтому
- добавил к ширине по 20px на каждую сторону. Или делать точно как в макете 1160px?*/
 body {
   margin: 0;
   display: flex;
@@ -330,7 +327,8 @@ body {
 
 img {
   max-width: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .visually-hidden {
@@ -432,8 +430,6 @@ img {
   z-index: 1;
 }
 
-/*Критерий TEST-07 требует для форм состояние disabled. Нужно ли прописывать это
-состояние конкретно форме, или достаточно для input прописать?*/
 .header_search_input:disabled {
   opacity: 0.3;
 }
@@ -477,7 +473,8 @@ img {
   max-width: 231px;
   margin-right: auto;
   padding-left: 27px;
-  align-self: center;
+  -ms-grid-row-align: center;
+      align-self: center;
   background-image: url("../images/icon/user.svg");
   background-repeat: no-repeat;
   background-position: 1px center;
@@ -514,10 +511,6 @@ img {
   margin-left: 18px;
 }
 
-/*Не могу сообразить, как исправиль переполнение следующих двух ссылок.
-Это из-за наложения флексов, позиционирования, попапа и z-index?
-Или это я где-то накосячил? Запас на переполнение есть, но он не
-"абсолютно-железобетонный"*/
 .navigation_user_difference .header_link {
   min-height: 30px;
   padding-left: 22px;
@@ -575,7 +568,8 @@ img {
   cursor: pointer;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   right: 0;
   opacity: 0.3;
 }
@@ -593,7 +587,8 @@ img {
   cursor: pointer;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   right: 0;
   opacity: 0.3;
 }
@@ -610,6 +605,7 @@ img {
 .navigation_menu_link:hover + .subcatalog,
 .navigation_menu_link:focus-within + .subcatalog,
 .subcatalog:hover {
+  display: -ms-grid;
   display: grid;
 }
 
@@ -655,7 +651,8 @@ img {
 .user-name {
   width: 119px;
   padding-left: 27px;
-  text-decoration-line: none;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
   color: #000000;
   background-image: url("../images/icon/user.svg");
   background-repeat: no-repeat;
@@ -664,7 +661,8 @@ img {
 
 .log-out {
   width: 56px;
-  text-decoration-line: none;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
   color: #000000;
   opacity: 0.3;
 }
@@ -683,7 +681,8 @@ img {
 .main_slider {
   position: relative;
   width: 1160px;
-  transform: translateY(-150px);
+  -webkit-transform: translateY(-150px);
+          transform: translateY(-150px);
 }
 
 .slider_button {
@@ -708,7 +707,8 @@ img {
   position: absolute;
   top: 211px;
   left: 540px;
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .slider_button:focus {
@@ -821,6 +821,8 @@ img {
 }
 
 .slider_features dl {
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
   min-width: fit-content;
   margin: 0;
 }
@@ -839,7 +841,8 @@ img {
   position: absolute;
   bottom: 2px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .slider_pagination_item {
@@ -898,7 +901,8 @@ img {
 .index_category {
   margin-bottom: 90px;
   min-height: 253px;
-  transform: translateY(-82px);
+  -webkit-transform: translateY(-82px);
+          transform: translateY(-82px);
 }
 
 .index_category_list {
@@ -986,7 +990,8 @@ img {
   flex-wrap: wrap;
   width: 1160px;
   margin: 0 auto;
-  transform: translateY(-102px);
+  -webkit-transform: translateY(-102px);
+          transform: translateY(-102px);
 }
 
 .index_benefits_buttons {
@@ -1003,7 +1008,8 @@ img {
   width: 7px;
   height: 30px;
   background-color: #000000;
-  transform: translate(280px, 35px);
+  -webkit-transform: translate(280px, 35px);
+          transform: translate(280px, 35px);
 }
 
 .index_benefits_button {
@@ -1191,7 +1197,9 @@ img {
 .about-shop {
   display: flex;
   width: 1160px;
-  column-gap: 108px;
+  -webkit-column-gap: 108px;
+     -moz-column-gap: 108px;
+          column-gap: 108px;
   margin-bottom: 70px;
 }
 
@@ -1328,8 +1336,32 @@ img {
   color: #444444;
 }
 
+.mailing-list_input::-webkit-input-placeholder {
+  opacity: 0.5;
+}
+
+.mailing-list_input::-moz-placeholder {
+  opacity: 0.5;
+}
+
+.mailing-list_input:-ms-input-placeholder {
+  opacity: 0.5;
+}
+
+.mailing-list_input::-ms-input-placeholder {
+  opacity: 0.5;
+}
+
 .mailing-list_input::placeholder {
   opacity: 0.5;
+}
+
+.mailing-list_input:-moz-placeholder-shown {
+  opacity: 1;
+}
+
+.mailing-list_input:-ms-input-placeholder {
+  opacity: 1;
 }
 
 .mailing-list_input:placeholder-shown {
@@ -1477,8 +1509,6 @@ img {
   width: 200px;
 }
 
-/*Я прописал состояние disabled для класса .filter_form_disabled... А нужно ли это?
-для js, или достаточно disabled для элемента .catalog_filter_form fieldset:disabled?*/
 .catalog_filter_form fieldset:disabled,
 .filter_form_disabled {
   opacity: 0.1;
@@ -1582,7 +1612,8 @@ img {
 
 .range_input::-webkit-outer-spin-button,
 .range_input::-webkit-inner-spin-button {
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   margin: 0;
 }
 
@@ -1693,7 +1724,9 @@ img {
 }
 
 .select_container {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 147px 142px 60px;
   grid-template-columns: 147px 142px 60px;
   justify-content: space-between;
   margin:  0 40px;
@@ -1786,7 +1819,9 @@ img {
 }
 
 .product_monopod_list {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 360px 40px 360px;
   grid-template-columns: repeat(2, 360px);
   flex-wrap: wrap;
   margin: 70px 40px 0;
@@ -1840,7 +1875,8 @@ img {
 
 .product_card_image {
   display: block;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .product_card_block {
@@ -2239,7 +2275,8 @@ img {
   position: absolute;
   top: -6px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .popover_list {
@@ -2369,14 +2406,117 @@ img {
   background-color: #ffe17f;
   z-index: 2;
   width: 1160px;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 60px 252px 211px 211px 425px;
   grid-template-columns: 60px 252px 211px 211px 425px;
+  -ms-grid-rows: 31px 16px 20px 16px 20px 16px 20px 16px 30px;
   grid-template-rows: 31px repeat(3, 20px) 30px;
   row-gap: 16px;
   min-height: 195px;
   margin: 0;
   padding:0;
   list-style-type: none;
+}
+.subcatalog > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+.subcatalog > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+}
+.subcatalog > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+.subcatalog > *:nth-child(4) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+}
+.subcatalog > *:nth-child(5) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+}
+.subcatalog > *:nth-child(6) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+.subcatalog > *:nth-child(7) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+}
+.subcatalog > *:nth-child(8) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+}
+.subcatalog > *:nth-child(9) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+}
+.subcatalog > *:nth-child(10) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+}
+.subcatalog > *:nth-child(11) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+}
+.subcatalog > *:nth-child(12) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+}
+.subcatalog > *:nth-child(13) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+}
+.subcatalog > *:nth-child(14) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 4;
+}
+.subcatalog > *:nth-child(15) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 5;
+}
+.subcatalog > *:nth-child(16) {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+}
+.subcatalog > *:nth-child(17) {
+  -ms-grid-row: 7;
+  -ms-grid-column: 2;
+}
+.subcatalog > *:nth-child(18) {
+  -ms-grid-row: 7;
+  -ms-grid-column: 3;
+}
+.subcatalog > *:nth-child(19) {
+  -ms-grid-row: 7;
+  -ms-grid-column: 4;
+}
+.subcatalog > *:nth-child(20) {
+  -ms-grid-row: 7;
+  -ms-grid-column: 5;
+}
+.subcatalog > *:nth-child(21) {
+  -ms-grid-row: 9;
+  -ms-grid-column: 1;
+}
+.subcatalog > *:nth-child(22) {
+  -ms-grid-row: 9;
+  -ms-grid-column: 2;
+}
+.subcatalog > *:nth-child(23) {
+  -ms-grid-row: 9;
+  -ms-grid-column: 3;
+}
+.subcatalog > *:nth-child(24) {
+  -ms-grid-row: 9;
+  -ms-grid-column: 4;
+}
+.subcatalog > *:nth-child(25) {
+  -ms-grid-row: 9;
+  -ms-grid-column: 5;
 }
 
 
@@ -2386,37 +2526,63 @@ img {
 }
 
 .subcatalog_item:nth-child(1) {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
   grid-row: 2/3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
   grid-column: 2/3;
 }
 
 .subcatalog_item:nth-child(2) {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
   grid-row: 3/4;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
   grid-column: 2/3;
 }
 
 .subcatalog_item:nth-child(3) {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
   grid-row: 4/5;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
   grid-column: 2/3;
 }
 
 .subcatalog_item:nth-child(4) {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
   grid-row: 2/3;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
   grid-column: 3/4;
 }
 
 .subcatalog_item:nth-child(5) {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
   grid-row: 3/4;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
   grid-column: 3/4;
 }
 
 .subcatalog_item:nth-child(6) {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
   grid-row: 2/3;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
   grid-column: 4/5;
 }
 
 .subcatalog_link {
   display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   color: #000000;
   text-decoration: none;
@@ -2564,9 +2730,35 @@ img {
   pointer-events: none;
 }
 
+.modal_input:-moz-placeholder-shown {
+  color: #000000;
+  outline: none;
+}
+
+.modal_input:-ms-input-placeholder {
+  color: #000000;
+  outline: none;
+}
+
 .modal_input:placeholder-shown {
   color: #000000;
   outline: none;
+}
+
+.modal_input_login::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.modal_input_login::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.modal_input_login:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.modal_input_login::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .modal_input_login::placeholder {
@@ -2680,8 +2872,25 @@ img {
 
 .modal_input_sum::-webkit-outer-spin-button,
 .modal_input_sum::-webkit-inner-spin-button {
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   margin: 0;
+}
+
+.modal_input_sum::-webkit-input-placeholder {
+  color: #000000;
+}
+
+.modal_input_sum::-moz-placeholder {
+  color: #000000;
+}
+
+.modal_input_sum:-ms-input-placeholder {
+  color: #000000;
+}
+
+.modal_input_sum::-ms-input-placeholder {
+  color: #000000;
 }
 
 .modal_input_sum::placeholder {
